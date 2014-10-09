@@ -28,6 +28,4 @@ Package.on_use(function (api) {
     api.add_files(['templates.html', 'templates.js', 'templates.less'], c);
     api.add_files(['staff view.html'], c);
 
-
-    api.export('SH');
 });

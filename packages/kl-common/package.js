@@ -1,9 +1,10 @@
 Package.describe({
-    name: 'sh-common',
-    summary: 'shifts sheduler base package. defines namespace, collections, and probably later something else',
+    name: 'kl-common',
+    //nothing special here, i just try to use my own libs
+    summary: 'provides KL namespace - place where utils live',
     owner: 'Angelo Tomarcafe',
     email: 'angelo.tomarcafe@gmail.com',
-    version: '0.1.1'
+    version: '0.1.0'
 });
 
 var cs = ['client', 'server'];
@@ -11,6 +12,7 @@ var c = 'client';
 var s = 'server';
 
 Package.on_use(function (api) {
+    api.use('underscore', cs);
     /* Use or imply other packages.
 
      * Example:
@@ -23,8 +25,7 @@ Package.on_use(function (api) {
      * package.
      */
     api.add_files('namespace.js', cs);
-    api.add_files('collections.js', cs);
-
-    api.export('SH', cs);
+    api.add_files('server/validation.js', s);
+    api.export('KL', cs);
 
 });

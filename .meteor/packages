@@ -14,6 +14,10 @@ tsega:bootstrap3-datetimepicker
 amr:parsley.js
 mrt:moment
 accounts-ui
+gfk:mailgun-api
+email
 sh-common
 sh-templates
+iron:router
+kl-common
 

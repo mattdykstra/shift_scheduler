@@ -1,6 +1,10 @@
 {
   "dependencies": [
     [
+      "kl-common",
+      "0.1.0"
+    ],
+    [
       "meteor",
       "1.1.1"
     ],

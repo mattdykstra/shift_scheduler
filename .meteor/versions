@@ -1,7 +1,5 @@
 accounts-base@1.1.1
 accounts-password@1.0.2
-accounts-ui-unstyled@1.1.2
-accounts-ui@1.1.1
 amr:parsley.js@2.0.5
 application-configuration@1.0.2
 autopublish@1.0.0
@@ -23,6 +21,7 @@ fastclick@1.0.0
 follower-livedata@1.0.1
 geojson-utils@1.0.0
 gfk:mailgun-api@1.0.0
+handlebars@1.0.0
 html-tools@1.0.1
 htmljs@1.0.1
 http@1.0.6
@@ -65,6 +64,7 @@ sha@1.0.0
 spacebars-compiler@1.0.2
 spacebars@1.0.2
 srp@1.0.0
+stylus@1.0.4
 templating@1.0.7
 tracker@1.0.2
 tsega:bootstrap3-datetimepicker@0.4.0
@@ -73,3 +73,4 @@ underscore@1.0.0
 url@1.0.0
 webapp-hashing@1.0.0
 webapp@1.1.2
+yasinuslu:accounts-ui-bootstrap-3@0.3.10

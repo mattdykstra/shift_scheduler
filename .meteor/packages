@@ -8,16 +8,16 @@ autopublish
 insecure
 accounts-password
 less
-mizzao:bootstrap-3
 mizzao:bootboxjs
 tsega:bootstrap3-datetimepicker
 amr:parsley.js
 mrt:moment
-accounts-ui
 gfk:mailgun-api
 email
 sh-common
 sh-templates
 iron:router
 kl-common
+mizzao:bootstrap-3
+yasinuslu:accounts-ui-bootstrap-3
 

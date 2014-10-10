@@ -8,17 +8,18 @@ KL.Validation._parse = function parse(result) {
     if (_.isString(result)) {
         // this allows writing fancy ' return "pass";    return "fail"    ' :)
         // not sure this is absolutely needed but indeed we can do more here.
-        if (result == 'pass') return true;
-        if (result == 'fail') return false;
+        if (result == 'pass' || result == 'true')  return true;
+        if (result == 'fail' || reuslt == 'false') return false;
         return result;
     }
 
-    // i think that at certain stage validation result IS an object, not a string or true/false.
-    // this is generic, non-optimized state of validation result. which allows for simpler result translation logic
-    if (_.isObject(result) && result.meta) {
-        //parse meta. do what needed.
+    // meta or validationMeta ? [philosoraptor.jpg]
+    // meta can (probably) exist as a field on returned object. so lets specify all specials
+    // on separate field. anyways this is not used anywhere for now
+    if (_.isObject(result) && result.validationMeta) {
+        //parse validationMeta. do what needed.
 
-        result.meta = null;
+        result.validationMeta = null;
         return result;
     }
     //bypass

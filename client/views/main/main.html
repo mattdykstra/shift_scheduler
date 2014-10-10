@@ -1,0 +1,26 @@
+<template name="main">
+    {{# if noAdminUser}}
+        <p> greetings. there s no admin user yet, so someone has to claim email</p>
+    {{/ if }}
+
+    {{#if isAdminUser}}
+    {{> admin_view}}
+    {{/if}}
+
+    {{#if isBusinessUser}}
+    {{> business_view}}
+    {{/if}}
+
+    {{#if isStaffUser}}
+    {{>staff_view}}
+    {{/if }}
+
+    {{#if isRootUser}}
+    {{> root_view}}
+    {{/if }}
+
+    {{#if currentUser }}
+    {{else}}
+        <p> please login </p>
+    {{/if}}
+</template>

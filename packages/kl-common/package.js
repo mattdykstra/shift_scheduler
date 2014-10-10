@@ -26,6 +26,7 @@ Package.on_use(function (api) {
      */
     api.add_files('namespace.js', cs);
     api.add_files('server/validation.js', s);
+    api.add_files('client/global_helpers.js', s);
     api.export('KL', cs);
 
 });

@@ -22,6 +22,7 @@ Package.on_use(function (api) {
      * Add files that should be used with this
      * package.
      */
+    api.use('kl-common', cs);
     api.add_files('namespace.js', cs);
     api.add_files('collections.js', cs);
 

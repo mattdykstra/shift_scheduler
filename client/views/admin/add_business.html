@@ -1,0 +1,40 @@
+<!-- originally created for shift_scheduler project-->
+<template name="add_business">
+    <div class="row text-center">
+        <div class="col-xs-1 col-sm-3 col-md-3"></div>
+        <div class="dropdown col-md-6 col-sm-6 col-xs-10">
+            <a class="btn btn-default dropdown-toggle"
+               data-toggle="dropdown"><span> Add Business Account</span></a>
+
+            <div class="dropdown-menu col-xs-12">
+                <!--div class="panel"-->
+                    <form role="form" class="form-vertical col-xs-12">
+                        <small>Add Business Account</small>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="login email" class="form-control"
+                                   autocomplete="off" required data-parsley-type="email"/>
+
+                            <input type="text" name="contactName" placeholder="contact name" class="form-control"
+                                   autocomplete="off" data-parsley-required required/>
+
+                            <input type="text" name="businessName" placeholder="business name" class="form-control"
+                                   autocomplete="off" data-parsley-required required/>
+
+                            <input type="text" name="address" placeholder="address" class="form-control"
+                                   autocomplete="off" data-parsley-required required/>
+
+                            <input type="text" name="phone" placeholder="phone" class="form-control"
+                                   autocomplete="off" data-parsley-required required/>
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary add-business" type="button" data-toggle="dropdown">Add
+                            </button>
+                            <button class="btn add-business" type="button" data-toggle="dropdown">Cancel</button>
+                        </div>
+                    </form>
+                <!--/div-->
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-3 col-md-3"></div>
+    </div>
+</template>

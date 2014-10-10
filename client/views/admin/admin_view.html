@@ -2,41 +2,22 @@
 <template name="admin_view">
     <h2> greetings Admin. </h2>
     {{> add_business}}
-    <table class="table table-striped table-bordered no-more-tables">
-        <thead>
-        <tr>
-            <th class="col-md-2">Login email</th>
-            <th class="col-md-2">Contact name</th>
-            <th class="col-md-2">Business name</th>
-            <th class="col-md-2">Address</th>
-            <th class="col-md-2">Phone</th>
-            <th class="col-md-2">Notes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
 
-            <th class="col-md-2">Login email</th>
-            <td class="col-md-2">Contact name</td>
-            <td class="col-md-2">Business name</td>
-            <td class="col-md-2">Address</td>
-            <td class="col-md-2">Phone</td>
-            <td class="col-md-2">Notes</td>
-
-        </tr>
-        {{#each businesses}}
-        <tr>
-            <td>{{email}}</td>
-            <td>{{contactName}}</td>
-            <td>{{businessName}}</td>
-            <td>{{address}}</td>
-            <td>{{phone}}</td>
-            <td>
-                <button class="btn btn-info">notes</button>
-            </td>
-        </tr>
-        {{/each}}
-        </tbody>
-
-    </table>
+    {{#each businesses}}
+    <div class="row">
+        {{> business_list_item}}
+    </div>
+    {{/each}}
+</template>
+<template name="business_list_item">
+    <div class="col-md-2">{{email}}</div>
+    <div class="col-md-2">{{contactName}}</div>
+    <div class="col-md-2">{{businessName}}</div>
+    <div class="col-md-2">{{address}}</div>
+    <div class="col-md-2">{{phone}}</div>
+    <div class="col-md-2">
+        <a data-toggle="modal" href="#{{_id}}" class="btn btn-primary">Edit</a>
+        {{> business_item_edit this}}
+        <button class="btn btn-info">notes</button>
+    </div>
 </template>

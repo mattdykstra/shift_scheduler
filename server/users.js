@@ -79,6 +79,7 @@ Meteor.methods({
             if  (id) {
                 Meteor.users.update({_id: id}, {$set: parameters});
                 Accounts.sendEnrollmentEmail(id);
+                return "success";
             }
         }
 
@@ -147,7 +148,7 @@ Meteor.publish('userData', function () {
                     {_id: this.userId},
                     {role: "business"}
                 ]},
-                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1,
+                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, emails: 1,
                     'contactName': 1, 'notes': 1}
                 });
         }
@@ -157,7 +158,7 @@ Meteor.publish('userData', function () {
                     {_id: this.userId},
                     {role: "staff", businessId: this.userId}
                 ]},
-                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1,
+                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, emails: 1,
                     'contactName': 1, 'notes': 1}
                 });
         }

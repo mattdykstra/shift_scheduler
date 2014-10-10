@@ -1,11 +1,10 @@
 Template['add_business'].rendered = function () {
-
+    this.$form = this.$("#add-business-form");
+    this.parsley = this.$form.parsley({trigger: "blur"});
 };
 
 Template['add_business'].helpers({
-    'foo': function () {
 
-    }
 });
 
 Template['add_business'].events({
@@ -16,5 +15,24 @@ Template['add_business'].events({
         if (e.key == 'Esc') {
             t.$('.dropdown.open').removeClass('open');
         }
+    },
+    'click .add-business': function (e, t) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!t.parsley.isValid()) return;
+        var newbie = {};
+        t.$form.serializeArray().forEach(function (input) {
+            newbie[input.name] = input.value;
+        });
+        Meteor.call("users/claim", newbie.email, "business", _.omit(newbie, ['email']), function(err, ret){
+            if (ret=="success") {
+                t.$('.dropdown.open').removeClass('open');
+                t.$form.trigger('reset');
+            }
+            if (ret=="email exists") {
+                alert("this email is already registered. going to add this check to ui validation asap");
+            }
+        });
+
     }
 });

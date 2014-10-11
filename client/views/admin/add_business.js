@@ -1,6 +1,7 @@
 Template['add_business'].rendered = function () {
     this.$form = this.$("#add-business-form");
     this.parsley = this.$form.parsley({trigger: "blur"});
+    this.$modal = this.$('#add-business');
 };
 
 Template['add_business'].helpers({
@@ -8,7 +9,7 @@ Template['add_business'].helpers({
 });
 
 Template['add_business'].events({
-    'shown.bs.dropdown': function (e, t) {
+    'shown.bs.modal': function (e, t) {
         t.$('input[name=email]').focus()
     },
     'keyup': function (e, t) {
@@ -16,7 +17,7 @@ Template['add_business'].events({
             t.$('.dropdown.open').removeClass('open');
         }
     },
-    'click .add-business': function (e, t) {
+    'click .submit': function (e, t) {
         e.preventDefault();
         e.stopPropagation();
         if (!t.parsley.isValid()) return;
@@ -26,7 +27,7 @@ Template['add_business'].events({
         });
         Meteor.call("users/claim", newbie.email, "business", _.omit(newbie, ['email']), function(err, ret){
             if (ret=="success") {
-                t.$('.dropdown.open').removeClass('open');
+                t.$modal.modal('hide');
                 t.$form.trigger('reset');
             }
             if (ret=="email exists") {

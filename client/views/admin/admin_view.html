@@ -2,12 +2,22 @@
 <template name="admin_view">
     <h2> greetings Admin. </h2>
     {{> add_business}}
+    <div class="row text-center large" style="margin-bottom: 6px;">
+        <div class="col-md-2"><strong>email</strong></div>
+        <div class="col-md-2"><strong>contactName</strong></div>
+        <div class="col-md-2"><strong>businessName</strong></div>
+        <div class="col-md-2"><strong>address</strong></div>
+        <div class="col-md-2"><strong>phone</strong></div>
+    </div>
+    <div class="interlaced">
 
     {{#each businesses}}
+
     <div class="row">
         {{> business_list_item}}
     </div>
     {{/each}}
+    </div>
 </template>
 <template name="business_list_item">
     <div class="col-md-2">{{email}}</div>
@@ -16,8 +26,9 @@
     <div class="col-md-2">{{address}}</div>
     <div class="col-md-2">{{phone}}</div>
     <div class="col-md-2">
-        <a data-toggle="modal" href="#{{_id}}" class="btn btn-primary">Edit</a>
+        <a class="btn btn-info notes pull-left">notes</a>
+        <a data-toggle="modal" href="#{{_id}}" class="btn btn-primary pull-right">Edit</a>
         {{> business_item_edit this}}
-        <button class="btn btn-info">notes</button>
+
     </div>
 </template>

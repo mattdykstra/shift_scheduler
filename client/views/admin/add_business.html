@@ -18,19 +18,55 @@
 
                         <div class="form-group">
                             <input type="email" name="email" placeholder="login email" class="form-control"
-                                   value="{{email}}" autocomplete="off" required data-parsley-type="email"/>
+                                   autocomplete="off" required data-parsley-type="email"/>
 
                             <input type="text" name="contactName" placeholder="contact name" class="form-control"
-                                   value="{{contactName}}" autocomplete="off" data-parsley-required required/>
+                                   autocomplete="off" data-parsley-required required/>
 
                             <input type="text" name="businessName" placeholder="business name" class="form-control"
-                                   value="{{businessName}}" autocomplete="off" data-parsley-required required/>
+                                   autocomplete="off" data-parsley-required required/>
 
                             <input type="text" name="address" placeholder="address" class="form-control"
-                                   value={{address}} autocomplete="off" />
+                                   autocomplete="off" />
 
                             <input type="text" name="phone" placeholder="phone" class="form-control"
-                                   value={{phone}} autocomplete="off" />
+                                    autocomplete="off" />
+
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="name" class="form-control"
+                                   autocomplete="off" required/>
+
+                            <input type="text" name="position" placeholder="position" class="form-control"
+                                   autocomplete="off" required data-parsley-type="email"/>
+
+                            <input type="email" name="email" placeholder="login email" class="form-control"
+                                   autocomplete="off"/>
+
+                            <label class="control-label">hi i m label</label>
+                            <input type="text" name="phone" placeholder="phone" class="form-control"
+                                   autocomplete="off"/>
+
+                            <input type="number" name="hourly_rate" placeholder="hourly" class="form-control"
+                                   step="0.25" autocomplete="off"/>
+
+                            <label class="control-label">Monday to Friday</label>
+                            <input type="number" name="coeff_mon_fri" class="form-control input-mini"
+                                   step="0.01" value="1.25"/>
+
+                            <label class="control-label">Saturday</label>
+                            <input type="number" name="coeff_sat" class="form-control input-mini"
+                                   step="0.01" value="1.5"/>
+
+                            <label class="control-label">Sunday</label>
+                            <input type="number" name="coeff_sun" class="form-control input-mini"
+                                   step="0.01" value="1.5"/>
+                            <label class="control-label">Salary</label>
+                            <input type="number" name="coeff_sun" class="form-control input-mini"
+                                   step="0.01" value="1.5"/>
                         </div>
 
                     </div>

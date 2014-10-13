@@ -34,6 +34,5 @@ Template['add_business'].events({
                 alert("this email is already registered. going to add this check to ui validation asap");
             }
         });
-
     }
 });

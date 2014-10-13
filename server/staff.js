@@ -30,3 +30,18 @@ SH.Collections.Staff.deny({
         return _.contains(fields, 'businessId');
     }
 });
+
+Meteor.publish('staff', function() {
+    if (!this.userId) {
+        this.ready();
+        return;
+    }
+
+    var bizSel = KL.Validation.pass("userBusinessSelector", this.userId);
+    if (!bizSel) {
+        this.ready();
+        return;
+    }
+
+    return SH.Collections.Staff.find(bizSel);
+});

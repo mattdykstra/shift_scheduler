@@ -61,9 +61,15 @@ UI.registerHelper('weekCode', function(){
     return SH.Week.getWeekCode (Seesion.get("weekStartDateString") )
 });
 
-var dateFormat = "ddd DD MMM";
+var thDateFormat = "ddd DD MMM";
 
 UI.registerHelper('thDateFromDayCode', function(isoDay){
     var date = SH.Week.dateFromString( Session.get("weekStartDateString")).day(isoDay);
-    return date.format(dateFormat);
+    return date.format(thDateFormat);
+});
+
+var trDateFormat= "D MMM YY ddd";
+UI.registerHelper('trDateFromDayCode', function(isoDay){
+    var date = SH.Week.dateFromString( Session.get("weekStartDateString")).day(isoDay);
+    return date.format(trDateFormat);
 });

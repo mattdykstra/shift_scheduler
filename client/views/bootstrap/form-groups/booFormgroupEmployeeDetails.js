@@ -36,28 +36,18 @@ Template['booFormgroupEmployeeDetails'].helpers({
     }
 });
 
-function _sessionSetTrueIfNonEmpty(t, jqkey, sessionkey) {
-    var get = Session.get(sessionkey);
-    if (t[jqkey].val() ) {
-        if (!get) {Session.set(sessionkey, true);}
-    }
-    else {
-        if (get) {Session.set(sessionkey, null);}
-    }
-}
-
 Template['booFormgroupEmployeeDetails'].events({
     'change [name=hourly_rate]': function (e, t) {
-        _sessionSetTrueIfNonEmpty(t, '$hourly', 'hourlyIsSet')
+        KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$hourly', 'hourlyIsSet')
     },
     'keyup [name=hourly_rate]': function (e, t) {
-        _sessionSetTrueIfNonEmpty(t, '$hourly', 'hourlyIsSet')
+        KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$hourly', 'hourlyIsSet')
     },
 
     'change [name=salary]': function (e, t) {
-        _sessionSetTrueIfNonEmpty(t, '$salary', 'salaryIsSet')
+        KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$salary', 'salaryIsSet')
     },
     'keyup [name=salary]': function (e, t) {
-        _sessionSetTrueIfNonEmpty(t, '$salary', 'salaryIsSet')
+        KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$salary', 'salaryIsSet')
     }
 });

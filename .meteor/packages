@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 accounts-password
 less
@@ -21,4 +20,3 @@ kl-common
 mizzao:bootstrap-3
 yasinuslu:accounts-ui-bootstrap-3
 matb33:collection-hooks
-

@@ -26,7 +26,21 @@ SH.Collections.Occupations.before.insert(
 
 SH.Collections.Occupations.deny({
     update: function (userId, docs, fields, modifier) {
-        // can't change businessId
         return _.contains(fields, 'businessId');
     }
+});
+
+Meteor.publish('occupations', function() {
+    if (!this.userId) {
+        this.ready();
+        return;
+    }
+
+    var bizSel = KL.Validation.pass("userBusinessSelector", this.userId);
+    if (!bizSel) {
+        this.ready();
+        return;
+    }
+
+    return SH.Collections.Occupations.find(bizSel);
 });

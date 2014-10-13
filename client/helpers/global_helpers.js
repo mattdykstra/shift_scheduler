@@ -44,6 +44,9 @@ var helpers = {
     occupationsList: function(){
         return SH.Collections.Occupations.find().fetch();
     },
+    employeesList: function(){
+        return SH.Collections.Staff.find().fetch();
+    },
     BusinessName: function() {
         var user = Meteor.users.findOne({_id: SH.businessId() });
         return user ? user.businessName : "";

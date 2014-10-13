@@ -1,11 +1,9 @@
 <!-- originally created for shift_scheduler project-->
 <template name="booModalEditEmployee">
-    <a data-toggle="modal" href="#edit-employee-{{_id}}"
-       title="Edit Employee Details">
+    <a data-toggle="modal" href="#edit-employee-{{_id}}">
         {{name}} &nbsp;
     </a>
-
-    <form role="form" class="form-vertical col-xs-12 edit-employee-form" id="edit-employee-{{_id}}-form">
+    <form role="form" class="form-horizontal col-xs-10">
         <div class="modal" id="edit-employee-{{_id}}">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -13,6 +11,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <h4 class="modal-title"> Edit employee details: {{name}}</h4>
+                        <div class="alerts-container">
+
+                        </div>
                     </div>
 
                     <div class="modal-body">
@@ -21,7 +22,7 @@
 
                     <div class="modal-footer">
                         <a href="#" data-dismiss="modal" class="btn cancel">Cancel</a>
-                        <a href="#" class="btn btn-primary submit">Add Employee</a>
+                        <a href="#" class="btn btn-primary submit">Save Changes</a>
                     </div>
 
                 </div>

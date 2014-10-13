@@ -1,0 +1,23 @@
+<!-- originally created for shift_scheduler project-->
+<template name="staffEmployeeRow">
+    <tr>
+        <td class="tdname">
+            {{> booModalEditEmployee this}}
+        </td>
+        {{#each isoWeekDays}}
+        <td class="text-center">
+            <span class="visible-xs-inline visible-sm-inline data">
+                <a href="http://project-ezy.com/roster/event_page.php?id=06%20Oct%2014"
+                   rel="ibox">
+                    06 Oct 14 Mon (+ event)
+                </a>
+            </span>
+            <a href="http://project-ezy.com/roster/add_time.php?ed=06%20Oct%2014&amp;uid=21"
+               rel="ibox" class="tda"> {{! Edit Time | Day Off | 7:30am-1:00pm F<br>6:00pm-8:30pm P}}
+            </a>
+        </td>
+        <td>{{dailyTimeTotal employee=.. dayCode=dayCode}}</td>
+        {{/each}}
+        <td><span class="visible-xs-inline visible-sm-inline data">{{! Total hours}}</span>{{! 11:0 }}</td>
+    </tr>
+</template>

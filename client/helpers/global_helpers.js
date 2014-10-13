@@ -40,6 +40,13 @@ var helpers = {
     staffId: SH.staffId,
     noAdminUser: function () {
         return Session.get("shNoAdmin");
+    },
+    occupationsList: function(){
+        return SH.Collections.Occupations.find().fetch();
+    },
+    BusinessName: function() {
+        var user = Meteor.users.findOne({_id: SH.businessId() });
+        return user ? user.businessName : "";
     }
 };
 

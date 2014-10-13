@@ -2,14 +2,13 @@
  * Created by angelo on 10/12/14.
  */
 Meteor.publish('weeklyShifts', function (week) {
-    var user = KL.Validation.pass("user", this.userId);
-    if (!user) {
+    var user = KL.Validation.pass("isUser", this.userId);
+    if (!user || !week) {
         this.ready();
         return;
     }
     var biz = KL.Validation.pass("userBusinessSelector", user);
-    var role = KL.Validation.pass("userRole", user);
-    var date = SH.Week.dateFromString;
+    var date = SH.Week.dateFromString();
 
     if (!biz || !_.isDate(date._d)) {
         this.ready();

@@ -1,0 +1,53 @@
+<!-- originally created for shift_scheduler project-->
+<template name="booModalOccupationsEdit">
+    <a data-toggle="modal" href="#edit-roles" class="btn btn-primary">
+        Edit Roles</a>
+
+    <form role="form" class="form-inline col-xs-12 edit-occupations-form" id="edit-occupations-form">
+        <div class="modal" id="edit-roles">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title"> {{BusinessName}}: edit roles list.</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        {{> add_occupation}}
+                        <div class="row" style="margin-top: 12px;"></div>
+                        {{#each occupationsList}}
+                        {{> edit_occupation this}}
+                        {{/each}}
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn btn-primary">Ok</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</template>
+
+
+<template name="add_occupation">
+    <div class="row form-group form-group-sm">
+            <input type="text" name="name" class=" oc-name" placeholder="Occupation"/>
+            <input type="text" name="code" class=" oc-code" placeholder="CODE"/>
+            <button class="role-add" type="button" title="add"><span class="glyphicon glyphicon-plus"></span></button>
+
+    </div>
+</template>
+
+<template name="edit_occupation">
+    <div class="row form-group form-group-sm">
+            <input type="text" name="name" class=" oc-name" value="{{name}}" placeholder="Occupation"/>
+            <input type="text" name="code" class=" oc-code" value="{{code}}" placeholder="CODE"/>
+            <button class="role-update" type="button" title="update"><span class="glyphicon glyphicon-ok"></span></button>
+            <button class="role-revert" type="button" title="revert"><span class="glyphicon glyphicon-arrow-left"></span></button>
+            <button class="role-revert" type="button" title="delete"><span class="glyphicon glyphicon-remove"></span></button>
+    </div>
+</template>

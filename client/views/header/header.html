@@ -13,9 +13,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    {{# if isBusinessUser}}
+                    {{# if or isBusinessUser isStaffUser}}
                         <li><a href="#"><input class="bid" name="pweek" value="Previous Week" type="submit"></a></li>
                         <li><a href="#"><input class="bid" name="nweek" value="Next Week" type="submit"></a></li>
+                        <li><a href="#"><input class="bid" name="cweek" value="Current Week" type="submit"></a></li>
                     {{/if }}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">      {{# if noAdminUser}}

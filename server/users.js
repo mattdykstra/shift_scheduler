@@ -10,9 +10,17 @@ _.extend (SH.Validators, {
      * @param id - db _id of user
      * @returns user of "fail"
      */
-    'isUserLoggedIn': function (id) {
+    'isUser': function (id) {
         var user = Meteor.users.findOne({_id: id});
         return user ? user : "fail";
+    },
+    'isBusiness': function(id) {
+        var user = Meteor.users.findOne({_id: id});
+        return user && user.role == "business" ? user : "fail";
+    },
+    'isStaff': function(id) {
+        var user = Meteor.users.findOne({_id: id});
+        return user && user.role == "staff" ? user : "fail";
     },
     /**
      * receive object. check either by .businessId or by .id ( ._id also allowed )
@@ -47,7 +55,7 @@ _.extend (SH.Validators, {
 Meteor.methods({
     // users creting accounts is disabled, so accounts are added thru this method
     'users/claim': function (email, role, parameters) {
-        if (roles.indexOf(role) < 0) return false;
+        if (_.indexOf(roles, role) < 0) return false;
         var id, user, count;
 
         // creating an admin. if no admins here, then first site visitor does.
@@ -66,7 +74,7 @@ Meteor.methods({
 
         // creating a business account. only admin can.
         if (role == 'business') {
-            user = KL.Validation.pass('isUserLoggedIn', this.userId);
+            user = KL.Validation.pass('isUser', this.userId);
             if (!user) {
                 throw new Meteor.Error(403, 'not logged in', 'method users/claim forbids adding staff for non-users');
             }
@@ -86,7 +94,7 @@ Meteor.methods({
         // creating a staff account. only business can.
         // currently only one staff account per business allowed.
         if (role == 'staff') {
-            user = KL.Validation.pass('isUserLoggedIn', this.userId);
+            user = KL.Validation.pass('isUser', this.userId);
             if (!user) {
                 throw new Meteor.Error(403, 'not logged in', 'method users/claim forbids adding staff for non-users');
             }
@@ -177,3 +185,10 @@ Meteor.publish('userData', function () {
         this.ready();
     }
 });
+
+Meteor.users.deny({
+    update: function (userId, docs, fields, modifier) {
+        // can't change role
+        return _.contains(fields, 'role');
+    }
+})

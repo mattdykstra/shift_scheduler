@@ -191,4 +191,4 @@ Meteor.users.deny({
         // can't change role
         return _.contains(fields, 'role');
     }
-})
+});

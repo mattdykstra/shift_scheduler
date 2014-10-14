@@ -20,12 +20,15 @@ Template['booModalEditEmployee'].events({
     },
     'hidden.bs.modal': function (e, t) {
         t.parsley.reset();
-        t.$form.trigger('reset');
+
+       // - would need this once we use only 1 modal and render it with data..
+       // t.$form.trigger('reset');
     },
     'click .submit': function (e, t) {
        e.preventDefault();
         e.stopPropagation();
         console.log('d');
+        t.parsley.validate();
         if (!t.parsley.isValid()) {
             Blaze.renderWithData(Template['alert'], {
                 message: "form validation failure",
@@ -38,7 +41,8 @@ Template['booModalEditEmployee'].events({
         t.$form.serializeArray().forEach(function (input) {
             newbie[input.name] = input.value;
         });
-        SH.Collections.Staff.update({_id: t.data._id}, newbie);
+        console.log(newbie);
+        SH.Collections.Staff.update({_id: t.data._id}, {$set: newbie} );
         t.$modal.modal('hide');
     }
 });

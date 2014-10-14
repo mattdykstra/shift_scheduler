@@ -1,0 +1,18 @@
+<!-- originally created for shift_scheduler project-->
+<template name="bizEmployeeRow">
+    <tr data-employee-id="{{_id}}">
+        <td class="tdname">
+            {{! > booModalEditEmployee this}}
+            <a class="edit-staff">
+                {{name}} &nbsp;
+            </a>
+            <span
+                    style="text-decoration: underline">{{position}}</span>
+        </td>
+        {{#each isoWeekDays}}
+            {{> editShift employeeId=../_id dayCode=dayCode}}
+        {{/each}}
+        <td><span class="visible-xs-inline visible-sm-inline data">{{! Total hours}}</span>{{! 11:0 }}</td>
+        <td><span class="visible-xs-inline visible-sm-inline data">{{! Total}} </span>{{! $142 }}</td>
+    </tr>
+</template>

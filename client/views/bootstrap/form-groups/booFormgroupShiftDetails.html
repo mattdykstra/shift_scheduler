@@ -1,0 +1,50 @@
+<!-- originally made for shift_scheduler project-->
+<template name="booFormgroupShiftDetails">
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label class="control-label">1st shift role</label>
+            <select class="form-control" name="shiftRole">
+                <option value="" {{selectedIfMatches shiftRole ""}}>select role</option>
+                {{#each occupationsList}}
+                <option value="{{_id}} {{selectedIfMatches shiftRole _id}}">{{name}} - {{code}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label class="control-label">1st shift start</label>
+            {{> timepicker_15 name='shiftStart' value=shiftStart}}
+
+        </div>
+        <div class="col-sm-6">
+            <label class="control-label">1st shift start</label>
+            {{> timepicker_15 name='shiftStop' value=shiftStop}}
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-6">
+            <label class="control-label">2st shift role</label>
+            <select class="form-control" name="splitRole">
+                <option value="" {{selectedIfMatches splitRole ""}}>select role</option>
+                {{#each occupationsList}}
+                <option value="{{_id}} {{selectedIfMatches splitRole _id}}">{{name}} - {{code}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label class="control-label">2st shift start</label>
+            {{> timepicker_15 name='splitStart' value=splitStart}}
+        </div>
+        <div class="col-sm-6">
+            <label class="control-label">2st shift start</label>
+            {{> timepicker_15 name='splitStop' value=splitStop}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-6">
+            <label class="control-label"></label>
+            <input type="checkbox" name="dayOff" class="form-control"
+                   value="{{dayOff}}"/>
+        </div>
+    </div>
+</template>

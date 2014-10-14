@@ -27,3 +27,5 @@ Meteor.autorun(function() {
             SH.Week.get() );
     }
 });
+
+

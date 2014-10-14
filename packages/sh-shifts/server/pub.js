@@ -1,6 +1,3 @@
-/**
- * Created by angelo on 10/12/14.
- */
 Meteor.publish('weeklyShifts', function (week) {
     var user = KL.Validation.pass("isUser", this.userId);
     if (!user || !week) {

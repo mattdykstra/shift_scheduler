@@ -1,4 +1,3 @@
-//todo - move to package?
 SH.businessId = function businessId(){
     var user = Meteor.user();
     if (user.role == 'business') return user._id;
@@ -53,11 +52,13 @@ var helpers = {
     }
 };
 
-Meteor.startup(function(){
-    _.each(helpers, function(helper, key) {
+Meteor.startup(function() {
+    _.each(helpers, function (helper, key) {
         UI.registerHelper(key, helper);
     });
+});
 
+Meteor.startup(function(){
     // specifically for noAdminUser helper.
     if (!Meteor.userId()) {
         Meteor.call("users/check/admin", function (err, ret) {

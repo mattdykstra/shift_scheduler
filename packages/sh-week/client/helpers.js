@@ -2,6 +2,12 @@ _.extend(SH.Week.formats, {
     thDate: "ddd DD MMM",
     trDate: "D MMM YY ddd"});
 
+SH.Week.weekCodeSel = function(){
+    return { weekCode: SH.Week.getWeekCode (SH.Week.getString()) };
+};
+
+
+
 var helpers = {
     'isoWeekDays': function () { //iterator with named parameter
         return [

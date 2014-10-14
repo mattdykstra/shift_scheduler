@@ -1,12 +1,11 @@
 <!-- originally created for shift_scheduler project-->
 <template name="business_view">
     <div class="containone">
-
         <table class="table-bordered table-striped table-condensed cf no-more-tables" id="no-more-tables">
             <thead class="cf">
             <tr>
                 <th class="bg-primary">
-                    {{> booModalAddEmployee}}
+                    <a href="#" class="add-employee btn btn-primary">Add Employee</a>
                 </th>
                 {{#each isoWeekDays}}
                 <th colspan="2" class="bg-primary text-center">
@@ -31,7 +30,7 @@
             <tfoot>
             <tr class="bg-primary">
                 <td>
-                    {{> occupations_edit}}
+                    {{> booModalOccupationsEdit}}
                 </td>
                 <td colspan="15">
                     {{> occupations_list}}

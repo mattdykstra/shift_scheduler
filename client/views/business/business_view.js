@@ -9,7 +9,11 @@ Template['business_view'].helpers({
 });
 
 Template['business_view'].events({
-    'click .bar': function (e, t) {
-
+    'click .add-employee': function(e, t){
+        if (!SH.Modals.addEmployee) {
+            SH.Modals.addEmployee = Blaze.render(
+                Template['booModalAddEmployee'],
+                $('#modals-container')[0])
+        }
     }
 });

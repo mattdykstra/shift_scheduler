@@ -1,0 +1,29 @@
+<!-- originally made for shift_scheduler project-->
+<!-- params are: dayCode, employeeId-->
+
+<template name="booModalAddShift">
+    <form role="form" class="form-horizontal col-xs-8" id="add-shift-form">
+        <div class="modal" id="add-shift">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                        </button>
+                        <h4 class="modal-title">Schedule for {{employee_name}} on {{thDateFromDayCode dayCode}}</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        {{> booFormgroupShiftDetails }}
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn cancel">Cancel</a>
+                        <a href="#" class="btn btn-primary submit">Add</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</template>

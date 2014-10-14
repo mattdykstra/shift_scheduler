@@ -2,6 +2,8 @@ Template['booModalAddEmployee'].rendered = function () {
     this.$form = this.$("#add-employee-form");
     this.parsley = this.$form.parsley({trigger: "blur"});
     this.$modal = this.$('#add-employee');
+
+    this.$modal.modal('show');
 };
 
 Template['booModalAddEmployee'].helpers({
@@ -12,16 +14,13 @@ Template['booModalAddEmployee'].helpers({
 
 Template['booModalAddEmployee'].events({
     'hidden.bs.modal': function (e, t) {
-        t.$form.trigger('reset');
-
-       // t.parsley = t.$form.parsley({trigger: "blur"});
-        t.parsley.reset();
-        // - would need this once we use only 1 modal and render it with data..
-        // t.$form.trigger('reset');
-    },
-    'show.bs.modal': function (e, t) {
+        Blaze.remove(SH.Modals.addEmployee);
+        SH.Modals.addEmployee = null;
         Session.set("hourlyIsSet", null);
         Session.set("salaryIsSet", null);
+    },
+    'show.bs.modal': function (e, t) {
+
     },
     'click .submit': function (e, t) {
         e.preventDefault();
@@ -35,7 +34,5 @@ Template['booModalAddEmployee'].events({
 console.log(newbie);
         SH.Collections.Staff.insert (newbie);
         t.$modal.modal('hide');
-        Session.set("hourlyIsSet", null);
-        Session.set("salaryIsSet", null);
     }
 });

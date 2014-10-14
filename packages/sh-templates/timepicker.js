@@ -1,13 +1,13 @@
 Template['timepicker_15'].rendered = function(){
-    var self = this;
-    self.$timepicker = self.$('.timepicker');
-    self.$timepicker .datetimepicker({
+
+    this.$timepicker = this.$('.timepicker');
+    this.$timepicker .datetimepicker({
         pickDate: false,
         pickTime: true,
         minuteStepping: 15});
 
-    self.$input = self.$('input');
-    self.$visibility_control = self.$('.input-helper-button-out');
+    this.$input = self.$('input');
+    this.$visibility_control = this.$('.input-helper-button-out');
 };
 
 Template['timepicker_15'].helpers({

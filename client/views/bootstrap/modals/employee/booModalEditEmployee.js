@@ -1,10 +1,15 @@
 Template['booModalEditEmployee'].rendered = function () {
+    this.$form = this.$("form");
+    this.$modal = this.$('.modal');
+
     this.$hourly = this.$("input[name=hourly_rate]");
     this.$salary = this.$("input[name=salary]");
-    this.$form = this.$("form");
-    this.parsley = this.$form.parsley({trigger: "blur"});
-    this.$modal = this.$('.modal');
+
     this.alertsRoot = this.$(".alerts-container")[0];
+    this.parsley = this.$form.parsley({trigger: "blur"});
+
+
+    this.$modal.modal('show');
 };
 
 Template['booModalEditEmployee'].helpers({
@@ -19,13 +24,13 @@ Template['booModalEditEmployee'].events({
         KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$salary', 'salaryIsSet');
     },
     'hidden.bs.modal': function (e, t) {
-        t.parsley.reset();
-
-       // - would need this once we use only 1 modal and render it with data..
-       // t.$form.trigger('reset');
+        Blaze.remove(SH.Modals.editEmployee);
+        SH.Modals.editEmployee = null;
+        Session.set("hourlyIsSet", null);
+        Session.set("salaryIsSet", null);
     },
     'click .submit': function (e, t) {
-       e.preventDefault();
+        e.preventDefault();
         e.stopPropagation();
         console.log('d');
         t.parsley.validate();

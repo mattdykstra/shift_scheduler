@@ -4,54 +4,6 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-_.extend (SH.Validators, {
-    /**
-     * receive id. check if user with this is exists.
-     * @param id - db _id of user
-     * @returns user of "fail"
-     */
-    'isUser': function (id) {
-        var user = Meteor.users.findOne({_id: id});
-        return user ? user : "fail";
-    },
-    'isBusiness': function(id) {
-        var user = Meteor.users.findOne({_id: id});
-        return user && user.role == "business" ? user : "fail";
-    },
-    'isStaff': function(id) {
-        var user = Meteor.users.findOne({_id: id});
-        return user && user.role == "staff" ? user : "fail";
-    },
-    /**
-     * receive object. check either by .businessId or by .id ( ._id also allowed )
-     *
-     * @param params
-     * @returns Object or "fail". object is staff user for that businessId, or for that id.
-     * resolves staff user whe passed id is business user's
-     */
-    'isStaffExists': function(params) {
-        var user;
-        if (params.businessId) {
-            user = Meteor.users.findOne({businessId: params.businessId, role: 'staff'});
-            return user ? user : "fail"
-        }
-        if (params._id) params.id = params._id;
-        if (params.id) {
-            user = Meteor.users.findOne({_id: params.id});
-            if (!user) return "fail";
-
-            if (user.role == "staff") {
-                return user;
-            }
-            if (user.role == 'business') {
-                user = Meteor.users.findOne({businessId: params.idd, role: 'staff'});
-                return user ? user : "fail";
-            }
-        }
-    }
-});
-
-
 Meteor.methods({
     // users creting accounts is disabled, so accounts are added thru this method
     'users/claim': function (email, role, parameters) {

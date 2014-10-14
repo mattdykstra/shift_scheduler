@@ -1,0 +1,35 @@
+<!-- originally made for shift_scheduler project-->
+
+
+<template name="editShift">
+    <td class="text-center" data-day-code="{{dayCode}}">
+        <span class="visible-xs-inline visible-sm-inline data">
+                <a href="#">
+                    {{ trDateFromDayCode dayCode}}{{ displayEvent_1 dayCode}}
+                </a>
+            </span>
+        <a href="#" class="edit-shift-modal-popup {{shiftClass shift}}">
+            {{#if shift }}
+                {{#if off}}
+                    <span class="day-off">OFF</span>>
+                {{else}}
+                    {{display_shift_one shift}}
+                    {{#if split}}
+                        <br/>
+                        {{display_shift_two shift}}
+                    {{/if}}
+                {{/if}}
+            {{else}}
+                Edit time
+            {{/if}}
+        </a>
+    </td>
+    <td>
+        {{dailyTimeTotal shift}}
+
+    </td>
+</template>
+
+<template name="editShiftLinkContent">
+
+</template>

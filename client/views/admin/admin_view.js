@@ -10,8 +10,14 @@ Template['admin_view'].helpers({
 });
 
 Template['admin_view'].events({
-    'click .add-business': function (e, t) {
-        //$.
+    'click .add-business-button': function(e, t) {
+        console.log("+++");
+        if (!SH.Modals.addBusiness) {
+            console.log("+");
+            SH.Modals.addBusiness = Blaze.render(
+                Template['add_business'],
+                $('#modals-container')[0])
+        }
     }
 });
 

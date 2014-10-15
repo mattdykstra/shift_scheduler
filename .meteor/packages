@@ -14,11 +14,10 @@ mrt:moment
 gfk:mailgun-api
 email
 sh-common
-sh-templates
 iron:router
 kl-common
 mizzao:bootstrap-3
 yasinuslu:accounts-ui-bootstrap-3
 matb33:collection-hooks
-sh-week
-sh-shifts
+sh-app
+

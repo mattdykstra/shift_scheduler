@@ -26,8 +26,6 @@ Template['booModalEditEmployee'].events({
     'hidden.bs.modal': function (e, t) {
         Blaze.remove(SH.Modals.editEmployee);
         SH.Modals.editEmployee = null;
-        Session.set("hourlyIsSet", null);
-        Session.set("salaryIsSet", null);
     },
     'click .submit': function (e, t) {
         e.preventDefault();

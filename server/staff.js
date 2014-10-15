@@ -1,10 +1,3 @@
-/**
- * Created by angelo on 10/13/14.
- */
-
-SH = SH || {};
-SH.Staff = SH.Staff || {};
-
 SH.Collections.Staff.allow({
     insert: function(userId, doc) {
         var user = KL.Validation.pass("isBusiness", userId);

@@ -41,3 +41,24 @@ SH.Week.weekStartDateString = function weekStartDateString ( momentObject ) {
 SH.Week.dateFromWD = function dateFromWeekStringAndDayCode (weekStartString, isoDay) {
     return this.dateFromString( weekStartString ) .day(isoDay);
 };
+
+SH.Week.Time = {};
+
+/**
+ // receives strings produced by timepicker. their format is 'h:mm a'
+ *
+ * @param start12h - start time
+ * @param end12h - end time
+ * @returns {difference in minutes, negative if start later than end}
+ */
+
+SH.Week.Time.spanInMinutes = function(start12h, end12h){
+    if (!start12h || !end12h) return null;
+    var dayFormat = 'YY M D ';
+    var fullFormat = 'YY M D h:mm a';
+    var day_ = moment.utc().format(dayFormat)
+    var start = day_+ start12h;
+    var end = day_+ end12h;
+
+    return (moment(end, fullFormat). diff(moment(start, fullFormat), 'minutes') );
+};

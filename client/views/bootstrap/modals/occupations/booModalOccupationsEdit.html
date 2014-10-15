@@ -3,57 +3,65 @@
     <a data-toggle="modal" href="#edit-occupations" class="btn btn-primary">
         Edit Roles</a>
 
-    <form role="form" class="form-inline col-xs-12 edit-occupations-form" id="edit-occupations-form">
-        <div class="modal" id="edit-occupations">
-            <div class="modal-dialog">
-                <div class="modal-content">
 
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title"> {{BusinessName}}: edit roles list.</h4>
-                        <div class="alerts-container">
+    <div class="modal" id="edit-occupations">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-                        </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title"> {{BusinessName}}: edit roles list.</h4>
+
+                    <div class="alerts-container">
+
                     </div>
+                </div>
 
-                    <div class="modal-body" >
-
+                <div class="modal-body">
+                    <form role="form" class="form-inline col-xs-12 edit-occupations-form" id="edit-occupations-form">
                         {{> add_occupation}}
                         <div class="row" style="margin-top: 12px;"></div>
                         {{#each occupationsList}}
                         {{> edit_occupation this}}
                         {{/each}}
-                    </div>
-
-                    <div class="modal-footer">
                         <a href="#" data-dismiss="modal" class="btn btn-primary">Ok</a>
-                    </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
 
                 </div>
+
             </div>
         </div>
-    </form>
+    </div>
+
 </template>
 
 
 <template name="add_occupation">
     <div class=" form-group form-group-sm" id="add-role">
-            <input type="text" class=" oc-name" placeholder="Occupation"/>
-            <input type="text" class=" oc-code" placeholder="CODE"/>
-            <button class="role-add" type="button" title="add"><span class="glyphicon glyphicon-plus"></span></button>
+        <input type="text" class=" oc-name" placeholder="Occupation"/>
+        <input type="text" class=" oc-code" placeholder="CODE"/>
+        <button class="role-add" type="button" title="add"><span class="glyphicon glyphicon-plus"></span></button>
 
     </div>
 </template>
 
 <template name="edit_occupation">
     <div class="form-group form-group-sm" id="edit-role-{{_id}}">
-            <input type="text" name="name" class=" oc-name" value="{{name}}" placeholder="Occupation"/>
-            <input type="text" name="code" class=" oc-code" value="{{code}}" placeholder="CODE"/>
+        <input type="text" name="name" class=" oc-name" value="{{name}}" placeholder="Occupation"/>
+        <input type="text" name="code" class=" oc-code" value="{{code}}" placeholder="CODE"/>
+
         <div class="btn-group btn-group-xs">
-            <button class="role-update btn-info" type="button" title="update"><span class="glyphicon glyphicon-ok"></span></button>
-            <button class="role-revert btn-default" type="button" title="revert"><span class="glyphicon glyphicon-arrow-left"></span></button>
-            <button class="role-revert btn-danger" type="button" title="delete"><span class="glyphicon glyphicon-remove"></span></button>
+            <button class="role-update btn-info" type="button" title="update"><span
+                    class="glyphicon glyphicon-ok"></span></button>
+            <button class="role-revert btn-default" type="button" title="revert"><span
+                    class="glyphicon glyphicon-arrow-left"></span></button>
+            <button class="role-revert btn-danger" type="button" title="delete"><span
+                    class="glyphicon glyphicon-remove"></span></button>
         </div>
-    </div><br>
+    </div>
+    <br>
 </template>
 

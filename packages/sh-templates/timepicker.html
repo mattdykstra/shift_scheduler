@@ -2,15 +2,28 @@
 
                                     < -->
 <template name="timepicker_15">
-    <div class="input-group timepicker" id="{{id}}">
+    <div class="input-group timepicker">
         <span class="input-group-addon"><span class="glyphicon-time glyphicon"></span>
         </span>
-        <input type="text" class="form-control" name="{{name}}" value="{{value}}"/>
+        <input type="text" class="form-control timepicker_my" name="{{name}}"
+               data-parsley-laterthan="{{parsleyLaterthan}}"
+               data-parsley-thenfillstart="{{parsleyLaterthan}}"
+
+               data-parsley-beforethan="{{parsleyBeforethan}}"
+               data-parsley-thenfillend="{{parsleyBeforethan}}"
+
+               data-parsley-trigger="{{#if or parsleyLaterthan parsleyBeforethan}}submit{{/if}}"
+               value="{{value}}"
+               data-parsley-errors-container="#{{id}}"
+                />
                 <span class="input-helper-button-out" style="visibility: hidden;">
-                <i class="btn input-helper-button-in glyphicon-remove glyphicon">
+                <i class="btn input-helper-button-in action-revert glyphicon-arrow-left glyphicon">
+
                 </i>
             </span>
+
     </div>
+    <div id="{{id}}"></div>
 </template>
 <!-- >
 

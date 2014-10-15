@@ -2,6 +2,7 @@ Template['add_business'].rendered = function () {
     this.$form = this.$("#add-business-form");
     this.parsley = this.$form.parsley({trigger: "blur"});
     this.$modal = this.$('#add-business');
+    this.$modal.modal('show');
 };
 
 Template['add_business'].helpers({
@@ -11,6 +12,10 @@ Template['add_business'].helpers({
 Template['add_business'].events({
     'shown.bs.modal': function (e, t) {
         t.$('input[name=email]').focus()
+    },
+    'hidden.bs.modal': function (e, t) {
+        Blaze.remove(SH.Modals.addBusiness);
+        SH.Modals.addBusiness = null;
     },
     'keyup': function (e, t) {
         if (e.key == 'Esc') {
@@ -34,5 +39,6 @@ Template['add_business'].events({
                 alert("this email is already registered. going to add this check to ui validation asap");
             }
         });
+        t.$modal.modal('hide');
     }
 });

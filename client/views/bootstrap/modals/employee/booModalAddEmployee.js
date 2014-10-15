@@ -16,8 +16,6 @@ Template['booModalAddEmployee'].events({
     'hidden.bs.modal': function (e, t) {
         Blaze.remove(SH.Modals.addEmployee);
         SH.Modals.addEmployee = null;
-        Session.set("hourlyIsSet", null);
-        Session.set("salaryIsSet", null);
     },
     'show.bs.modal': function (e, t) {
 

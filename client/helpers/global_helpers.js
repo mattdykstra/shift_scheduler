@@ -49,6 +49,11 @@ var helpers = {
     BusinessName: function() {
         var user = Meteor.users.findOne({_id: SH.businessId() });
         return user ? user.businessName : "";
+    },
+    'EmployeeName': function (employeeId) {
+        var employee = SH.Staff.collection.findOne({_id: employeeId});
+        if (employee) return employee.name;
+        return '###';
     }
 };
 

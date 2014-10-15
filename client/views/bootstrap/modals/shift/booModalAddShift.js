@@ -1,16 +1,14 @@
 Template['booModalAddShift'].rendered = function () {
     this.$form = this.$("#add-shift-form");
     this.$modal = this.$('#add-shift');
-
-    this.$modal.modal('show');
+    this.parsley = this.$form.parsley({
+        trigger: 'change'
+    });
+    this.$modal.modal({backdrop: 'static'});
 };
 
 Template['booModalAddShift'].helpers({
-    'employee_name': function () {
-        var employee = SH.Shifts.collection.findOne({_id: this.employeeId});
-        if (employee) return employee.name;
-        return '###';
-    }
+
 });
 
 Template['booModalAddShift'].events({
@@ -23,10 +21,22 @@ Template['booModalAddShift'].events({
         e.preventDefault();
         e.stopPropagation();
 
+        t.parsley.validate();
+        console.log(t.parsley.isValid());
+        if (!t.parsley.isValid()) {
+            Blaze.renderWithData(Template['alert'], {
+                message: "form validation failure",
+                status: 'info'
+            }, t.alertsRoot);
+            return;
+        }
+
         var newbie = {};
         t.$form.serializeArray().forEach(function (input) {
+            if (input.value)
             newbie[input.name] = input.value;
         });
+        console.log( SH.Week.Time.spanInMinutes( newbie.shiftBegin, newbie.shiftEnd ) );
         console.log(newbie);
         t.$modal.modal('hide');
     }

@@ -1,21 +1,16 @@
 <!-- originally created for shift_scheduler project-->
 <template name="add_business">
-    <div class="row text-center">
-        <a data-toggle="modal" href="#add-business" class="btn btn-primary">Add Business Account</a>
-    </div>
+    <div class="modal" id="add-business">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-    <form role="form" class="form-vertical col-xs-12" id="add-business-form" >
-        <div class="modal" id="add-business">
-            <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Add Business Account</h4>
+                </div>
 
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Add Business Account</h4>
-                    </div>
-
-                    <div class="modal-body">
-
+                <div class="modal-body">
+                    <form role="form" class="form-vertical" id="add-business-form">
                         <div class="form-group">
                             <input type="email" name="email" placeholder="login email" class="form-control"
                                    autocomplete="off" required data-parsley-type="email"/>
@@ -30,55 +25,15 @@
                                    autocomplete="off" required/>
 
                             <input type="text" name="phone" required placeholder="phone" class="form-control"
-                                    autocomplete="off" />
-
-
-
+                                   autocomplete="off"/>
                         </div>
-
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="name" class="form-control"
-                                   autocomplete="off" required/>
-
-                            <input type="text" name="position" placeholder="position" class="form-control"
-                                   autocomplete="off" required data-parsley-type="email"/>
-
-                            <input type="email" name="email" placeholder="login email" class="form-control"
-                                   autocomplete="off"/>
-
-                            <label class="control-label">hi i m label</label>
-                            <input type="text" name="phone" placeholder="phone" class="form-control"
-                                   autocomplete="off"/>
-
-                            <input type="number" name="hourly_rate" placeholder="hourly" class="form-control"
-                                   step="0.25" autocomplete="off"/>
-
-                            <label class="control-label">Monday to Friday</label>
-                            <input type="number" name="coeff_mon_fri" class="form-control input-mini"
-                                   step="0.01" value="1.25"/>
-
-                            <label class="control-label">Saturday</label>
-                            <input type="number" name="coeff_sat" class="form-control input-mini"
-                                   step="0.01" value="1.5"/>
-
-                            <label class="control-label">Sunday</label>
-                            <input type="number" name="coeff_sun" class="form-control input-mini"
-                                   step="0.01" value="1.5"/>
-                            <label class="control-label">Salary</label>
-                            <input type="number" name="coeff_sun" class="form-control input-mini"
-                                   step="0.01" value="1.5"/>
+                            <a href="#" data-dismiss="modal" class="btn cancel">Cancel</a>
+                            <a href="#" class="btn btn-primary submit">Save</a>
                         </div>
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <a href="#" data-dismiss="modal" class="btn cancel">Cancel</a>
-                        <a href="#" class="btn btn-primary submit">Save</a>
-                    </div>
-
+                    </form>
                 </div>
             </div>
         </div>
-    </form>
-
+    </div>
 </template>

@@ -2,12 +2,12 @@
 // this object can contain:
 // dayOff: user has vacation on this day - then other fields are ignored
 
-// shiftStart: stringified 12h time`
-// shiftStop: stringified 12h time`
+// shiftBegin: stringified 12h time`
+// shiftEnd: stringified 12h time`
 // shiftRole: _id of role
 
-// splitStart: stringified 12h time`
-// splitStop: stringified 12h time`
+// splitBegin: stringified 12h time`
+// splitEnd: stringified 12h time`
 // splitRole: _id of role
 
 // there also can be 'event records'

@@ -8,29 +8,17 @@
         <div class="col-md-2"><strong>email</strong></div>
         <div class="col-md-2"><strong>contactName</strong></div>
         <div class="col-md-2"><strong>businessName</strong></div>
-        <div class="col-md-2"><strong>address</strong></div>
         <div class="col-md-2"><strong>phone</strong></div>
+        <div class="col-md-2"><strong>status</strong></div>
     </div>
     <div class="interlaced">
 
     {{#each businesses}}
 
-    <div class="row">
+    <div class="row text-center" >
         {{> business_list_item}}
     </div>
     {{/each}}
     </div>
 </template>
-<template name="business_list_item">
-    <div class="col-md-2">{{email}}</div>
-    <div class="col-md-2">{{contactName}}</div>
-    <div class="col-md-2">{{businessName}}</div>
-    <div class="col-md-2">{{address}}</div>
-    <div class="col-md-2">{{phone}}</div>
-    <div class="col-md-2">
-        <a class="btn btn-info notes pull-left">notes</a>
-        <a data-toggle="modal" href="#{{_id}}" class="btn btn-primary pull-right">Edit</a>
-        {{> business_item_edit this}}
 
-    </div>
-</template>

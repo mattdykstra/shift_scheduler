@@ -6,7 +6,9 @@ Template['add_business'].rendered = function () {
 };
 
 Template['add_business'].helpers({
-
+    'defaultValues' : function(){
+        return {isActive: 'on'};
+    }
 });
 
 Template['add_business'].events({
@@ -30,6 +32,7 @@ Template['add_business'].events({
         t.$form.serializeArray().forEach(function (input) {
             newbie[input.name] = input.value;
         });
+        console.log(newbie);
         Meteor.call("users/claim", newbie.email, "business", _.omit(newbie, ['email']), function(err, ret){
             if (ret=="success") {
                 t.$modal.modal('hide');
@@ -41,4 +44,5 @@ Template['add_business'].events({
         });
         t.$modal.modal('hide');
     }
+
 });

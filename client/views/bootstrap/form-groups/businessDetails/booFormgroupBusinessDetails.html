@@ -1,0 +1,45 @@
+<!-- originally made for shift_scheduler project-->
+<template name="booFormgroupBusinessDetails" xmlns="http://www.w3.org/1999/html">
+    <div class="form-group col-sm-6">
+        <label class="control-label"> Business Name </label>
+        <input type="text" name="businessName" class="form-control"
+               value="{{businessName}}" autocomplete="off" data-parsley-required required/>
+        <label class="control-label"> Contact Name </label>
+        <input type="text" name="contactName" class="form-control"
+               value="{{contactName}}" autocomplete="off" data-parsley-required required/>
+    </div>
+    <div class="form-group col-sm-6">
+
+        <label class="control-label"> Email </label>
+        <input type="email" name="email"
+               disabled="{{#if disableEmail}}disabled{{/if}}"
+               class="form-control"
+               value="{{email}}" autocomplete="off" data-parsley-required required/>
+
+        <label> Phone </label>
+        <input type="text" name="phone" class="form-control"
+               value={{phone}} autocomplete="off" data-parsley-required required/>
+    </div>
+
+    <div class="form-group col-sm-8">
+        <label class="control-label"> Country </label>
+        {{> countrySelector dataForCountrySelector }}
+
+
+        <label class="control-label"> Address </label>
+        <textarea name="address" class="form-control" data-parsley-required required>{{address}}</textarea>
+
+    </div><div class="form-group col-sm-4">
+        <label class="control-label"> Postcode </label>
+        <input type="text" name="postcode" class="form-control" value="{{postcode}}"
+        autocomplete="off" data-parsley-required required/>
+
+        <label class="control-label"> State </label>
+        <input type="text" name="state" class="form-control" value="{{state}}"
+               autocomplete="off" />
+    </div>
+
+    <div class="form-group">
+        <input type="checkbox" name="isActive" class="form-control"  checked="{{#if eq isActive 'on'}}checked{{/if}}"/>
+    </div>
+</template>

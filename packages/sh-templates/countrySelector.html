@@ -1,0 +1,12 @@
+<!-- originally made for shift_scheduler project-->
+<template name="countrySelector">
+    <select name="{{name}}" class="{{class}}"
+            data-parsley-required="{{parsleyRequired}}"
+            required="{{#if parsleyRequired}}required{{/if}}">
+        <option value="" {{selectedIfMatches "" ../selectedValue}}>{{emp}}</option>
+        {{#each countriesList}}
+            <option value="{{this}}" {{selectedIfMatches this ../selectedValue}}>{{this}}</option>
+        {{/each}}
+    </select>
+    <p>selectedValue: {{selectedValue}}</p>
+</template>

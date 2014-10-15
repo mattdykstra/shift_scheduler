@@ -12,6 +12,7 @@ var s = 'server';
 
 Package.on_use(function (api) {
     api.use(['ui', 'templating', 'less'], c);
+    api.use(['kl-common'], c);
     api.imply('sh-common');
     /* Use or imply other packages.
 
@@ -25,6 +26,7 @@ Package.on_use(function (api) {
      * package.
      */
     api.add_files(['timepicker.html', 'timepicker.js'], c);
-    api.add_files(['templates.html', 'templates.js', 'templates.less'], c);
+    api.add_files(['templates.html', 'templates.js', 'templates.less',
+    'countrySelector.html', 'countrySelector.js'], c);
 
 });

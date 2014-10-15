@@ -108,7 +108,10 @@ Meteor.publish('userData', function () {
                     {_id: this.userId},
                     {role: "business"}
                 ]},
-                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, emails: 1,
+                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, emails: 1, isActive: 1,
+                    postcode:1,
+                    state:1,
+                    country:1,
                     'contactName': 1, 'notes': 1}
                 });
         }
@@ -118,7 +121,7 @@ Meteor.publish('userData', function () {
                     {_id: this.userId},
                     {role: "staff", businessId: this.userId}
                 ]},
-                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, emails: 1,
+                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, emails: 1, isActive: 1,
                     'contactName': 1, 'notes': 1}
                 });
         }
@@ -128,7 +131,7 @@ Meteor.publish('userData', function () {
                     {_id: this.userId},
                     {role: "business", _id: this.businessId}
                 ]},
-                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1,
+                { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, isActive: 1,
                     'contactName': 1, 'notes': 1}
                 });
         }
@@ -138,9 +141,14 @@ Meteor.publish('userData', function () {
     }
 });
 
-Meteor.users.deny({
+Meteor.users.allow({
     update: function (userId, docs, fields, modifier) {
+
+        // only admin can update users. TODO - add root privilegies here
+        var user = KL.Validation.pass('isAdmin', userId);
+        if (!user) return false;
+
         // can't change role
-        return _.contains(fields, 'role');
+        return !_.contains(fields, 'role');
     }
 });

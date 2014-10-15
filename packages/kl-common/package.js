@@ -24,7 +24,7 @@ Package.on_use(function (api) {
      * Add files that should be used with this
      * package.
      */
-    api.add_files('namespace.js', cs);
+    api.add_files(['namespace.js', 'countries_list.js'], cs);
     api.add_files('server/validation.js', s);
     api.add_files('client/global_helpers.js', c);
     //api.add_files('client/_dummy.js', s);

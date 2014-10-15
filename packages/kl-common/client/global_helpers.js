@@ -55,7 +55,7 @@ var helpers = {
     },
     //this is for <select><option>..
     selectedIfMatches: function(value1, value2){
-        return value1==value2 ? 'selected="selected"' : "";
+        return value1==value2 ? 'selected' : "";
     }
 };
 

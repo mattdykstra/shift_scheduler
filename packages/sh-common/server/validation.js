@@ -65,6 +65,15 @@ _.extend( SH.Validators, {
         return user && user.role == "staff" ? user : "fail";
     },
     /**
+     *
+     * @param id
+     * @returns {*}
+     */
+    'isAdmin': function(id) {
+        var user = _.isObject(id) ? id : Meteor.users.findOne({_id: id});
+        return user && user.role == "admin" ? user : "fail";
+    },
+    /**
      * receive object. check either by .businessId or by .id ( ._id also allowed )
      *
      * @param params

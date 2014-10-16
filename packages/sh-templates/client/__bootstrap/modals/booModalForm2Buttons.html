@@ -1,0 +1,29 @@
+<!-- originally made for shift_scheduler project-->
+<template name="booModalForm2Buttons">
+    <div class="modal" id="{{modalId}}">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    {{#if noCloseButtonInHeader}}                    {{else}}
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    {{/if}}
+                    <h4 class="modal-title">{{form.title}}</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form role="form" class="{{form.class}}" id="{{formId}}">
+                        {{> Template.contentBlock data}}
+                        <a href="#" data-dismiss="modal" class="btn cancel">{{cancelButton}}</a>
+                        <a href="#" class="btn btn-primary submit">{{applyButton}}</a>
+                    </form>
+                </div>
+
+                {{#if modalFooter}}
+                <div class="modal-footer">
+                    {{modalFooter}}
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

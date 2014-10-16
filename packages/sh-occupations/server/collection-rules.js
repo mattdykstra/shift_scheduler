@@ -1,4 +1,4 @@
-SH.Collections.Staff.allow({
+SH.Collections.Occupations.allow({
     insert: function(userId, doc) {
         var user = KL.Validation.pass("isBusiness", userId);
         return user ? true : false;
@@ -11,20 +11,19 @@ SH.Collections.Staff.allow({
     }
 });
 
-SH.Collections.Staff.before.insert(
+SH.Collections.Occupations.before.insert(
     function(userId, doc) {
         doc.businessId = userId;
     }
 );
 
-SH.Collections.Staff.deny({
+SH.Collections.Occupations.deny({
     update: function (userId, docs, fields, modifier) {
-        // can't change businessId
         return _.contains(fields, 'businessId');
     }
 });
 
-Meteor.publish('staff', function() {
+Meteor.publish('occupations', function() {
     if (!this.userId) {
         this.ready();
         return;
@@ -36,5 +35,5 @@ Meteor.publish('staff', function() {
         return;
     }
 
-    return SH.Collections.Staff.find(bizSel);
+    return SH.Collections.Occupations.find(bizSel);
 });

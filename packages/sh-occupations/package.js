@@ -1,9 +1,9 @@
 Package.describe({
-    name: 'sh-common',
-    summary: 'shifts sheduler base package. defines namespace, collections, and probably later something else',
+    name: 'sh-occupations',
+    summary: "shifts sheduler package that deals with employee' roles",
     owner: 'Angelo Tomarcafe',
     email: 'angelo.tomarcafe@gmail.com',
-    version: '0.1.1'
+    version: '0.1.0'
 });
 
 var cs = ['client', 'server'];
@@ -22,12 +22,10 @@ Package.on_use(function (api) {
      * Add files that should be used with this
      * package.
      */
-    api.use(['underscore', 'matb33:collection-hooks', 'accounts-base'], cs);
-    api.use('kl-common', cs);
-    api.add_files('namespace.js', cs);
-    api.add_files('collections.js', cs);
-    api.add_files('server/validation.js', s);
-
-    api.export('SH', cs);
-
+    api.use('underscore', cs);
+    api.use('matb33:collection-hooks', s);
+    api.use(['sh-common'], cs);
+    api.add_files(['namespace.js'], cs);
+    api.add_files(['server/collection-rules.js'], s);
+    //api.add_files(['client/helpers.js', 'client/sub.js'], c);
 });

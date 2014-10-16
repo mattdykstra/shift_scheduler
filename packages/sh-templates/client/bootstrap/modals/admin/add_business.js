@@ -46,7 +46,6 @@ Template['add_business'].events({
             newbie[input.name] = input.value;
         });
         if (!newbie.isActive) newbie.isActive='off';
-        console.log(newbie);
         Meteor.call("users/claim", newbie.email, "business", _.omit(newbie, ['email']), function(err, ret){
             if (ret=="success") {
                 t.$modal.modal('hide');

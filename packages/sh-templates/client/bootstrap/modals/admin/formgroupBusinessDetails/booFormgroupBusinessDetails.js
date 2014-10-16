@@ -21,7 +21,6 @@ Template['booFormgroupBusinessDetails'].helpers({
             emp: 'select country...',
             selectedValue: self.country || ""
         };
-        console.log(ret);
         return ret;
     },
     'email': function(){

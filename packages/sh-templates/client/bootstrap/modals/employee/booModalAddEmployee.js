@@ -29,7 +29,6 @@ Template['booModalAddEmployee'].events({
         t.$form.serializeArray().forEach(function (input) {
             newbie[input.name] = input.value;
         });
-console.log(newbie);
         SH.Collections.Staff.insert (newbie);
         t.$modal.modal('hide');
     }

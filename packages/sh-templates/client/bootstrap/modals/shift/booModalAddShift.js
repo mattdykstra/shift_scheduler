@@ -23,7 +23,6 @@ Template['booModalAddShift'].events({
         e.stopPropagation();
 
         t.parsley.validate();
-        console.log(t.parsley.isValid());
         if (!t.parsley.isValid()) {
             Blaze.renderWithData(Template['alert'], {
                 message: "form validation failure",
@@ -36,18 +35,16 @@ Template['booModalAddShift'].events({
         t.$form.serializeArray().forEach(function (input) {
             newbie[input.name] = input.value;
         });
-        
+
         if (!newbie.dayOff)
             newbie.dayOff = 'off';
         if (!(newbie.shiftBegin || newbie.shiftEnd || newbie.splitBegin || newbie.splitEnd))
             newbie.dayOff = 'on';
-        console.log( SH.Week.Time.spanInMinutes( newbie.shiftBegin, newbie.shiftEnd ) );
         _.extend(newbie, {
             employeeId: t.data.employeeId,
             dayCode: t.data.dayCode,
             weekCode: SH.Week.getWeekCode( SH.Week.getString() )
         });
-        console.log(newbie);
         SH.Shifts.collection.insert(newbie);
         t.$modal.modal('hide');
     }

@@ -44,7 +44,6 @@ Template['edit_business'].events({
         });
         if (!newbie.isActive) newbie.isActive='off';
         Meteor.users.update({_id: t.data._id}, {$set: newbie});
-        console.log('here');
         t.$modal.modal('hide');
     }
 });

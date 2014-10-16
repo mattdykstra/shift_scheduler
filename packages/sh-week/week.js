@@ -90,11 +90,11 @@ SH.Week.Time.minutesToHmmString = function minutesToHmmString(totalMinutes){
 
     if (_.isString(totalMinutes)) miutes = parseInt(totalMinutes);
     if (isNaN(totalMinutes)) {
-        console.log('exception: passed non-number.');
+        console.log ('exception: passed non-number.');
         return '###';
     }
     if (totalMinutes < 0) {
-        console.log('exception: negative total.');
+        console.log ('exception: negative total.');
         return '###';
     }
     var hours = Math.floor(totalMinutes / 60);

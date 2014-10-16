@@ -39,7 +39,6 @@ Template['booModalEditShift'].events({
         e.stopPropagation();
 
         t.parsley.validate();
-        console.log(t.parsley.isValid());
         if (!t.parsley.isValid()) {
             Blaze.renderWithData(Template['alert'], {
                 message: "form validation failure",
@@ -53,13 +52,13 @@ Template['booModalEditShift'].events({
         t.$form.serializeArray().forEach(function (input) {
             newbie[input.name] = input.value;
         });
-        console.log( newbie );
+
+        //todo: this also should happen on server.
         if (!newbie.dayOff)
             newbie.dayOff = 'off';
         if (!(newbie.shiftBegin || newbie.shiftEnd || newbie.splitBegin || newbie.splitEnd))
             newbie.dayOff = 'on';
-        console.log(newbie);
-        console.log(t.data._id);
+
         SH.Shifts.collection.update({_id: t.data._id}, {$set: newbie});
         t.$modal.modal('hide');
     }

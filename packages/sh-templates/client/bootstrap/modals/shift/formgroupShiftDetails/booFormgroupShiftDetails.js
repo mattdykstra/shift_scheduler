@@ -24,11 +24,11 @@ Template['booFormgroupShiftDetails'].helpers({
         return Session.get('shiftDayOff');
     },
     shiftBeginEmpty: function () {
-        console.log(Session.get('shiftBeginEmpty'));
+
         return Session.get('shiftBeginEmpty')
     },
     splitBeginEmpty: function () {
-        console.log(Session.get('splitBeginEmpty'));
+
         return Session.get('splitBeginEmpty')
     }
 });
@@ -42,5 +42,5 @@ Template['booFormgroupShiftDetails'].destroyed = function(){
 Template['booFormgroupShiftDetails'].events({
     'change .dayOff': function (e, t) {
         Session.set('shiftDayOff', t.$dayOff.val()=='on');
-    },
+    }
 });

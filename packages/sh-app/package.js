@@ -23,7 +23,7 @@ Package.on_use(function (api) {
      * package.
      */
     api.imply(['kl-common', 'sh-common'], cs);
-    api.use(['sh-week', 'sh-staff', 'sh-shifts'], cs);
+    api.use(['sh-staff', 'sh-week', 'sh-shifts'], cs);
     api.use(['sh-templates'], c);
     //api.add_files(['namespace.js'], cs);
     //api.add_files(['server/pub.js', 'server/validators/shifts.js'], s);

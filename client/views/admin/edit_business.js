@@ -29,8 +29,8 @@ Template['edit_business'].events({
         var newbie = {};
         t.$form.serializeArray().forEach(function (input) {
             newbie[input.name] = input.value;
-            if (!newbie.isActive) newbie.isActive='off';
         });
+        if (!newbie.isActive) newbie.isActive='off';
         Meteor.users.update({_id: t.data._id}, {$set: newbie});
         console.log('here');
         t.$modal.modal('hide');

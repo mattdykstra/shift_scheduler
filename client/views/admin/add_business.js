@@ -32,6 +32,7 @@ Template['add_business'].events({
         t.$form.serializeArray().forEach(function (input) {
             newbie[input.name] = input.value;
         });
+        if (!newbie.isActive) newbie.isActive='off';
         console.log(newbie);
         Meteor.call("users/claim", newbie.email, "business", _.omit(newbie, ['email']), function(err, ret){
             if (ret=="success") {

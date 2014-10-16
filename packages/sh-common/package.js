@@ -22,7 +22,7 @@ Package.on_use(function (api) {
      * Add files that should be used with this
      * package.
      */
-    api.use([ 'underscore', 'matb33:collection-hooks'], cs);
+    api.use(['underscore', 'matb33:collection-hooks', 'accounts-base'], cs);
     api.use('kl-common', cs);
     api.add_files('namespace.js', cs);
     api.add_files('collections.js', cs);

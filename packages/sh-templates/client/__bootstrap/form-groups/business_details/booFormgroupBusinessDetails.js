@@ -25,6 +25,11 @@ Template['booFormgroupBusinessDetails'].helpers({
     },
     'email': function(){
         return this.emails ? this.emails[0].address : '';
+    },
+    'state': function(){
+        if (this.isActive == 'on') return true;
+        if (this.isActive == 'off') return false;
+        return undefined;
     }
 });
 

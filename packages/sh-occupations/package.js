@@ -1,6 +1,6 @@
 Package.describe({
-    name: 'sh-staff',
-    summary: 'shifts sheduler package that deals with employees',
+    name: 'sh-occupations',
+    summary: "shifts sheduler package that deals with employee' roles",
     owner: 'Angelo Tomarcafe',
     email: 'angelo.tomarcafe@gmail.com',
     version: '0.1.0'
@@ -23,10 +23,10 @@ Package.on_use(function (api) {
      * package.
      */
     api.use('underscore', cs);
-    api.use(['sh-common', 'sh-occupations'], cs);
-    api.imply(['sh-common'], cs);
+    api.use('matb33:collection-hooks', s);
+    api.use(['sh-common'], cs);
     api.add_files(['namespace.js'], cs);
-
-    api.add_files(['server/staff.js'], s);
+    api.add_files(['client/helpers.js'], c);
+    api.add_files(['server/collection-rules.js'], s);
     //api.add_files(['client/helpers.js', 'client/sub.js'], c);
 });

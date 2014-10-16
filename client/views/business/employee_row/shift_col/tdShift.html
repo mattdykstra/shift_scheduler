@@ -1,7 +1,7 @@
 <!-- originally made for shift_scheduler project-->
 
 
-<template name="editShift">
+<template name="tdShift">
     <td class="text-center shift-cell {{shiftCellClass shift}}" data-day-code="{{dayCode}}">
         <span class="visible-xs-inline visible-sm-inline data">
                 <a href="#">
@@ -14,14 +14,14 @@
             {{#if eq dayOff 'on'}}
             <span class="day-off">OFF</span>
             {{else}}
-            {{#if shiftRole}}
-            {{shiftBegin}} - {{shiftEnd}}  {{RoleCode shiftRole}}
+            {{#if shiftBegin}}
+            {{niceTime shiftBegin}} - {{niceTime shiftEnd}}  {{RoleCode shiftRole}}
             {{/if}}
             {{#if and shiftRole splitRole}}
             <br/>
             {{/if}}
-            {{#if splitRole}}
-            {{splitBegin}} - {{splitEnd}}   {{RoleCode splitRole}}
+            {{#if splitBegin}}
+            {{niceTime splitBegin}} - {{niceTime splitEnd}}   {{RoleCode splitRole}}
             {{/if}}
             {{/if}}
             {{/with}}
@@ -33,6 +33,8 @@
         {{/if}}
     </td>
     <td>
-        {{dailyTimeTotal shift}}
+        <div class="daily-time-total" data-time-daily="{{dailyTimeTotal shift}}" data-day-code="{{dayCode}}">
+            {{DailyTimeTotal shift}}
+        </div>
     </td>
 </template>

@@ -1,14 +1,29 @@
 /**
  * Created by angelo on 10/16/14.
  */
+#shift_scheduler {
+   table {
+     > tbody {
+       // that long selector is due to table-striped.. see client/main.less
+       > tr {
+         > td {
 
-.shift-cell.shift-cell-green {
-  background-color: yellowgreen;
-  a {
-    background-color: yellowgreen;
-    color: black;
-    text-decoration: none
-  }
+         }
+         > td.shift-cell.shift-cell-green {
+           background-color: yellowgreen;
+           a {
+             color: black;
+           }
+         }
+         > td.shift-cell.shift-cell-orange {
+           background-color: orange;
+           a {
+             color: white;
+           }
+         }
+       }
+     }
+   }
 }
 
 

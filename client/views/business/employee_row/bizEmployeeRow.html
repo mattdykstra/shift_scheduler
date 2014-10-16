@@ -10,9 +10,14 @@
                     style="text-decoration: underline">{{position}}</span>
         </td>
         {{#each isoWeekDays}}
-            {{> editShift employeeId=../_id dayCode=dayCode}}
+            {{> tdShift employeeId=../_id dayCode=dayCode}}
         {{/each}}
-        <td><span class="visible-xs-inline visible-sm-inline data">{{! Total hours}}</span>{{! 11:0 }}</td>
-        <td><span class="visible-xs-inline visible-sm-inline data">{{! Total}} </span>{{! $142 }}</td>
+        <td class="weekly-time" data-value="{{weeklyPaymentTotal}}">{{ weeklyTimeTotal}}</td>
+        <td class="weekly-salary" data-value="{{weeklyPaymentTotal}}">
+            ${{weeklyPaymentTotal}}</td>
     </tr>
+</template>
+
+<template name="bizrowWeeklyTime">
+    {{calc}}
 </template>

@@ -1,13 +1,26 @@
 Template['add_business'].rendered = function () {
     this.$form = this.$("#add-business-form");
-    this.parsley = this.$form.parsley({trigger: "blur"});
+    this.parsley = this.$form.parsley({trigger: "blur",
+        excluded:"input[type=checkbox]"});
     this.$modal = this.$('#add-business');
     this.$modal.modal('show');
 };
 
 Template['add_business'].helpers({
-    'defaultValues' : function(){
-        return {isActive: 'on'};
+    'dataHelper': function(){
+        var self = this;
+        return {
+            modalId: 'add-business',
+            form: {
+                title: function () {
+                    return 'Add Business Account'
+                },
+                class: "form-vertical"
+            },
+            cancelButton: 'Cancel',
+            applyButton: 'Add',
+            data: {isActive: 'on'}
+        }
     }
 });
 

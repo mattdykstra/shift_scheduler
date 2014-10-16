@@ -29,6 +29,7 @@ Package.on_use(function (api) {
     api.add_files('namespace.js', cs);
     api.add_files('week.js', cs);
     api.add_files('server/week.js', s);
-    api.add_files(['client/session.js', 'client/helpers.js', 'client/week.js'], c);
+    api.add_files(['client/session.js', 'client/helpers.js', 'client/week.js',
+    'client/time/helpers.js'], c);
 
 });

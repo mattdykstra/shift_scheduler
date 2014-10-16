@@ -24,6 +24,9 @@ var helpers = {
         return SH.Week
             .dateFromWD(SH.Week.get(), isoDay)
             .format(SH.Week.formats.trDate);
+    },
+    'niceTime': function(time12h) {
+        return time12h.toLowerCase().replace(' ','');
     }
 };
 

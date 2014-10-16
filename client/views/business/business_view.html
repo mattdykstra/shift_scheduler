@@ -4,7 +4,7 @@
         <table class="table-bordered table-striped table-condensed cf no-more-tables" id="no-more-tables">
             <thead class="cf">
             <tr>
-                <th class="bg-primary">
+                <th class="bg-primary text-center">
                     <a href="#" class="add-employee btn btn-primary">Add Employee</a>
                 </th>
                 {{#each isoWeekDays}}
@@ -15,8 +15,8 @@
                     </a><br>
                 </th>
                 {{/each}}
-                <th class="bg-primary"></th>
-                <th class="bg-primary"></th>
+                <th class="bg-primary">Week</th>
+                <th class="bg-primary">Total</th>
             </tr>
             </thead>
 
@@ -29,13 +29,13 @@
             </tbody>
             <tfoot>
             <tr class="bg-primary">
-                <td>
+                <td class="text-center">
                     {{> booModalOccupationsEdit}}
                 </td>
-                <td colspan="15">
+                <td colspan="14" class="text-center">
                     {{> occupations_list}}
                 </td>
-                <td>Grand Total: $44532{{grand_total}}</td>
+                <td colspan="2" class="text-right">Grand Total: $44532{{grand_total}}</td>
             </tr>
             </tfoot>
         </table>

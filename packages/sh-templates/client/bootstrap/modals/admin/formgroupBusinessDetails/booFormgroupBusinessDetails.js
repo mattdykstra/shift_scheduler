@@ -5,6 +5,7 @@ Template['booFormgroupBusinessDetails'].rendered = function () {
         {
             onText: " ACTIVE ",
             offText: " SUSPENDED ",
+            offColor: "warning",
             labelText: " status "
         }
     );
@@ -26,7 +27,7 @@ Template['booFormgroupBusinessDetails'].helpers({
     'email': function(){
         return this.emails ? this.emails[0].address : '';
     },
-    'state': function(){
+    'status': function(){ //true if active account, false if suspended
         if (this.isActive == 'on') return true;
         if (this.isActive == 'off') return false;
         return undefined;
@@ -34,7 +35,5 @@ Template['booFormgroupBusinessDetails'].helpers({
 });
 
 Template['booFormgroupBusinessDetails'].events({
-    'click .bar': function (e, t) {
 
-    }
 });

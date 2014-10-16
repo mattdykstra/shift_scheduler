@@ -4,11 +4,11 @@ Meteor.startup(function(){
 });
 
 
-Template['editShift'].rendered = function () {
+Template['tdShift'].rendered = function () {
 
 };
 
-Template['editShift'].helpers({
+Template['tdShift'].helpers({
     'shift': function() {
         var selector = _.pick(this, ['dayCode', 'employeeId']);
         _.extend( selector, {
@@ -19,11 +19,9 @@ Template['editShift'].helpers({
 
         return SH.Shifts.collection.findOne(selector);
     },
-    'dailyTimeTotal': function (shift) {
-
-        if (!shift) return "()";
-
-        return '0:00';
+    'DailyTimeTotal': function(shift) {
+        return SH.Week.Time.minutesToHmmString(
+            Blaze._globalHelpers['dailyTimeTotal'](shift) ); //todo: refactor into SH.Shifts....
     },
     'shiftCellClass': function(shift) {
         if (!shift) return '';
@@ -43,7 +41,7 @@ Template['editShift'].helpers({
     }
 });
 
-Template['editShift'].events({
+Template['tdShift'].events({
     'click .add-shift-modal-popup': function(e ,t) {
         console.log('here');
         if (!SH.Modals.addShift) {
@@ -54,7 +52,7 @@ Template['editShift'].events({
     'click .edit-shift-modal-popup': function(e ,t) {
 
         if (!SH.Modals.editShift) {
-            var shift = Template['editShift'].__helpers[' shift'].call(t.data);
+            var shift = Template['tdShift'].__helpers[' shift'].call(t.data);
             console.log(shift);
             if (shift) {
                 SH.Modals.editShift = Blaze.renderWithData(

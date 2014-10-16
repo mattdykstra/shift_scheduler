@@ -2,64 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaf01bf-5fd4-4456-8993-18457d5b0a13" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/sh-occupations/package.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/sh-staff/server/staff.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/sh-templates/client/templates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/sh-templates/client/form-elements/timepicker/timepicker.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/main/test_form/test_form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/main/test_form/test_form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/sh-templates/timepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/staff.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/main.css" afterPath="$PROJECT_DIR$/client/main.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/alert.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/alert.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/alert.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/alert.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/buttons/buttons.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/buttons/buttons.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-groups/businessDetails/booFormgroupBusinessDetails.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-groups/businessDetails/booFormgroupBusinessDetails.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-groups/employee_details/booFormgroupEmployeeDetails.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/employee_details/booFormgroupEmployeeDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-groups/employee_details/booFormgroupEmployeeDetails.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/employee_details/booFormgroupEmployeeDetails.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-groups/shift_details/booFormgroupShiftDetails.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/shift_details/booFormgroupShiftDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-groups/shift_details/booFormgroupShiftDetails.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/shift_details/booFormgroupShiftDetails.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalAddEmployee.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalAddEmployee.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalEditEmployee.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalEditEmployee.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalEditEmployee.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalEditEmployee.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/modals_patch.less" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/modals_patch.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/occupations/booModalOccupationsEdit.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/occupations/booModalOccupationsEdit.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/occupations/booModalOccupationsEdit.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/occupations/booModalOccupationsEdit.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/twoButtonsDialog.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/twoButtonsDialog.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/claim_admin/claim_admin.html" afterPath="$PROJECT_DIR$/client/views/scale_0/header/claim_admin/claim_admin.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/claim_admin/claim_admin.js" afterPath="$PROJECT_DIR$/client/views/scale_0/header/claim_admin/claim_admin.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/footer/footer.html" afterPath="$PROJECT_DIR$/client/views/scale_0/footer/footer.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/footer/footer.js" afterPath="$PROJECT_DIR$/client/views/scale_0/footer/footer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/header/header.html" afterPath="$PROJECT_DIR$/client/views/scale_0/header/header.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/header/header.js" afterPath="$PROJECT_DIR$/client/views/scale_0/header/header.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/main/main.html" afterPath="$PROJECT_DIR$/client/views/scale_0/main/main.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/main/main.js" afterPath="$PROJECT_DIR$/client/views/scale_0/main/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/countrySelector.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/form-elements/countrySelector/countrySelector.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/countrySelector.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/form-elements/countrySelector/countrySelector.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/templates.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/templates.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/templates.js" afterPath="$PROJECT_DIR$/packages/sh-occupations/namespace.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/templates.less" afterPath="$PROJECT_DIR$/packages/sh-templates/client/templates.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/timepicker.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/form-elements/timepicker/timepicker.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/shifts.js" afterPath="$PROJECT_DIR$/packages/sh-occupations/server/collection-rules.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-common/collections.js" afterPath="$PROJECT_DIR$/packages/sh-common/collections.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/lib/modals.js" afterPath="$PROJECT_DIR$/client/lib/modals.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/occupations.js" afterPath="$PROJECT_DIR$/server/occupations.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/sh-occupations/client/helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/no_build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/shift-cell.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/add_business.js" afterPath="$PROJECT_DIR$/client/views/admin/add_business.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/alert.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/shift_details/booFormgroupShiftDetails.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/shift_details/booFormgroupShiftDetails.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.html" afterPath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.js" afterPath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/edit_business.js" afterPath="$PROJECT_DIR$/client/views/admin/edit_business.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-app/package.js" afterPath="$PROJECT_DIR$/packages/sh-app/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-common/package.js" afterPath="$PROJECT_DIR$/packages/sh-common/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-occupations/package.js" afterPath="$PROJECT_DIR$/packages/sh-occupations/package.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-staff/package.js" afterPath="$PROJECT_DIR$/packages/sh-staff/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/package.js" afterPath="$PROJECT_DIR$/packages/sh-templates/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-common/versions.json" afterPath="$PROJECT_DIR$/packages/sh-common/versions.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/versions.json" afterPath="$PROJECT_DIR$/packages/sh-templates/versions.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-week/versions.json" afterPath="$PROJECT_DIR$/packages/sh-week/versions.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-shifts/server/validators/shifts.js" afterPath="$PROJECT_DIR$/packages/sh-shifts/server/validators/shifts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-staff/server/staff.js" afterPath="$PROJECT_DIR$/packages/sh-staff/server/staff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/kl-common/server/validation.js" afterPath="$PROJECT_DIR$/packages/kl-common/server/validation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-common/server/validation.js" afterPath="$PROJECT_DIR$/packages/sh-common/server/validation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-week/client/week.js" afterPath="$PROJECT_DIR$/packages/sh-week/client/week.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shift_scheduler.iws" />
@@ -83,11 +50,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="add_business.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/admin/add_business.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="480">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_business.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/admin/add_business.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="810">
+              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="booFormgroupBusinessDetails.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="765">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state vertical-scroll-proportion="-15.041667" vertical-offset="284" max-vertical-offset="765">
+              <caret line="43" column="89" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="booFormgroupBusinessDetails.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="booFormgroupShiftDetails.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/shift_details/booFormgroupShiftDetails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7287449" vertical-offset="0" max-vertical-offset="735">
+              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="booModalAddEmployee.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalAddEmployee.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,88 +113,38 @@
       <file leaf-file-name="booModalAddShift.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="585">
-              <caret line="11" column="94" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="94" />
+            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="600">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booModalEditEmployee.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalEditEmployee.html">
+      <file leaf-file-name="edit_business.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/admin/edit_business.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="645">
+              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booModalEditShift.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.html">
+      <file leaf-file-name="booModalAddShift.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="180">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="840">
+              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booModalEditShift.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js">
+      <file leaf-file-name="editShift.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="booModalForm2Buttons.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="525">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/sh-templates/package.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1320">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shifts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/validators/shifts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="1050">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="vcs:///home/angelo/projects/shift_scheduler/server/users/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2385">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="staff.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/sh-staff/server/staff.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.375" vertical-offset="30" max-vertical-offset="660">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -201,57 +168,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.html" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.js" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalEditEmployee.js" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.html" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.js" />
-        <option value="$PROJECT_DIR$/client/helpers/global_helpers.js" />
-        <option value="$PROJECT_DIR$/packages/sh-week/week.js" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/form-groups/booFormgroupShiftDetails.html" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/form-groups/booFormgroupShiftDetails.js" />
-        <option value="$PROJECT_DIR$/packages/sh-templates/timepicker.html" />
-        <option value="$PROJECT_DIR$/packages/kl-common/.build.kl-common/countries.js" />
-        <option value="$PROJECT_DIR$/packages/kl-common/.build.kl-common/countries_list.js" />
-        <option value="$PROJECT_DIR$/packages/kl-common/package.js" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/form-groups/businessDetails/booFormGroupAddBusiness.js" />
-        <option value="$PROJECT_DIR$/client/views/bootstrap/form-groups/businessDetails/booFormGroupAddBusiness.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/business_item_edit.html" />
         <option value="$PROJECT_DIR$/client/views/admin/add_business.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/add_business.js" />
         <option value="$PROJECT_DIR$/client/views/admin/admin_view.html" />
         <option value="$PROJECT_DIR$/client/views/admin/business_list_item.html" />
         <option value="$PROJECT_DIR$/client/views/admin/admin_view.js" />
         <option value="$PROJECT_DIR$/client/views/admin/business_list_item.js" />
         <option value="$PROJECT_DIR$/client/views/bootstrap/form-groups/businessDetails/booFormgroupBusinessDetails.js" />
-        <option value="$PROJECT_DIR$/packages/sh-common/server/validation.js" />
         <option value="$PROJECT_DIR$/packages/sh-templates/countrySelector.html" />
         <option value="$PROJECT_DIR$/packages/kl-common/countries_list.js" />
         <option value="$PROJECT_DIR$/packages/sh-templates/countrySelector.js" />
         <option value="$PROJECT_DIR$/packages/kl-common/client/global_helpers.js" />
         <option value="$PROJECT_DIR$/client/views/admin/edit_business.html" />
-        <option value="$PROJECT_DIR$/client/views/admin/edit_business.js" />
         <option value="$PROJECT_DIR$/client/views/bootstrap/form-groups/businessDetails/booFormgroupBusinessDetails.html" />
         <option value="$PROJECT_DIR$/server/users/users.js" />
         <option value="$PROJECT_DIR$/server/staff.js" />
-        <option value="$PROJECT_DIR$/packages/sh-app/package.js" />
         <option value="$PROJECT_DIR$/server/occupations.js" />
-        <option value="$PROJECT_DIR$/packages/sh-occupations/package.js" />
-        <option value="$PROJECT_DIR$/packages/sh-staff/package.js" />
         <option value="$PROJECT_DIR$/packages/sh-occupations/server/collection-rules.js" />
         <option value="$PROJECT_DIR$/packages/sh-occupations/namespace.js" />
         <option value="$PROJECT_DIR$/client/lib/modals.js" />
         <option value="$PROJECT_DIR$/packages/sh-templates/timepicker.js" />
         <option value="$PROJECT_DIR$/packages/sh-common/package.js" />
         <option value="$PROJECT_DIR$/packages/sh-common/collections.js" />
-        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html" />
         <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm.html" />
-        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.js" />
-        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js" />
-        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html" />
         <option value="$PROJECT_DIR$/packages/sh-templates/package.js" />
+        <option value="$PROJECT_DIR$/packages/sh-staff/server/staff.js" />
+        <option value="$PROJECT_DIR$/packages/sh-common/server/validation.js" />
+        <option value="$PROJECT_DIR$/packages/kl-common/server/validation.js" />
+        <option value="$PROJECT_DIR$/packages/sh-shifts/client/helpers.js" />
+        <option value="$PROJECT_DIR$/packages/sh-staff/client/helpers.js" />
+        <option value="$PROJECT_DIR$/packages/sh-staff/package.js" />
+        <option value="$PROJECT_DIR$/packages/sh-occupations/package.js" />
+        <option value="$PROJECT_DIR$/packages/sh-week/client/week.js" />
+        <option value="$PROJECT_DIR$/packages/sh-app/package.js" />
+        <option value="$PROJECT_DIR$/packages/sh-shifts/server/pub.js" />
+        <option value="$PROJECT_DIR$/client/main.less" />
+        <option value="$PROJECT_DIR$/client/views/business/employee_row/shift_col/shift-cell.less" />
+        <option value="$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.js" />
         <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.html" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.js" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/alert.js" />
+        <option value="$PROJECT_DIR$/packages/sh-occupations/client/helpers.js" />
+        <option value="$PROJECT_DIR$/packages/sh-shifts/server/validators/shifts.js" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.js" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js" />
         <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.html" />
+        <option value="$PROJECT_DIR$/client/views/admin/edit_business.js" />
+        <option value="$PROJECT_DIR$/client/views/admin/add_business.js" />
+        <option value="$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.html" />
+        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/shift_details/booFormgroupShiftDetails.html" />
       </list>
     </option>
   </component>
@@ -422,6 +389,118 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sh-templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sh-templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sh-templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modals" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sh-templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modals" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="sh-staff" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -462,7 +541,83 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sh-shifts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sh-occupations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sh-occupations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="sh-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sh-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -539,6 +694,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="root" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -667,7 +844,7 @@
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="validat&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-common/server/validation.js" />
+    <property name="SearchEverywhereHistoryKey" value="alert&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/__bootstrap/alert.html&#10;validat&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-common/server/validation.js" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="73" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="83" />
@@ -694,22 +871,14 @@
       <recent name="$PROJECT_DIR$/client/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/sh-occupations" />
       <recent name="$PROJECT_DIR$/packages/sh-templates/client" />
       <recent name="$PROJECT_DIR$/packages/sh-templates/client/form-elements" />
       <recent name="$PROJECT_DIR$/packages/sh-templates/client/countrySelector" />
       <recent name="$PROJECT_DIR$/packages/sh-templates/client/timepicker" />
-      <recent name="$PROJECT_DIR$/client/views/scale_0/header" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -720,14 +889,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -735,6 +902,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -788,17 +965,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1286" height="1001" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38921455" sideWeight="0.49960095" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39012927" sideWeight="0.7355044" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32239157" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32197416" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25099286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25099286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22025913" sideWeight="0.50039905" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39012927" sideWeight="0.26449564" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -809,6 +986,26 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39012927" sideWeight="0.7355044" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32197416" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39012927" sideWeight="0.26449564" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25099286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -840,244 +1037,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/admin/edit_business.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="645">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-common/server/validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="1650">
-          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/helpers/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/kl-common/client/global_helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1080">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.meteor/platforms">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.meteor/packages">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-occupations/package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="555">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-app/package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="555">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="540">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-staff/package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="555">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-occupations/namespace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/occupations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-staff/namespace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-occupations/server/collection-rules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/lib/modals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/form-elements/timepicker/timepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="251" max-vertical-offset="1350">
-          <caret line="83" column="67" selection-start-line="83" selection-start-column="67" selection-end-line="83" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/lib/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/router_controllers/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/email/mailgun.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/lib/init/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/users/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2385">
-          <caret line="146" column="72" selection-start-line="146" selection-start-column="72" selection-end-line="146" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-common/package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-common/namespace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-common/collections.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/scale_0/footer/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="794">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/scale_0/header/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="781">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/scale_0/main/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="794">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/scale_0/main/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="794">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/root/root_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.054347824" vertical-offset="0" max-vertical-offset="828">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/staff/staff_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6465">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="794">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,7 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="794">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,7 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="781">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,7 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1005">
           <caret line="16" column="25" selection-start-line="3" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="839">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,42 +1103,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="585">
-          <caret line="11" column="94" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/sh-templates/package.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1320">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1193,34 +1119,327 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="180">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="765">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/sh-staff/server/staff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-week/week.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="1035">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/namespace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-week/.build.sh-week/web.browser/packages/sh-week.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2858" max-vertical-offset="3435">
+          <caret line="213" column="8" selection-start-line="213" selection-start-column="8" selection-end-line="213" selection-end-column="8" />
+          <folding>
+            <marker date="1413434920197" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1413434920197" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-common/server/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="1710">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/kl-common/server/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/client/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-staff/namespace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-staff/package.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-occupations/package.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-occupations/namespace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/client/sub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/pub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/package.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-app/package.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-week/client/week.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4897957" vertical-offset="305" max-vertical-offset="825">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/shift_col/shift-cell.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5306122" vertical-offset="0" max-vertical-offset="300">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="485" max-vertical-offset="1050">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/bizEmployeeRow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="360">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/booModalForm2Buttons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="540">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/alert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18229167" vertical-offset="0" max-vertical-offset="576">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4076087" vertical-offset="0" max-vertical-offset="552">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalEditEmployee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="840">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-occupations/client/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/validators/shifts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="1050">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1050">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalEditShift.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="180">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/employee/booModalAddEmployee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="840">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/admin/add_business.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="480">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.041667" vertical-offset="284" max-vertical-offset="765">
+          <caret line="43" column="89" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/admin/edit_business.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="645">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/admin/add_business.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="810">
+          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375" vertical-offset="30" max-vertical-offset="660">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/shift/booModalAddShift.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="600">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/shift_details/booFormgroupShiftDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7287449" vertical-offset="0" max-vertical-offset="735">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -1230,6 +1449,7 @@
     <states>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
+          <last-edited>no build</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1237,6 +1457,9 @@
               </list>
             </option>
           </splitter-proportions>
+          <order>
+            <scope name="no build" />
+          </order>
         </settings>
       </state>
     </states>

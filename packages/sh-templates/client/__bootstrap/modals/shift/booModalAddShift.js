@@ -4,6 +4,7 @@ Template['booModalAddShift'].rendered = function () {
     this.parsley = this.$form.parsley({
         trigger: 'change'
     });
+    this.alertsRoot = this.$(".alerts-container")[0];
     this.$modal.modal({backdrop: 'static'});
 };
 
@@ -36,8 +37,15 @@ Template['booModalAddShift'].events({
             if (input.value)
             newbie[input.name] = input.value;
         });
+        if (!newbie.dayOff) newbie.dayOff = 'off';
         console.log( SH.Week.Time.spanInMinutes( newbie.shiftBegin, newbie.shiftEnd ) );
+        _.extend(newbie, {
+            employeeId: t.data.employeeId,
+            dayCode: t.data.dayCode,
+            weekCode: SH.Week.getWeekCode( SH.Week.getString() )
+        });
         console.log(newbie);
+        SH.Shifts.collection.insert(newbie);
         t.$modal.modal('hide');
     }
 });

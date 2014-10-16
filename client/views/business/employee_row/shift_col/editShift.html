@@ -2,34 +2,37 @@
 
 
 <template name="editShift">
-    <td class="text-center" data-day-code="{{dayCode}}">
+    <td class="text-center shift-cell {{shiftCellClass shift}}" data-day-code="{{dayCode}}">
         <span class="visible-xs-inline visible-sm-inline data">
                 <a href="#">
                     {{ trDateFromDayCode dayCode}}{{ displayEvent_1 dayCode}}
                 </a>
             </span>
-        <a href="#" class="edit-shift-modal-popup {{shiftClass shift}}">
-            {{#if shift }}
-                {{#if off}}
-                    <span class="day-off">OFF</span>>
-                {{else}}
-                    {{display_shift_one shift}}
-                    {{#if split}}
-                        <br/>
-                        {{display_shift_two shift}}
-                    {{/if}}
-                {{/if}}
+        {{#if shift }}
+        <a href="#" class="edit-shift-modal-popup">
+            {{#with shift}}
+            {{#if eq dayOff 'on'}}
+            <span class="day-off">OFF</span>
             {{else}}
-                Edit time
+            {{#if shiftRole}}
+            {{shiftBegin}} - {{shiftEnd}}  {{RoleCode shiftRole}}
             {{/if}}
+            {{#if and shiftRole splitRole}}
+            <br/>
+            {{/if}}
+            {{#if splitRole}}
+            {{splitBegin}} - {{splitEnd}}   {{RoleCode splitRole}}
+            {{/if}}
+            {{/if}}
+            {{/with}}
         </a>
+        {{else}}
+        <a href="#" class="add-shift-modal-popup tda">
+            Edit time
+        </a>
+        {{/if}}
     </td>
     <td>
         {{dailyTimeTotal shift}}
-
     </td>
-</template>
-
-<template name="editShiftLinkContent">
-
 </template>

@@ -4,9 +4,9 @@ Template['alert'].rendered = function () {
 
 Template['alert'].helpers({
     'class': function () {
-        var ret = "alert ";
-        if (this.status) ret += "alert-"+this.status;
-        if (this.dismissible !== false) ret += "alert-dismissible";
+        var ret = "alert";
+        if (this.status) ret += " alert-"+this.status;
+        if (this.dismissible !== false) ret += " alert-dismissible";
         return ret;
     }
 });

@@ -28,7 +28,7 @@ SH.Collections.Shifts.allow({
 
     },
     update: function(userId, doc, fields, modifier) {
-        var businessId = KL.Validation.pass('userBusinessId', this.userId);
+        var businessId = KL.Validation.pass('userBusinessId', userId);
         return (doc.businessId === businessId);
     },
     remove: function(userId, doc) {
@@ -36,15 +36,15 @@ SH.Collections.Shifts.allow({
     }
 });
 
-SH.Collections.Staff.before.insert(
+SH.Collections.Shifts.before.insert(
     function(userId, doc) {
-        doc.businessId = KL.Validation.pass('userBusinessId', this.userId);
+        doc.businessId = KL.Validation.pass('userBusinessId', userId);
 
         doc.staffEdited = KL.Validation.pass('isStaff') ? true : null;
     }
 );
 
-SH.Collections.Staff.before.update(
+SH.Collections.Shifts.before.update(
     function(userId, doc) {
         // all updates/inserts from staff going to be marked as staffEdited.
         // those are going to be reviewed
@@ -53,13 +53,13 @@ SH.Collections.Staff.before.update(
     }
 );
 
-SH.Collections.Staff.deny({
-    update: function (userId, docs, fields, modifier) {
+SH.Collections.Shifts.deny({
+    update: function (userId, doc, fields, modifier) {
         // can't change businessId
         if (_.contains(fields, 'businessId')) return true;
 
         // allow only biz and staff users - and modify only own docs
-        var businessId = KL.Validation.pass('userBusinessId', this.userId);
+        var businessId = KL.Validation.pass('userBusinessId', userId);
         if (doc.businessId !== businessId) return true;
         return false;
     }

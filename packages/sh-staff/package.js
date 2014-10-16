@@ -26,6 +26,7 @@ Package.on_use(function (api) {
     api.use(['sh-common', 'sh-occupations'], cs);
     api.imply(['sh-common'], cs);
     api.add_files(['namespace.js'], cs);
+
     api.add_files(['server/staff.js'], s);
     //api.add_files(['client/helpers.js', 'client/sub.js'], c);
 });

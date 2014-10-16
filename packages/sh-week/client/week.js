@@ -18,14 +18,3 @@ SH.Week.setNext = function(){
     this.set( startWeek );
 };
 
-Meteor.autorun(function() {
-    var role = Meteor.user() && Meteor.user().role;
-    if (SH.Subscriptions.weeklyShifts) SH.Subscriptions.weeklyShifts.stop() ;
-
-    if (role == 'business' || role == 'staff') {
-        SH.Subscriptions.weeklyShifts = Meteor.subscribe('weeklyShifts',
-            SH.Week.get() );
-    }
-});
-
-

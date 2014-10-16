@@ -9,7 +9,7 @@ KL.Validation._parse = function parse(result) {
         // this allows writing fancy ' return "pass";    return "fail"    ' :)
         // not sure this is absolutely needed but indeed we can do more here.
         if (result == 'pass' || result == 'true')  return true;
-        if (result == 'fail' || reuslt == 'false') return false;
+        if (result == 'fail' || result == 'false') return false;
         return result;
     }
 

@@ -1,4 +1,9 @@
 
+Meteor.startup(function(){
+    Session.set('businessUserSiteMode', 'scheduling');
+});
+
+
 Template['editShift'].rendered = function () {
 
 };
@@ -20,15 +25,18 @@ Template['editShift'].helpers({
 
         return '0:00';
     },
+    'shiftCellClass': function(shift) {
+        if (!shift) return '';
+        var mode = Session.get('businessUserSiteMode');
+        if (mode == 'scheduling') {
+            if (!shift.staffEdited) return 'shift-cell-green';
+            if (shift.staffEdited) return 'shift-cell-orange';
+        }
+        return '';
+    },
     'shiftClass': function(shift) {
-
-        return 'tda'
-    },
-    'foo': function(params){
-        return Template['editShift'].shift();
-    },
-    'display_shift_one': function(shift) {
-        return 'sh1_start-sh1_stop ROLE';
+        if (!shift) return 'tda';
+        return '';
     },
     'display_shift_two': function(shift) {
         return 'sh2_start-sh2_stop ROLE';
@@ -36,18 +44,21 @@ Template['editShift'].helpers({
 });
 
 Template['editShift'].events({
+    'click .add-shift-modal-popup': function(e ,t) {
+        console.log('here');
+        if (!SH.Modals.addShift) {
+            SH.Modals.addShift = Blaze.renderWithData(
+                Template['booModalAddShift'], t.data, $("#modals-container")[0]);
+        }
+    },
     'click .edit-shift-modal-popup': function(e ,t) {
-        if (!SH.Modals.edit) {
+
+        if (!SH.Modals.editShift) {
             var shift = Template['editShift'].__helpers[' shift'].call(t.data);
+            console.log(shift);
             if (shift) {
                 SH.Modals.editShift = Blaze.renderWithData(
                     Template['booModalEditShift'], shift, $("#modals-container")[0]);
-            }
-            else {
-
-                SH.Modals.addShift = Blaze.renderWithData(
-                    Template['booModalAddShift'], t.data, $("#modals-container")[0]);
-
             }
         }
     }

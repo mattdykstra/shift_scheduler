@@ -6,7 +6,7 @@
             <select class="form-control" name="shiftRole">
                 <option value="" {{selectedIfMatches shiftRole ""}}>select role</option>
                 {{#each occupationsList}}
-                <option value="{{_id}} {{selectedIfMatches shiftRole _id}}">{{name}} - {{code}}</option>
+                <option value="{{_id}}" {{selectedIfMatches ../shiftRole _id}}>{{name}} - {{code}}</option>
                 {{/each}}
             </select>
 
@@ -22,7 +22,7 @@
             <select class="form-control" name="splitRole">
                 <option value="" {{selectedIfMatches splitRole ""}}>select role</option>
                 {{#each occupationsList}}
-                <option value="{{_id}} {{selectedIfMatches splitRole _id}}">{{name}} - {{code}}</option>
+                <option value="{{_id}}" {{selectedIfMatches ../splitRole _id}}>{{name}} - {{code}}</option>
                 {{/each}}
             </select>
 
@@ -38,7 +38,7 @@
     <div class="form-group">
 
             <input type="checkbox" name="dayOff" class="form-control"
-                   value="{{dayOff}}"/>
+                   checked="{{#if eq dayOff 'on'}}checked{{/if}}"/>
 
     </div>
 </template>

@@ -67,7 +67,6 @@ Meteor.startup(function(){
     // specifically for noAdminUser helper.
     if (!Meteor.userId()) {
         Meteor.call("users/check/admin", function (err, ret) {
-            console.log(ret);
             Session.set("shNoAdmin", ret ? false : true);
         })
     }

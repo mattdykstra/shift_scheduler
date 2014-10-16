@@ -28,17 +28,13 @@ _.extend( SH.Validators, {
         if (!_.isObject(user)) {
             user = Meteor.users.findOne({_id: user});
         }
-        console.log(user);
+
         if (!user) return "fail";
 
-        if (user.role == "business") {
-            console.log(user._id);
-            return user._id;
-        }
-        if (user.role == "staff") {
-            console.log(user.businessId);
-            return user.businessId;
-        }
+        if (user.role == "business") return user._id;
+
+        if (user.role == "staff") return user.businessId;
+
         return "fail";
     },
     /**

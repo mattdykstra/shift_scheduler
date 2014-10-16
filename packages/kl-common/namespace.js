@@ -1,4 +1,5 @@
 KL = {};
+KL.Utils = {};
 
 function functionName(fun) {
     console.log(fun);

@@ -12,12 +12,8 @@
         {{#each isoWeekDays}}
             {{> tdShift employeeId=../_id dayCode=dayCode}}
         {{/each}}
-        <td class="weekly-time" data-value="{{weeklyPaymentTotal}}">{{ weeklyTimeTotal}}</td>
-        <td class="weekly-salary" data-value="{{weeklyPaymentTotal}}">
-            ${{weeklyPaymentTotal}}</td>
+        <td class="weekly-time text-right" data-value="{{weeklyTimeTotal}}">{{ weeklyTimeTotal}}</td>
+        <td class="weekly-salary text-right" data-value="{{weeklyPayment}}">
+            ${{weeklyPayment}}</td>
     </tr>
-</template>
-
-<template name="bizrowWeeklyTime">
-    {{calc}}
 </template>

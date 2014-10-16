@@ -11,7 +11,6 @@ Template['business_list_item'].helpers({
             "submit_title": "Save",
             "cancel_title": "Cancel"
         };
-        console.log(ret);
         return ret;
     },
     'email': function(){
@@ -24,7 +23,6 @@ Template['business_list_item'].helpers({
 
 Template['business_list_item'].events({
     'click .edit-business-button': function(e, t) {
-        console.log('sdf');
         if (!SH.Modals.editBusiness) {
             SH.Modals.editBusiness = Blaze.renderWithData(
                 Template['edit_business'], t.data,

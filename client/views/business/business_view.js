@@ -3,8 +3,14 @@ Template['business_view'].rendered = function () {
 };
 
 Template['business_view'].helpers({
-    'foo': function () {
-
+    'grand_total': function () {
+        var businessId = SH.businessId();
+        if (!businessId) return 0;
+        var selector = {
+            businessId: businessId,
+            weekCode: SH.Week.getWeekCode( SH.Week.getString() )
+        };
+        return SH.Shifts.totalWeeklyPayment(selector);
     }
 });
 

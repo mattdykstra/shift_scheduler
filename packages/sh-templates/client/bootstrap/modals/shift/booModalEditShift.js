@@ -51,12 +51,13 @@ Template['booModalEditShift'].events({
 
         var newbie = {};
         t.$form.serializeArray().forEach(function (input) {
-            if (input.value)
-                newbie[input.name] = input.value;
+            newbie[input.name] = input.value;
         });
         console.log( newbie );
-        if (!newbie.dayOff) newbie.dayOff = 'off';
-
+        if (!newbie.dayOff)
+            newbie.dayOff = 'off';
+        if (!(newbie.shiftBegin || newbie.shiftEnd || newbie.splitBegin || newbie.splitEnd))
+            newbie.dayOff = 'on';
         console.log(newbie);
         console.log(t.data._id);
         SH.Shifts.collection.update({_id: t.data._id}, {$set: newbie});

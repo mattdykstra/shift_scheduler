@@ -34,10 +34,13 @@ Template['booModalAddShift'].events({
 
         var newbie = {};
         t.$form.serializeArray().forEach(function (input) {
-            if (input.value)
             newbie[input.name] = input.value;
         });
-        if (!newbie.dayOff) newbie.dayOff = 'off';
+        
+        if (!newbie.dayOff)
+            newbie.dayOff = 'off';
+        if (!(newbie.shiftBegin || newbie.shiftEnd || newbie.splitBegin || newbie.splitEnd))
+            newbie.dayOff = 'on';
         console.log( SH.Week.Time.spanInMinutes( newbie.shiftBegin, newbie.shiftEnd ) );
         _.extend(newbie, {
             employeeId: t.data.employeeId,

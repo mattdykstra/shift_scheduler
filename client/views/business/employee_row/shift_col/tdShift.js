@@ -17,7 +17,7 @@ Template['tdShift'].helpers({
             tag: {$exists: false}
         });
 
-        return SH.Shifts.collection.findOne(selector);
+        return SH.Shifts.collection.findOne(selector) ;
     },
     'DailyTimeTotal': function(shift) {
         return SH.Week.Time.minutesToHmmString(

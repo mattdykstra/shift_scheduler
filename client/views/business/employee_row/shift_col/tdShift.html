@@ -11,18 +11,18 @@
         {{#if shift }}
         <a href="#" class="edit-shift-modal-popup">
             {{#with shift}}
-            {{#if eq dayOff 'on'}}
-            <span class="day-off">OFF</span>
-            {{else}}
-            {{#if shiftBegin}}
-            {{niceTime shiftBegin}} - {{niceTime shiftEnd}}  {{RoleCode shiftRole}}
-            {{/if}}
-            {{#if and shiftRole splitRole}}
-            <br/>
-            {{/if}}
-            {{#if splitBegin}}
-            {{niceTime splitBegin}} - {{niceTime splitEnd}}   {{RoleCode splitRole}}
-            {{/if}}
+                {{#if eq dayOff 'on'}}
+                    <span class="day-off">OFF</span>
+                {{else}}
+                    {{#if shiftBegin}}
+                        {{niceTime shiftBegin}} - {{niceTime shiftEnd}}  {{RoleCode shiftRole}}
+                    {{/if}}
+                    {{#if and shiftBegin splitBegin}}
+                        <br/>
+                    {{/if}}
+                    {{#if splitBegin}}
+                        {{niceTime splitBegin}} - {{niceTime splitEnd}}   {{RoleCode splitRole}}
+                    {{/if}}
             {{/if}}
             {{/with}}
         </a>

@@ -6,7 +6,8 @@ var helpers = {
     },
     'dailyTimeTotal': function (shift) {
         var total = 0;
-        if (shift) {
+        //TODO: implement transform class so dayOff!='on' could be hidden
+        if (shift && shift.dayOff != 'on') {
             var sh = SH.Week.Time.spanInMinutesNormalized(shift.shiftBegin, shift.shiftEnd);
             if (sh != null) total += sh;
             sh = SH.Week.Time.spanInMinutesNormalized(shift.splitBegin, shift.splitEnd);

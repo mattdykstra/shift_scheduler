@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feaf01bf-5fd4-4456-8993-18457d5b0a13" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/alert.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/alert.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/alert.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/alert.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/form-elements/timepicker/input-helper-button.less" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/input-helper-button.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/form-elements/timepicker/timepicker.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/form-elements/timepicker/timepicker.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/admin/add_business.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/add_business.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/admin/add_business.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/add_business.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/admin/edit_business.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/edit_business.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/admin/edit_business.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/edit_business.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/admin/formgroupBusinessDetails/booFormgroupBusinessDetails.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/formgroupBusinessDetails/booFormgroupBusinessDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/admin/formgroupBusinessDetails/booFormgroupBusinessDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/formgroupBusinessDetails/booFormgroupBusinessDetails.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/booModalForm2Buttons.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/booModalForm2Buttons.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/booModalForm2Buttons.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/booModalForm2Buttons.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/employee/booModalAddEmployee.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/employee/booModalAddEmployee.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/employee/booModalEditEmployee.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalEditEmployee.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/employee/booModalEditEmployee.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalEditEmployee.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/modals_patch.less" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/modals_patch.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/occupations/booModalOccupationsEdit.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/occupations/booModalOccupationsEdit.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/occupations/booModalOccupationsEdit.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/occupations/booModalOccupationsEdit.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/shift/booModalAddShift.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/shift/booModalAddShift.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/shift/booModalEditShift.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/shift/booModalEditShift.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/twoButtonsDialog.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/twoButtonsDialog.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/form-elements/countrySelector/countrySelector.html" afterPath="$PROJECT_DIR$/client/views/form-elements/countrySelector/countrySelector.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/packages/sh-templates/client/form-elements/countrySelector/countrySelector.js" afterPath="$PROJECT_DIR$/client/views/form-elements/countrySelector/countrySelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/scale_0/main/main.html" afterPath="$PROJECT_DIR$/client/views/scale_0/main/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shift_scheduler.iws" />
@@ -102,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booFormgroupEmployeeDetails.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="booFormgroupEmployeeDetails.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0083333" vertical-offset="626" max-vertical-offset="1215">
+            <state vertical-scroll-proportion="-20.166666" vertical-offset="626" max-vertical-offset="1215">
               <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
               <folding />
             </state>
@@ -132,31 +102,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="business_list_item.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/admin/business_list_item.html">
+      <file leaf-file-name="timepicker.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state vertical-scroll-proportion="-8.666667" vertical-offset="107" max-vertical-offset="585">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#span#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timepicker.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6115538" vertical-offset="293" max-vertical-offset="1410">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/scale_0/header/header.html">
+      <file leaf-file-name="input-helper-button.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/input-helper-button.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="525">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/scale_0/main/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="495">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="26" selection-end-column="11" />
+            <state vertical-scroll-proportion="-2.4489796" vertical-offset="0" max-vertical-offset="315">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -180,9 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/form-groups/business_details/booFormgroupBusinessDetails.js" />
-        <option value="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals/modals_patch.less" />
-        <option value="$PROJECT_DIR$/packages/sh-templates/client/bootstrap/modals/occupations/booModalOccupationsEdit.html" />
         <option value="$PROJECT_DIR$/client/views/admin/admin_view.html" />
         <option value="$PROJECT_DIR$/client/views/business/employee_row/shift_col/shift-cell.less" />
         <option value="$PROJECT_DIR$/client/views/business/employee_row/shift_col/editShift.html" />
@@ -231,6 +200,9 @@
         <option value="$PROJECT_DIR$/client/views/scale_0/main/main.html" />
         <option value="$PROJECT_DIR$/client/views/admin/admin_view.js" />
         <option value="$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.html" />
+        <option value="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/input-helper-button.less" />
+        <option value="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html" />
+        <option value="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" />
       </list>
     </option>
   </component>
@@ -595,6 +567,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timepicker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shift_scheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -649,11 +651,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker" />
       <recent name="$PROJECT_DIR$/packages/sh-templates/client/__bootstrap/modals" />
       <recent name="$PROJECT_DIR$/packages/sh-occupations" />
       <recent name="$PROJECT_DIR$/packages/sh-app" />
       <recent name="$PROJECT_DIR$/packages/sh-staff" />
-      <recent name="$PROJECT_DIR$/client/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/views" />
@@ -765,15 +767,20 @@
       <created>1413469597431</created>
       <updated>1413469597431</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added PIN field to employeeDetails form">
+      <created>1413576943117</created>
+      <updated>1413576943117</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1270" height="940" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3459596" sideWeight="0.7355044" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34683543" sideWeight="0.7355044" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34469697" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -786,7 +793,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -821,7 +827,8 @@
     <MESSAGE value="grand total added" />
     <MESSAGE value="added more support for dayOff: &#10;auto-set dayOff once no shifts timing is present.&#10;do not count time if dayOff is set" />
     <MESSAGE value="removed console output" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed console output" />
+    <MESSAGE value="added PIN field to employeeDetails form" />
+    <option name="LAST_COMMIT_MESSAGE" value="added PIN field to employeeDetails form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -829,16 +836,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/views/admin/admin_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="435">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
@@ -1191,8 +1188,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0083333" vertical-offset="626" max-vertical-offset="1215">
+        <state vertical-scroll-proportion="-20.166666" vertical-offset="626" max-vertical-offset="1215">
           <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/input-helper-button.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4489796" vertical-offset="0" max-vertical-offset="315">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="107" max-vertical-offset="585">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#span#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6115538" vertical-offset="293" max-vertical-offset="1410">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding />
         </state>
       </provider>

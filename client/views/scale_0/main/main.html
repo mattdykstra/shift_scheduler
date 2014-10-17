@@ -1,7 +1,4 @@
 <template name="main">
-    {{# if noAdminUser}}
-        <p> greetings. there s no admin user yet, so someone has to claim email</p>
-    {{/ if }}
 
     {{#if isAdminUser}}
     {{> admin_view}}
@@ -21,6 +18,10 @@
 
     {{#if currentUser }}
     {{else}}
-        <p> please login </p>
+        {{# if noAdminUser}}
+            <p class="text-center" >greetings. there s no admin user yet, so someone has to claim email</p>
+        {{ else }}
+            <p class="text-center"> welcome to 'shifts scheduler' app. please login. </p>
+        {{/ if }}
     {{/if}}
 </template>

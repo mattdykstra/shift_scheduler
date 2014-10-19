@@ -1,7 +1,9 @@
 SH.businessId = function businessId(){
     var user = Meteor.user();
-    if (user.role == 'business') return user._id;
-    if (user.role == 'staff') return user.businessId;
+    if (user) {
+        if (user.role == 'business') return user._id;
+        if (user.role == 'staff') return user.businessId;
+    }
     return null;
 };
 

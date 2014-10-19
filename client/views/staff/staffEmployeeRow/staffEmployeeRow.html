@@ -1,0 +1,15 @@
+<!-- originally created for shift_scheduler project-->
+<template name="staffEmployeeRow">
+    <tr data-employee-id="{{_id}}" class="staff-employee-row">
+        <td class="tdname">
+            <a class="toggle-clock" data-day-code="">
+                {{name}} &nbsp; <strong>{{position}}</strong>
+            </a>
+        </td>
+        {{#each isoWeekDays}}
+        {{> staffDailyShift employeeId=../_id dayCode=dayCode}}
+        {{/each}}
+        <td class="weekly-time text-right" data-value="{{weeklyTimeTotal}}">{{ weeklyTimeTotal}}</td>
+
+    </tr>
+</template>

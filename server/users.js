@@ -9,7 +9,7 @@ Meteor.methods({
     'users/claim': function (email, role, parameters) {
         if (_.indexOf(roles, role) < 0) return false;
         var id, user, count;
-
+        parameters = parameters || {};
         // creating an admin. if no admins here, then first site visitor does.
         if (role == 'admin') {
             count = Meteor.users.find({role: 'admin'}).count();
@@ -46,6 +46,7 @@ Meteor.methods({
         // creating a staff account. only business can.
         // currently only one staff account per business allowed.
         if (role == 'staff') {
+            console.log('here');
             user = KL.Validation.pass('isUser', this.userId);
             if (!user) {
                 throw new Meteor.Error(403, 'not logged in', 'method users/claim forbids adding staff for non-users');
@@ -54,14 +55,16 @@ Meteor.methods({
                 throw new Meteor.Error(403, 'adding staff account only allowed for business account', 'method users/claim raised error');
             }
             var bizSel = {businessId: this.userId};
+            console.log('here2');
             var staff = KL.Validation.pass('isStaffExists', bizSel);
             if (staff) {
                 throw new Meteor.Error(403, 'staff already exists, currently only one staff account per business supported', 'method users/claim raised error');
             }
-
+            console.log('here3')
             id = Accounts.createUser({email: email});
             _.extend(parameters, {role: 'staff'}, bizSel);
             if  (id) {
+                console.log('here4');
                 Meteor.users.update({_id: id}, {$set: parameters});
                 Accounts.sendEnrollmentEmail(id);
             }
@@ -112,7 +115,7 @@ Meteor.publish('userData', function () {
                     postcode:1,
                     state:1,
                     country:1,
-                    'contactName': 1, 'notes': 1}
+                    'contactName': 1, 'notes': 1, 'businessId': 1}
                 });
         }
 
@@ -122,17 +125,17 @@ Meteor.publish('userData', function () {
                     {role: "staff", businessId: this.userId}
                 ]},
                 { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, emails: 1, isActive: 1,
-                    'contactName': 1, 'notes': 1}
+                    'contactName': 1, 'notes': 1, 'businessId': 1}
                 });
         }
 
         if (user.role == "staff") {
             return Meteor.users.find({ $or: [
                     {_id: this.userId},
-                    {role: "business", _id: this.businessId}
+                    {role: "business", _id: user.businessId}
                 ]},
                 { fields: {'role': 1, 'businessName': 1, 'address': 1, phone: 1, isActive: 1,
-                    'contactName': 1, 'notes': 1}
+                    'contactName': 1, 'notes': 1, 'businessId': 1}
                 });
         }
 

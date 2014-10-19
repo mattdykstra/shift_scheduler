@@ -82,6 +82,9 @@ _.extend( SH.Validators, {
      */
     'isStaffExists': function(params) {
         var user;
+        if (!_.isObject(params)) {
+            params = {id: params}
+        }
         if (params.businessId) {
             user = Meteor.users.findOne({businessId: params.businessId, role: 'staff'});
             return user ? user : "fail"
@@ -95,11 +98,9 @@ _.extend( SH.Validators, {
                 return user;
             }
             if (user.role == 'business') {
-                user = Meteor.users.findOne({businessId: params.idd, role: 'staff'});
+                user = Meteor.users.findOne({businessId: params.id, role: 'staff'});
                 return user ? user : "fail";
             }
         }
     }
-
-
 });

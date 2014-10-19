@@ -1,0 +1,36 @@
+<!-- originally made for shift_scheduler project-->
+<template name="staffDailyShift">
+    <td class="text-center shift-cell {{shiftCellClass shift}}" data-day-code="{{dayCode}}">
+        <span class="visible-xs-inline visible-sm-inline data">
+                <a href="#">
+                    {{ trDateFromDayCode dayCode}}{{ displayEvent_1 dayCode}}
+                </a>
+            </span>
+        {{#if shift }}
+            {{#if eq dayOff 'on'}}
+                <span class="day-off">OFF</span>
+            {{else}}
+                <a href="#" class="toggle-clock" data-day-code="{{dayCode}}">
+                {{#with shift}}
+                    {{#if shiftBegin}}
+                        {{niceTime shiftBegin}} - {{niceTime shiftEnd}} {{RoleCode shiftRole}}
+                    {{/if}}
+                    {{#if and shiftBegin splitBegin}}<br/>{{/if}}
+                    {{#if splitBegin}}
+                        {{niceTime splitBegin}} - {{niceTime splitEnd}} {{RoleCode splitRole}}
+                    {{/if}}
+                {{/with}}
+                </a>
+            {{/if}}
+        {{else}}
+        <span class="no-schedule">
+            NO SCHEDULE
+        </span>
+        {{/if}}
+    </td>
+    <td>
+        <div class="daily-time-total" data-time-daily="{{dailyTimeTotal shift}}" data-day-code="{{dayCode}}">
+            {{DailyTimeTotal shift}}
+        </div>
+    </td>
+</template>

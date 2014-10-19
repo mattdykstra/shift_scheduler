@@ -1,0 +1,45 @@
+<!-- originally made for shift_scheduler project-->
+<template name="toggleClockPopup">
+    <div class="modal" id="toggle-clock">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">{{title}}</h4>
+
+                    <div class="alerts-container"></div>
+                    {{#if employee.pin}}
+                    <div class="row">
+                        <p>pin: {{employee.pin}}</p>
+                    </div>
+                    {{/if}}
+                </div>
+
+                <div class="modal-body ">
+                    <div class=" row toggle-clock-form" id="toggle-clock-form">
+                        {{#if showShiftOn}}
+                        <!-- todo: alter button colors as of late-earlyconditions -->
+                        <a href="#" class="btn btn-success clock-on-shift">Shift on</a>
+                        {{else}}
+                        {{#if showShiftOff}}
+                        <a href="#" class="btn btn-primary clock-off-shift">Shift off</a>
+                        {{/if}}
+                        {{/if}}
+
+
+                        {{#if showSplitOn}}
+                        <a href="#" class="btn btn-success clock-on-split">Split on</a>
+                        {{else}}
+                        {{#if showSplitOff}}
+                        <a href="#" class="btn btn-primary clock-off-split">Split off</a>
+                        {{/if}}
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn cancel">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

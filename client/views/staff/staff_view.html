@@ -8,9 +8,7 @@
             </th>
             {{#each isoWeekDays}}
             <th colspan="2" class="bg-primary text-center">
-                <a href="#" class="manage_daily_event">
-                    {{thDateFromDayCode dayCode}}
-                </a><br>
+                <span>{{thDateFromDayCode dayCode}} {{#if dailyEvent dayCode}}({{DailyEventName dayCode}}){{/if}}</span>
             </th>
             {{/each}}
             <th colspan="2" class="bg-primary">Total</th>

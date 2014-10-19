@@ -1,15 +1,15 @@
 <!-- depends on bootstrap3-datetimepicker  >
 < -->
 <template name="timepicker_15">
-    <div class="input-group timepicker">
+    <div class="input-group timepicker" readonly="{{disabled}}">
         <span class="input-group-addon"><span class="glyphicon-time glyphicon"></span>
         </span>
         <input type="text" class="form-control timepicker_my" name="{{name}}"
                data-parsley-laterthan="{{parsleyLaterthan}}"
                data-parsley-thenfillstart="{{parsleyLaterthan}}"
-
                data-parsley-beforethan="{{parsleyBeforethan}}"
                data-parsley-thenfillend="{{parsleyBeforethan}}"
+               data-parsley-splitaftershift="{{parsleySplitafter}}"
 
                data-parsley-trigger="{{#if or parsleyLaterthan parsleyBeforethan}}submit{{/if}}"
                value="{{value}}"

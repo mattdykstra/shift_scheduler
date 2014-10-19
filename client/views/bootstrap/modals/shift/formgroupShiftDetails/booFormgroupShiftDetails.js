@@ -1,7 +1,8 @@
 Template['booFormgroupShiftDetails'].rendered = function () {
     this.$dayOff = this.$('[name=dayOff]');
-    this.$shiftBegin = this.$('[name=shiftBegin]');
-    this.$splitBegin = this.$('[name=splitBegin]');
+    this.$shiftRole = this.$('[name=shiftRole]');
+    this.$splitRole = this.$('[name=splitRole]');
+
     this.$dayOff.bootstrapSwitch(
         {
             onText: "OFF",
@@ -12,8 +13,8 @@ Template['booFormgroupShiftDetails'].rendered = function () {
         }
     );
     Session.set('shiftDayOff', this.$dayOff.val()=='on');
-    Session.set('shiftBeginEmpty', this.$shiftBegin.val() == "");
-    Session.set('splitBeginEmpty', this.$splitBegin.val() == "");
+    Session.set('shiftRoleEmpty', this.$shiftRole.val() == "");
+    Session.set('splitRoleEmpty', this.$splitRole.val() == "");
 };
 
 Template['booFormgroupShiftDetails'].helpers({
@@ -23,24 +24,31 @@ Template['booFormgroupShiftDetails'].helpers({
     'isDayOff': function() {
         return Session.get('shiftDayOff');
     },
-    shiftBeginEmpty: function () {
-
-        return Session.get('shiftBeginEmpty')
+    shiftRoleNotEmpty: function () {
+        return !Session.get('shiftRoleEmpty')
     },
-    splitBeginEmpty: function () {
-
-        return Session.get('splitBeginEmpty')
+    splitRoleNotEmpty: function () {
+        return !Session.get('splitRoleEmpty')
+    },
+    visibleIf: function(condition) {
+        return condition ? 'visible' : 'hidden';
     }
 });
 
 Template['booFormgroupShiftDetails'].destroyed = function(){
     Session.set('shiftDayOff',null);
-    Session.set('shiftBeginEmpty', null);
-    Session.set('splitBeginEmpty', null);
+    Session.set('shiftRoleEmpty', null);
+    Session.set('splitRoleEmpty', null);
 };
 
 Template['booFormgroupShiftDetails'].events({
     'change .dayOff': function (e, t) {
         Session.set('shiftDayOff', t.$dayOff.val()=='on');
+    },
+    'change [name=\"shiftRole\"]': function(e, t) {
+        Session.set('shiftRoleEmpty',  t.$shiftRole.val() == "");
+    },
+    'change [name=\"splitRole\"]': function(e, t) {
+        Session.set('splitRoleEmpty',  t.$splitRole.val() == "");
     }
 });

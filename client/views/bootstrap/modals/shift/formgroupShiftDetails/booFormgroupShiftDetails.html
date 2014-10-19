@@ -2,43 +2,51 @@
 <template name="booFormgroupShiftDetails">
     <div class="form-group col-sm-6">
 
-            <label class="control-label">1st shift role</label>
-            <select class="form-control" name="shiftRole">
-                <option value="" {{selectedIfMatches shiftRole ""}}>select role</option>
-                {{#each occupationsList}}
-                <option value="{{_id}}" {{selectedIfMatches ../shiftRole _id}}>{{name}} - {{code}}</option>
-                {{/each}}
-            </select>
+        <label class="control-label">1st shift role</label>
+        <select class="form-control" name="shiftRole">
+            <option value=""
+            {{selectedIfMatches shiftRole ""}}>select role</option>
+            {{#each occupationsList}}
+            <option value="{{_id}}"
+            {{selectedIfMatches ../shiftRole _id}}>{{name}} - {{code}}</option>
+            {{/each}}
+        </select>
 
+        <div style="visibility: {{visibleIf shiftRoleNotEmpty}};">
             <label class="control-label">1st shift start time</label>
             {{> timepicker_15 name='shiftBegin' id="tp1" value=shiftBegin parsleyBeforethan="shiftEnd" }}
 
             <label class="control-label">1st shift end time</label>
             {{> timepicker_15 name='shiftEnd' id="tp2" value=shiftEnd parsleyLaterthan="shiftBegin" }}
+        </div>
 
     </div>
     <div class="form-group col-sm-6">
-            <label class="control-label">2st shift role</label>
-            <select class="form-control" name="splitRole">
-                <option value="" {{selectedIfMatches splitRole ""}}>select role</option>
-                {{#each occupationsList}}
-                <option value="{{_id}}" {{selectedIfMatches ../splitRole _id}}>{{name}} - {{code}}</option>
-                {{/each}}
-            </select>
+        <label class="control-label">2st shift role</label>
+        <select class="form-control" name="splitRole">
+            <option value=""
+            {{selectedIfMatches splitRole ""}}>select role</option>
+            {{#each occupationsList}}
+            <option value="{{_id}}"
+            {{selectedIfMatches ../splitRole _id}}>{{name}} - {{code}}</option>
+            {{/each}}
+        </select>
 
+        <div style="visibility: {{visibleIf splitRoleNotEmpty}};">
             <label class="control-label">2st shift start time</label>
-            {{> timepicker_15 name='splitBegin' id="tp3" value=splitBegin parsleyBeforethan="splitEnd"}}
+            {{> timepicker_15 name='splitBegin' id="tp3" value=splitBegin parsleyBeforethan="splitEnd"
+            parsleySplitafter="shiftEnd"}}
 
             <label class="control-label">2st shift end time</label>
             {{> timepicker_15 name='splitEnd' id="tp4" value=splitEnd parsleyLaterthan="splitBegin" }}
-
+        </div>
     </div>
 
     <div class="row" style="height=6px;">&nbsp;</div>
     <div class="form-group">
 
-            <input type="checkbox" name="dayOff" class="form-control"
-                   checked="{{#if eq dayOff 'on'}}checked{{/if}}"/>
+        <input type="checkbox" name="dayOff" class="form-control"
+               checked="{{#if eq dayOff 'on'}}checked{{/if}}"/>
 
     </div>
 </template>

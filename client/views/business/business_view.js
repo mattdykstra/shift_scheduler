@@ -21,5 +21,17 @@ Template['business_view'].events({
                 Template['booModalAddEmployee'],
                 $('#modals-container')[0])
         }
+    },
+    'click .manage_daily_event': function(e, t) {
+        console.log('+')
+        var $link = t.$(e.currentTarget);
+        var dayCode = $link.data('dayCode');
+        var event = SH.Shifts.Events.fromWD( SH.Week.getString(), dayCode ) || {};
+        if (!event.dayCode) event.dayCode = dayCode;
+        if (!SH.Modals.manageEvent) {
+            SH.Modals.manageEvent = Blaze.renderWithData(
+                Template['manageEvent'], event,
+                $('#modals-container')[0]);
+        }
     }
 });

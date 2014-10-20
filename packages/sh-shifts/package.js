@@ -25,6 +25,7 @@ Package.on_use(function (api) {
     api.use('underscore', cs);
     api.use(['kl-common', 'sh-week'], cs);
     api.add_files(['namespace.js', 'shifts.js', 'events.js'], cs);
-    api.add_files(['server/pub.js', 'server/validators/shifts.js'], s);
+    api.add_files(['server/pub.js', 'server/validators/shifts.js',
+        'server/methods.js'], s);
     api.add_files(['client/helpers.js', 'client/sub.js'], c);
 });

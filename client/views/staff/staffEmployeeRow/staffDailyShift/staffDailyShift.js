@@ -27,8 +27,20 @@ Template['staffDailyShift'].helpers({
         return '';
     },
     'shiftClass': function(shift) {
+        console.log(shift);
         if (!shift) return 'tda';
         return '';
+    },
+    'shiftTimeStatus': function(shift) {
+        console.log(shift.shiftClockOn);
+        console.log(shift);
+        console.log(shift.shiftClockOff);
+        return shift.shiftClockOn ?
+             (shift.shiftClockOff ? "glyphicon-check" : "glyphicon-time"): "";
+    },
+    'splitTimeStatus': function(shift) {
+        return shift.splitClockOn ?
+             (shift.splitClockOff ? "glyphicon-check" : "glyphicon-time"): "";
     }
 });
 

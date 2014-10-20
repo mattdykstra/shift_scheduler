@@ -3,7 +3,9 @@ Template['header'].rendered = function () {
 };
 
 Template['header'].helpers({
-
+    'headerDate': function(){
+        return moment().format('ddd DD MMM');
+    }
 });
 
 Template['header'].events({

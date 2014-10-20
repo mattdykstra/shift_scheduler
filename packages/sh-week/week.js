@@ -7,6 +7,7 @@ SH.Week.formats = {};
 _.extend (SH.Week.formats, {storage: 'gg W-E'});
 
 SH.Week.dateToString = function dateToString( momentObject ) {
+    if (!momentObject) momentObject = moment();
     return momentObject.format( SH.Week.formats.storage );
 };
 
@@ -15,12 +16,16 @@ SH.Week.dateFromString = function dateFromString( dateString ) {
 };
 
 // take 'gg W' part of 'gg W-E'
+// if nothing passed - get today's
 SH.Week.getWeekCode = function getWeekCode ( dateString ) {
+    if (!dateString) dateString = SH.Week.dateToString ( moment() );
     return dateString.split('-')[0];
 };
 
 // take 'E' part of 'gg W-E'
+// if nothing passed - get today's
 SH.Week.getDayCode  = function getDayCode ( dateString ) {
+    if (!dateString) dateString = SH.Week.dateToString ( moment() );
     return dateString.split('-')[1];
 };
 

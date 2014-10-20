@@ -2,7 +2,10 @@
 <template name="header">
     <div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
-            <h2 class="text-center" style="padding: 0; margin: 0;">{{BusinessName}} shifts scheduler</h2>
+            <h2 class="text-center" style="padding: 0; margin: 0;">shifts scheduler
+            {{# if isStaffUser }}<span class="pull-left">{{headerDate}}</span> {{/if}}
+            <span class="pull-right">{{BusinessName}}</span>
+            </h2>
             <div class="navbar-header">
 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -21,6 +24,7 @@
                         <li><a href="#"><input class="bid" name="cweek" value="Current Week" type="submit"></a></li>
                     {{/if }}
                 </ul>
+
                 <ul class="nav navbar-nav navbar-right">
 {{# if noAdminUser}}  <li>{{> claim_admin}}</li>   {{/ if }}
                     {{> loginButtons }}

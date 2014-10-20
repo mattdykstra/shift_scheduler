@@ -34,7 +34,7 @@ Template['add_business'].events({
     },
     'keyup': function (e, t) {
         if (e.key == 'Esc') {
-            t.$('.dropdown.open').removeClass('open');
+            t.$modal.modal('hide');
         }
     },
     'click .submit': function (e, t) {

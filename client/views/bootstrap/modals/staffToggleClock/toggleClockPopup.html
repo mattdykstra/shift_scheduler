@@ -16,23 +16,28 @@
                 </div>
 
                 <div class="modal-body ">
-                    <div class=" row toggle-clock-form" id="toggle-clock-form">
+                    <div class="toggle-clock-form" id="toggle-clock-form">
+                        {{#if hasShift}}
                         {{#if showShiftOn}}
                         <!-- todo: alter button colors as of late-earlyconditions -->
-                        <a href="#" class="btn btn-success clock-on-shift">Shift on</a>
+                        <a href="#" class="btn btn-success shift-on">Shift on</a>
                         {{else}}
                         {{#if showShiftOff}}
-                        <a href="#" class="btn btn-primary clock-off-shift">Shift off</a>
+                        <a href="#" class="btn btn-primary shift-off">Shift off</a>
                         {{/if}}
                         {{/if}}
 
 
                         {{#if showSplitOn}}
-                        <a href="#" class="btn btn-success clock-on-split">Split on</a>
+                        <a href="#" class="btn btn-success split-on">Split on</a>
                         {{else}}
                         {{#if showSplitOff}}
-                        <a href="#" class="btn btn-primary clock-off-split">Split off</a>
+                        <a href="#" class="btn btn-primary split-off">Split off</a>
                         {{/if}}
+                        {{/if}}
+
+                        {{else}}
+                        <p>Why are you there</p>
                         {{/if}}
                     </div>
                 </div>

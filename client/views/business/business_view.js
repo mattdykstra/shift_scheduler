@@ -23,7 +23,6 @@ Template['business_view'].events({
         }
     },
     'click .manage_daily_event': function(e, t) {
-        console.log('+')
         var $link = t.$(e.currentTarget);
         var dayCode = $link.data('dayCode');
         var event = SH.Shifts.Events.fromWD( SH.Week.getString(), dayCode ) || {};

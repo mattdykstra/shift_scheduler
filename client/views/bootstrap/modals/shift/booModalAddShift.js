@@ -42,7 +42,7 @@ Template['booModalAddShift'].events({
             newbie.dayOff = 'on';
         _.extend(newbie, {
             employeeId: t.data.employeeId,
-            dayCode: t.data.dayCode,
+            dayCode: t.data.dayCode.toString(),
             weekCode: SH.Week.getWeekCode( SH.Week.getString() )
         });
         SH.Shifts.collection.insert(newbie);

@@ -11,8 +11,8 @@ SH.Week.weekCodeSel = function(){
 var helpers = {
     'isoWeekDays': function () { //iterator with named parameter
         return [
-            {'dayCode': 1}, {'dayCode': 2}, {'dayCode': 3},
-            {'dayCode': 4}, {'dayCode': 5}, {'dayCode': 6}, {'dayCode': 7}
+            {'dayCode': '1'}, {'dayCode': '2'}, {'dayCode': '3'},
+            {'dayCode': '4'}, {'dayCode': '5'}, {'dayCode': '6'}, {'dayCode': '7'}
         ]
     },
     'thDateFromDayCode': function (isoDay) {

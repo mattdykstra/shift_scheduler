@@ -19,11 +19,21 @@ Template['staffEmployeeRow'].events({
 
         if (!SH.Modals.toggleClock) {
             console.log("here");
+            console.log({
+                employeeId: t.data._id,
+                dayCode: SH.Week.getDayCode(),
+                weekCode: SH.Week.getWeekCode()
+            });
+
             SH.Modals.toggleClock = Blaze.renderWithData(
                 Template['toggleClockPopup'], {
-                    shifts: SH.Shifts.collection.find({employeeId: t.data._id}).fetch(),
-                    employee: t.data,
-                    dayCode: $link.data('dayCode')},
+                    shift: SH.Shifts.collection.findOne({
+                        employeeId: t.data._id,
+                        dayCode: SH.Week.getDayCode(),
+                        weekCode: SH.Week.getWeekCode()
+                    }),
+                    employee: t.data
+                },
                 $('#modals-container')[0])
         }
     }

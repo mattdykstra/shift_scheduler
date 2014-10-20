@@ -7,15 +7,22 @@ SH.businessId = function businessId(){
     return null;
 };
 
-SH.staffId = function() {
+SH.staffUser = function(){
     var user = Meteor.user();
-    if (user.role == 'staff') return user._id;
+    if (user.role == 'staff') return user;
     if (user.role == 'business') {
         var staff = Meteor.users.findOne({role: 'staff', businessId: user._id});
-        if (staff) return staff._id;
+        if (staff) return staff;
     }
     return null;
 };
+
+SH.staffId = function() {
+    var staff = SH.staffUser();
+    if (staff) return staff._id;
+    return null;
+};
+
 
 var helpers = {
     // who is looged in ?
@@ -39,6 +46,7 @@ var helpers = {
     // what is businessId
     businessId: SH.businessId,
     staffId: SH.staffId,
+    staffUser: SH.staffUser,
     noAdminUser: function () {
         return Session.get("shNoAdmin");
     },

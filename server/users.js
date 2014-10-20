@@ -60,7 +60,7 @@ Meteor.methods({
             if (staff) {
                 throw new Meteor.Error(403, 'staff already exists, currently only one staff account per business supported', 'method users/claim raised error');
             }
-            console.log('here3')
+            console.log('here3');
             id = Accounts.createUser({email: email});
             _.extend(parameters, {role: 'staff'}, bizSel);
             if  (id) {

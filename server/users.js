@@ -46,7 +46,7 @@ Meteor.methods({
         // creating a staff account. only business can.
         // currently only one staff account per business allowed.
         if (role == 'staff') {
-            console.log('here');
+
             user = KL.Validation.pass('isUser', this.userId);
             if (!user) {
                 throw new Meteor.Error(403, 'not logged in', 'method users/claim forbids adding staff for non-users');
@@ -55,16 +55,16 @@ Meteor.methods({
                 throw new Meteor.Error(403, 'adding staff account only allowed for business account', 'method users/claim raised error');
             }
             var bizSel = {businessId: this.userId};
-            console.log('here2');
+
             var staff = KL.Validation.pass('isStaffExists', bizSel);
             if (staff) {
                 throw new Meteor.Error(403, 'staff already exists, currently only one staff account per business supported', 'method users/claim raised error');
             }
-            console.log('here3');
+
             id = Accounts.createUser({email: email});
             _.extend(parameters, {role: 'staff'}, bizSel);
             if  (id) {
-                console.log('here4');
+
                 Meteor.users.update({_id: id}, {$set: parameters});
                 Accounts.sendEnrollmentEmail(id);
             }
@@ -72,6 +72,16 @@ Meteor.methods({
     },
     "users/check/admin": function(){
         return (Meteor.users.find({role: 'admin'}).count() > 0);
+    },
+    "users/remove": function(id){
+        var target = Meteor.users.findOne({_id: id});
+        if (!target) return;
+        var user = KL.Validation.pass("isUser", this.userId);
+        if (!user) return;
+        if (user.role == "business") {
+            if (target.role == 'staff' && target.businessId == this.userId)
+            Meteor.users.remove({_id: id});
+        }
     }
 });
 

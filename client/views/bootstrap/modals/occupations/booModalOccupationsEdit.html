@@ -2,6 +2,7 @@
 <template name="booModalOccupationsEdit">
     <a data-toggle="modal" href="#edit-occupations" class="btn btn-primary">
         Edit Roles</a>
+
     <div class="modal" id="edit-occupations">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -15,12 +16,15 @@
                 </div>
 
                 <div class="modal-body">
+
+                    {{> add_occupation}}
                     <form role="form" class="form-vertical edit-occupations-form" id="edit-occupations-form">
-                        {{> add_occupation}}
                         <div class="row" style="margin-top: 12px;"></div>
-                        {{#each occupationsList}}
-                        {{> edit_occupation this}}
-                        {{/each}}
+                        <div class="form-group form-group-sm">
+                            {{#each occupationsList}}
+                            {{> edit_occupation this}}
+                            {{/each}}
+                        </div>
                         <a href="#" data-dismiss="modal" class="btn btn-primary">Ok</a>
                     </form>
                 </div>
@@ -31,28 +35,28 @@
 
 
 <template name="add_occupation">
-    <div class=" form-group form-group-sm" id="add-role">
-        <input type="text" class=" oc-name" placeholder="Occupation"/>
-        <input type="text" class=" oc-code" placeholder="CODE"/>
-        <button class="role-add" type="button" title="add"><span class="glyphicon glyphicon-plus"></span></button>
-
-    </div>
+    <form role="form" class="form-vertical add-occupation-form" id="add-occupation-form">
+        <div class=" form-group form-group-sm" id="add-role">
+            <input type="text" class=" oc-name" placeholder="Occupation"/>
+            <input type="text" class=" oc-code" placeholder="CODE"/>
+            <button class="role-add" type="button" title="add"><span class="glyphicon glyphicon-plus"></span></button>
+        </div>
+    </form>
 </template>
 
 <template name="edit_occupation">
-    <div class="form-group form-group-sm" id="edit-role-{{_id}}">
-        <input type="text" name="name" class=" oc-name" value="{{name}}" placeholder="Occupation"/>
-        <input type="text" name="code" class=" oc-code" value="{{code}}" placeholder="CODE"/>
 
-        <div class="btn-group btn-group-xs">
-            <button class="role-update btn-info" type="button" title="update"><span
-                    class="glyphicon glyphicon-ok"></span></button>
-            <button class="role-revert btn-default" type="button" title="revert"><span
-                    class="glyphicon glyphicon-arrow-left"></span></button>
-            <button class="role-remove btn-danger" type="button" title="delete"><span
-                    class="glyphicon glyphicon-remove"></span></button>
-        </div>
+    <input type="text" name="name" class=" oc-name" value="{{name}}" placeholder="Occupation"/>
+    <input type="text" name="code" class=" oc-code" value="{{code}}" placeholder="CODE"/>
+
+    <div class="btn-group btn-group-xs">
+        <button class="role-update btn-info" type="button" title="update"><span
+                class="glyphicon glyphicon-ok"></span></button>
+        <button class="role-revert btn-default" type="button" title="revert"><span
+                class="glyphicon glyphicon-arrow-left"></span></button>
+        <button class="role-remove btn-danger" type="button" title="delete"><span
+                class="glyphicon glyphicon-remove"></span></button>
     </div>
-    <br>
+    <br/>
 </template>
 

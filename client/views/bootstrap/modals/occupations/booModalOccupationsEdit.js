@@ -2,15 +2,8 @@ Template['booModalOccupationsEdit'].rendered = function () {
     this.alertsRoot = this.$(".alerts-container")[0];
 };
 
-Template['booModalOccupationsEdit'].helpers({
-    'foo': function () {
-
-    }
-});
-
-Template['booModalOccupationsEdit'].events({
+Template['add_occupation'].events({
     'click .role-add': function (e, t) {
-
         var $row = t.$(e.currentTarget).closest(".form-group");
         var data = {
             name: t.$(".oc-name", $row).val(),
@@ -24,15 +17,12 @@ Template['booModalOccupationsEdit'].events({
         }
         else {
             SH.Collections.Occupations.insert(data);
+            t.$(".oc-name", $row).val(''),
+            t.$(".oc-code", $row).val('')
         }
 
     }
 });
-
-
-function occupationId( mess ){
-    return mess.split("edit-role-")[1];
-}
 
 Template['edit_occupation'].events({
     'click .role-revert': function(e, t) {

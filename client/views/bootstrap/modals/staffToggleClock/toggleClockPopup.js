@@ -154,7 +154,8 @@ function stamp(t) {
         offset: moment().zone(),
         time: moment().format('h:mm A'),
         shiftId: t.data.shift ? t.data.shift._id : '',
-        addon: _getAddon(t.$form)
+        employeeId: t.data.employee ? t.data.employee._id : '',
+            addon: _getAddon(t.$form)
         }
 }
 

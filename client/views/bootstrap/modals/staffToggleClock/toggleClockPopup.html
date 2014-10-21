@@ -18,7 +18,9 @@
                 <div class="modal-body ">
                     <form class="toggle-clock-form" id="toggle-clock-form">
 						{{#if showBye}}
-                            <p>You have closed 2 shifts today. </p>
+                            <div class="form-group">
+                                <p>You have closed 2 shifts today. </p>
+                            </div>
 						{{/if}}
 
 						{{#if showWhy2}}
@@ -91,19 +93,28 @@
         <a href="#" class="btn btn-success clock-on" data-shift="{{split}}">Clock on</a>
 	{{/if}}
 	{{#if late}}
-        <div class="form-control">
-        <p>Why are you late</p>
-        <input type="radio" name="reason-late" value="late" required>Just running late<br>
-        <input type="radio" name="reason-late" value="ok">Forgot to clock on, was here on time<br>
-        <input type="radio" name="reason-late" value="timer">Forgot to clock on, was here at ...<br>
+        <div>
+            <p class="">Why are you late</p>
+
+            <input type="radio" name="reason-late" value="late" required>Just running late<br>
+            <input type="radio" name="reason-late" value="ok">Forgot to clock on, was here on time<br>
+            <input type="radio" name="reason-late" value="timer">Forgot to clock on, was here at ...<br>
         </div>
-        {{#if showTimepicker}}
-			{{> timepicker_15 name="timepicker" required="required"}}
+
+		{{#if showTimepicker}}
+            <div class="form-group row">
+                <div class="col-sm-6">
+					{{> timepicker_15 name="timepicker" required="required" id="tp789"}}
+                </div>
+            </div>
 		{{/if}}
 
-        {{#if showConfirm}}
-        <a href="#" class="btn btn-success clock-on-confirm" data-shift="{{split}}">Clock on</a>
-        {{/if}}
+		{{#if showConfirm}}
+
+            <div class="form-group">
+                <a href="#" class="btn btn-success clock-on-confirm" data-shift="{{split}}">Clock on</a>
+            </div>
+		{{/if}}
 	{{/if}}
 </template>
 
@@ -113,22 +124,35 @@
 	{{/if}}
 
 	{{#if early}}
-        <p>Why are you leaving early?</p>
-        <input type="radio" name="reason-early" value="ok" required>Finished / Nothing for me to do<br>
-        <input type="radio" name="reason-early" value="sick">Going home early – Sick<br>
+        <div>
+            <p>Why are you leaving early?</p>
+            <input type="radio" name="reason-early" value="ok" required>Finished / Nothing for me to do<br>
+            <input type="radio" name="reason-early" value="sick">Going home early – Sick<br>
+        </div>
 	{{/if}}
 
 	{{#if late}}
-        <p>Why are you here so late?</p>
-        <input type="radio" name="reason-late" value="ok" required>I love my work<br>
-        <input type="radio" name="reason-late" value="manager">I was asked to stay back<br>
-		{{#if manager}}
-            <input type="text" name="manager" placeholder="manager name">
-		{{/if}}
-        {{#if showConfirm}}
-        <a href="#" class="btn btn-primary clock-off-confirm" data-shift="{{split}}">Clock off</a>
-        {{/if}}
-	{{/if}}
 
+        <div>
+            <p>Why are you here so late?</p>
+            <input type="radio" name="reason-late" value="ok" required>I love my work<br>
+            <input type="radio" name="reason-late" value="manager">I was asked to stay back<br>
+        </div>
+
+        {{#if manager}}
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <input type="text" name="manager" placeholder="manager name">
+                </div>
+            </div>
+		{{/if}}
+
+		{{#if showConfirm}}
+            <div class="form-group">
+                <a href="#" class="btn btn-primary clock-off-confirm" data-shift="{{split}}">Clock off</a>
+            </div>
+		{{/if}}
+
+	{{/if}}
 </template>
 

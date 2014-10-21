@@ -5,42 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feaf01bf-5fd4-4456-8993-18457d5b0a13" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/add_business.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/add_business.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/admin_view.js" afterPath="$PROJECT_DIR$/client/views/admin/admin_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/alert.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/alert.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/alert.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/business/employee_row/bizEmployeeRow.js" afterPath="$PROJECT_DIR$/client/views/business/employee_row/bizEmployeeRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/formgroupBusinessDetails/booFormgroupBusinessDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/formgroupBusinessDetails/booFormgroupBusinessDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalAddEmployee.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalEditEmployee.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/employee/booModalEditEmployee.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/booModalForm2Buttons.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/booModalForm2Buttons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/occupations/booModalOccupationsEdit.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/occupations/booModalOccupationsEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/admin/business_list_item.js" afterPath="$PROJECT_DIR$/client/views/admin/business_list_item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/business/business_view.js" afterPath="$PROJECT_DIR$/client/views/business/business_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/scale_0/header/claim_admin/claim_admin.js" afterPath="$PROJECT_DIR$/client/views/scale_0/header/claim_admin/claim_admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/scale_0/header/claim_staff/claim_staff.js" afterPath="$PROJECT_DIR$/client/views/scale_0/header/claim_staff/claim_staff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/form-elements/countrySelector/countrySelector.js" afterPath="$PROJECT_DIR$/client/views/form-elements/countrySelector/countrySelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/edit_business.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/admin/edit_business.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/scale_0/footer/footer.js" afterPath="$PROJECT_DIR$/client/views/scale_0/footer/footer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/scale_0/header/header.js" afterPath="$PROJECT_DIR$/client/views/scale_0/header/header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/manageEvent/manageEvent.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/manageEvent/manageEvent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-shifts/server/methods.js" afterPath="$PROJECT_DIR$/packages/sh-shifts/server/methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/scale_0/header/reset_staff/reset_staff.js" afterPath="$PROJECT_DIR$/client/views/scale_0/header/reset_staff/reset_staff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shift_scheduler.iml" afterPath="$PROJECT_DIR$/.idea/shift_scheduler.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staffEmployeeRow/staffDailyShift/staffDailyShift.js" afterPath="$PROJECT_DIR$/client/views/staff/staffEmployeeRow/staffDailyShift/staffDailyShift.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staffEmployeeRow/staffEmployeeRow.js" afterPath="$PROJECT_DIR$/client/views/staff/staffEmployeeRow/staffEmployeeRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staff_view.js" afterPath="$PROJECT_DIR$/client/views/staff/staff_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShift.js" afterPath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShift.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-week/week.js" afterPath="$PROJECT_DIR$/packages/sh-week/week.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shift_scheduler.iws" />
@@ -67,11 +34,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="toggleClockPopup.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="booFormgroupEmployeeDetails.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.75" vertical-offset="519" max-vertical-offset="1215">
+              <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="booModalEditShift.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1035">
+              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tdShift.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShift.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="945">
+              <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toggleClockPopup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17142858" vertical-offset="1305" max-vertical-offset="2100">
-              <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+            <state vertical-scroll-proportion="-11.141176" vertical-offset="1213" max-vertical-offset="2565">
+              <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -80,8 +77,18 @@
       <file leaf-file-name="toggleClockPopup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="63.0" vertical-offset="4641" max-vertical-offset="5190">
-              <caret line="175" column="33" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
+            <state vertical-scroll-proportion="-14.0" vertical-offset="4592" max-vertical-offset="5280">
+              <caret line="336" column="32" selection-start-line="336" selection-start-column="32" selection-end-line="336" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="methods.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.51724136" vertical-offset="180" max-vertical-offset="1005">
+              <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -207,7 +214,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -218,29 +225,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shift_scheduler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shift_scheduler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shift_scheduler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.lastSelected" value="web-ide.project.structure" />
@@ -525,17 +510,30 @@
       <option name="project" value="LOCAL" />
       <updated>1413791195401</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="almost done with client-side for 'clock on/off' form.">
+      <created>1413891355148</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1413891355148</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added some divs and formgroups">
+      <created>1413892993030</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1413892993030</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1286" height="1001" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31770223" sideWeight="0.7355044" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3172738" sideWeight="0.7355044" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34114888" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34077555" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28196982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -547,7 +545,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -609,7 +606,9 @@
     <MESSAGE value="added clock on/ clock off buttons + logic to show one of them.&#10;&#10;no logic is present to control late/on time/ etc. no dialogs, too." />
     <MESSAGE value="added staff reset form" />
     <MESSAGE value="fixed occupations edit form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed occupations edit form" />
+    <MESSAGE value="almost done with client-side for 'clock on/off' form." />
+    <MESSAGE value="added some divs and formgroups" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some divs and formgroups" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,13 +623,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/client/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05689001" vertical-offset="0" max-vertical-offset="791">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/staff/staff_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="660">
@@ -810,6 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="957" max-vertical-offset="2580">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -817,6 +810,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1440">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -832,6 +826,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -878,6 +873,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="900">
           <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -937,34 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="474" max-vertical-offset="1035">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/admin/edit_business.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="249" max-vertical-offset="810">
           <caret line="43" column="11" selection-start-line="41" selection-start-column="32" selection-end-line="43" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShift.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="945">
-          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="780">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -985,18 +957,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js">
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/employee/formgroupEmployeeDetails/booFormgroupEmployeeDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="63.0" vertical-offset="4641" max-vertical-offset="5190">
-          <caret line="175" column="33" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
+        <state vertical-scroll-proportion="-7.75" vertical-offset="519" max-vertical-offset="1215">
+          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1035">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShift.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="945">
+          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17142858" vertical-offset="1305" max-vertical-offset="2100">
-          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+        <state vertical-scroll-proportion="-11.141176" vertical-offset="1213" max-vertical-offset="2565">
+          <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0" vertical-offset="4592" max-vertical-offset="5280">
+          <caret line="336" column="32" selection-start-line="336" selection-start-column="32" selection-end-line="336" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51724136" vertical-offset="180" max-vertical-offset="1005">
+          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
           <folding />
         </state>
       </provider>

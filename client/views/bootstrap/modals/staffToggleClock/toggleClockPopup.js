@@ -137,6 +137,9 @@ Template.btnShiftClockOff.helpers({
     },
     'showConfirm': function(){ // should we chow clock button (when in complex cases)
         return _isVisibleConfirmButton();
+    },
+    'manager': function(){ //
+        return _isVisibleManagerField();
     }
 });
 
@@ -278,6 +281,8 @@ Template.toggleClockPopup.events({
         var shiftName = $link.data('shift');
         var prop =shiftName+'End';
 
+        // difference btwn scheduled and real. positive if scheduled before real.
+        // negative if scheduled after real
         var diff = SH.Week.Time.spanInMinutes(shift[prop], SH.Week.Time.momentToHmmString());
         console.log(diff);
 
@@ -311,7 +316,7 @@ Template.toggleClockPopup.events({
             return;
         }
 
-        Meteor.call("shift/clock/force", _.extend(stamp(t), {
+        Meteor.call("shift/clock", _.extend(stamp(t), {
             toggle: 'on',
             shift: shiftName
         }));
@@ -329,8 +334,8 @@ Template.toggleClockPopup.events({
             t.$form._parsley.validate();
             return;
         }
-        Meteor.call("shift/clock/force", _.extend(stamp(t), {
-            toggle: 'on',
+        Meteor.call("shift/clock", _.extend(stamp(t), {
+            toggle: 'off',
             shift: shiftName
         }));
         t.$modal.modal('hide');

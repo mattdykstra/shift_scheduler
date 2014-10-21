@@ -1,9 +1,9 @@
 
-Template['claim_staff'].rendered = function(){
+Template.claim_staff.rendered = function(){
     $('#claim_staff').parsley({trigger: 'change keyup'});
 };
 
-Template['claim_staff'].events({
+Template.claim_staff.events({
     'click button': function(e,t){
         e.preventDefault();
         e.stopPropagation();

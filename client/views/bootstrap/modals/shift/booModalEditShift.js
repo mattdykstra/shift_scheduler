@@ -1,4 +1,4 @@
-Template['booModalEditShift'].rendered = function () {
+Template.booModalEditShift.rendered = function () {
     this.$form = this.$("#edit-shift-form");
     this.parsley = this.$form.parsley({trigger: "blur", excluded: "input[type=checkbox]"
     });
@@ -7,7 +7,7 @@ Template['booModalEditShift'].rendered = function () {
     this.alertsRoot = this.$(".alerts-container")[0];
 };
 
-Template['booModalEditShift'].helpers({
+Template.booModalEditShift.helpers({
     'dataHelper': function(){
         var self = this;
         return {
@@ -28,7 +28,7 @@ Template['booModalEditShift'].helpers({
     }
 });
 
-Template['booModalEditShift'].events({
+Template.booModalEditShift.events({
     'hidden.bs.modal': function (e, t) {
         Blaze.remove(SH.Modals.editShift);
         SH.Modals.editShift = null;
@@ -40,10 +40,9 @@ Template['booModalEditShift'].events({
 
         t.parsley.validate();
         if (!t.parsley.isValid()) {
-            Blaze.renderWithData(Template['alert'], {
+            Blaze.renderWithData(Template.alert, {
                 message: "form validation failure",
-                status: 'info',
-                dismissible: true
+                status: 'info'
             }, t.alertsRoot);
             return;
         }

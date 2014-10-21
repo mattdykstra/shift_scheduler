@@ -1,4 +1,4 @@
-Template['booModalEditEmployee'].rendered = function () {
+Template.booModalEditEmployee.rendered = function () {
     this.$form = this.$("form");
     this.$modal = this.$('.modal');
 
@@ -12,13 +12,13 @@ Template['booModalEditEmployee'].rendered = function () {
     this.$modal.modal('show');
 };
 
-Template['booModalEditEmployee'].helpers({
+Template.booModalEditEmployee.helpers({
     'foo': function () {
 
     }
 });
 
-Template['booModalEditEmployee'].events({
+Template.booModalEditEmployee.events({
     'show.bs.modal': function (e, t) {
         KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$hourly', 'hourlyIsSet');
         KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$salary', 'salaryIsSet');
@@ -33,7 +33,7 @@ Template['booModalEditEmployee'].events({
 
         t.parsley.validate();
         if (!t.parsley.isValid()) {
-            Blaze.renderWithData(Template['alert'], {
+            Blaze.renderWithData(Template.alert, {
                 message: "form validation failure",
                 status: 'info'
             }, t.alertsRoot);

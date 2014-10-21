@@ -1,9 +1,9 @@
-Template['business_list_item'].rendered = function () {
+Template.business_list_item.rendered = function () {
 
 };
 
 
-Template['business_list_item'].helpers({
+Template.business_list_item.helpers({
     'edit_popup_data': function() {
         var ret = {
             "id": this._id,
@@ -21,7 +21,7 @@ Template['business_list_item'].helpers({
     }
 });
 
-Template['business_list_item'].events({
+Template.business_list_item.events({
     'click .edit-business-button': function(e, t) {
         if (!SH.Modals.editBusiness) {
             SH.Modals.editBusiness = Blaze.renderWithData(

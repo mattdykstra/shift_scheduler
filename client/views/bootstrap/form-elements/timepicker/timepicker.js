@@ -1,4 +1,4 @@
-Template['timepicker_15'].rendered = function () {
+Template.timepicker_15.rendered = function () {
     this.$timepicker = this.$('.timepicker');
     this.$timepicker.datetimepicker({
         pickDate: false,
@@ -11,7 +11,7 @@ Template['timepicker_15'].rendered = function () {
 
 };
 
-Template['timepicker_15'].helpers({
+Template.timepicker_15.helpers({
     parsleyHelper: function (param) {
         if (param) return 'data-parsley-trigger="submit"';
         return ""
@@ -25,7 +25,7 @@ function controlVisibility($visibility_control, condition) {
     if (vis != newvis) $visibility_control.css('visibility', newvis);
 }
 
-Template['timepicker_15'].events({
+Template.timepicker_15.events({
     'keyup input': function (e, t) {
         controlVisibility(t.$revertButton, t.$input.val() != t.data.value);
 

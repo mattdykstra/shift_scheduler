@@ -1,11 +1,11 @@
-Template['edit_business'].rendered = function () {
+Template.edit_business.rendered = function () {
     this.$form = this.$("#edit-business-form");
     this.parsley = this.$form.parsley({trigger: "blur", excluded: "input[type=checkbox]"});
     this.$modal = this.$('#edit-business');
     this.$modal.modal('show');
 };
 
-Template['edit_business'].helpers({
+Template.edit_business.helpers({
     'dataHelper': function(){
         var self = this;
         return {
@@ -23,7 +23,7 @@ Template['edit_business'].helpers({
     }
 });
 
-Template['edit_business'].events({
+Template.edit_business.events({
     'hidden.bs.modal': function (e, t) {
         Blaze.remove(SH.Modals.editBusiness);
         SH.Modals.editBusiness = null;

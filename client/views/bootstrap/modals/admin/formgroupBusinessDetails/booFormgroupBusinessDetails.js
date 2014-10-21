@@ -1,4 +1,4 @@
-Template['booFormgroupBusinessDetails'].rendered = function () {
+Template.booFormgroupBusinessDetails.rendered = function () {
     this.$isActive = this.$('[name=isActive]');
 
     this.$isActive .bootstrapSwitch(
@@ -11,7 +11,7 @@ Template['booFormgroupBusinessDetails'].rendered = function () {
     );
 };
 
-Template['booFormgroupBusinessDetails'].helpers({
+Template.booFormgroupBusinessDetails.helpers({
     'dataForCountrySelector': function () {
         var self = this;
         var ret = {
@@ -33,6 +33,6 @@ Template['booFormgroupBusinessDetails'].helpers({
     }
 });
 
-Template['booFormgroupBusinessDetails'].events({
+Template.booFormgroupBusinessDetails.events({
 
 });

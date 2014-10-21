@@ -1,8 +1,8 @@
-Template['staffEmployeeRow'].rendered = function () {
+Template.staffEmployeeRow.rendered = function () {
 
 };
 
-Template['staffEmployeeRow'].helpers({
+Template.staffEmployeeRow.helpers({
     'weeklyTimeTotal': function() {
         var self = this;
         var selector = {
@@ -13,20 +13,12 @@ Template['staffEmployeeRow'].helpers({
     }
 });
 
-Template['staffEmployeeRow'].events({
+Template.staffEmployeeRow.events({
     'click .toggle-clock': function (e, t) {
-        var $link = $(e.currentTarget);
-
         if (!SH.Modals.toggleClock) {
-            console.log("here");
-            console.log({
-                employeeId: t.data._id,
-                dayCode: SH.Week.getDayCode(),
-                weekCode: SH.Week.getWeekCode()
-            });
 
             SH.Modals.toggleClock = Blaze.renderWithData(
-                Template['toggleClockPopup'], {
+                Template.toggleClockPopup, {
                     shift: SH.Shifts.collection.findOne({
                         employeeId: t.data._id,
                         dayCode: SH.Week.getDayCode(),

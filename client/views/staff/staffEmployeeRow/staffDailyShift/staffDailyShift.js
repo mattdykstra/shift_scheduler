@@ -1,8 +1,8 @@
-Template['staffDailyShift'].rendered = function () {
+Template.staffDailyShift.rendered = function () {
 
 };
 
-Template['staffDailyShift'].helpers({
+Template.staffDailyShift.helpers({
     'shift': function() {
         var selector = _.pick(this, ['dayCode', 'employeeId']);
         _.extend( selector, {
@@ -32,9 +32,6 @@ Template['staffDailyShift'].helpers({
         return '';
     },
     'shiftTimeStatus': function(shift) {
-        console.log(shift.shiftClockOn);
-        console.log(shift);
-        console.log(shift.shiftClockOff);
         return shift.shiftClockOn ?
              (shift.shiftClockOff ? "glyphicon-check" : "glyphicon-time"): "";
     },
@@ -44,5 +41,5 @@ Template['staffDailyShift'].helpers({
     }
 });
 
-Template['staffDailyShift'].events({
+Template.staffDailyShift.events({
 });

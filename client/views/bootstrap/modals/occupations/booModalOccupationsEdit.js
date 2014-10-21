@@ -1,8 +1,8 @@
-Template['booModalOccupationsEdit'].rendered = function () {
+Template.booModalOccupationsEdit.rendered = function () {
     this.alertsRoot = this.$(".alerts-container")[0];
 };
 
-Template['add_occupation'].events({
+Template.add_occupation.events({
     'click .role-add': function (e, t) {
         var $row = t.$(e.currentTarget).closest(".form-group");
         var data = {
@@ -10,7 +10,7 @@ Template['add_occupation'].events({
             code: t.$(".oc-code", $row).val().toUpperCase()
         };
         if (!data.name || !data.code) {
-            Blaze.renderWithData(Template['alert'], {
+            Blaze.renderWithData(Template.alert, {
                 message: "<strong>both</strong> occupation and code required",
                 status: 'warning'
             }, t.alertsRoot)
@@ -24,7 +24,7 @@ Template['add_occupation'].events({
     }
 });
 
-Template['edit_occupation'].events({
+Template.edit_occupation.events({
     'click .role-revert': function(e, t) {
         var _id = t.data._id;
         var occupation = SH.Collections.Occupations.findOne({_id: _id });
@@ -39,7 +39,7 @@ Template['edit_occupation'].events({
             code: t.$(".oc-code").val().toUpperCase()
         };
         if (!data.name || !data.code) {
-            Blaze.renderWithData(Template['alert'], {
+            Blaze.renderWithData(Template.alert, {
                 message: "<strong>both</strong> occupation and code required",
                 status: 'warning'
             }, t.alertsRoot)

@@ -1,4 +1,4 @@
-Template['booModalAddShift'].rendered = function () {
+Template.booModalAddShift.rendered = function () {
     this.$form = this.$("#add-shift-form");
     this.$modal = this.$('#add-shift');
     this.parsley = this.$form.parsley({
@@ -8,11 +8,11 @@ Template['booModalAddShift'].rendered = function () {
     this.$modal.modal({backdrop: 'static'});
 };
 
-Template['booModalAddShift'].helpers({
+Template.booModalAddShift.helpers({
 
 });
 
-Template['booModalAddShift'].events({
+Template.booModalAddShift.events({
     'hidden.bs.modal': function (e, t) {
         Blaze.remove(SH.Modals.addShift);
         SH.Modals.addShift = null;
@@ -24,7 +24,7 @@ Template['booModalAddShift'].events({
 
         t.parsley.validate();
         if (!t.parsley.isValid()) {
-            Blaze.renderWithData(Template['alert'], {
+            Blaze.renderWithData(Template.alert, {
                 message: "form validation failure",
                 status: 'info'
             }, t.alertsRoot);

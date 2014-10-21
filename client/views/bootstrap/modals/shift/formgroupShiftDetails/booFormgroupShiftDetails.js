@@ -1,4 +1,4 @@
-Template['booFormgroupShiftDetails'].rendered = function () {
+Template.booFormgroupShiftDetails.rendered = function () {
     this.$dayOff = this.$('[name=dayOff]');
     this.$shiftRole = this.$('[name=shiftRole]');
     this.$splitRole = this.$('[name=splitRole]');
@@ -17,7 +17,7 @@ Template['booFormgroupShiftDetails'].rendered = function () {
     Session.set('splitRoleEmpty', this.$splitRole.val() == "");
 };
 
-Template['booFormgroupShiftDetails'].helpers({
+Template.booFormgroupShiftDetails.helpers({
     'disabledOnDayOff': function () {
         return Session.get('shiftDayOff') ? 'disabled' : '';
     },
@@ -35,13 +35,13 @@ Template['booFormgroupShiftDetails'].helpers({
     }
 });
 
-Template['booFormgroupShiftDetails'].destroyed = function(){
+Template.booFormgroupShiftDetails.destroyed = function(){
     Session.set('shiftDayOff',null);
     Session.set('shiftRoleEmpty', null);
     Session.set('splitRoleEmpty', null);
 };
 
-Template['booFormgroupShiftDetails'].events({
+Template.booFormgroupShiftDetails.events({
     'change .dayOff': function (e, t) {
         Session.set('shiftDayOff', t.$dayOff.val()=='on');
     },

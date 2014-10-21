@@ -1,4 +1,4 @@
-Template['bizEmployeeRow'].rendered = function () {
+Template.bizEmployeeRow.rendered = function () {
     var self = this;
     Meteor.autorun(function(){
         var timeTotal = 0;
@@ -13,7 +13,7 @@ Template['bizEmployeeRow'].rendered = function () {
     })
 };
 
-Template['bizEmployeeRow'].helpers({
+Template.bizEmployeeRow.helpers({
     'weeklyTimeTotal': function() {
         var self = this;
         var selector = {
@@ -32,11 +32,11 @@ Template['bizEmployeeRow'].helpers({
     }
 });
 
-Template['bizEmployeeRow'].events({
+Template.bizEmployeeRow.events({
     'click .edit-staff': function (e, t) {
         if (!SH.Modals.editEmployee) {
             SH.Modals.editEmployee = Blaze.renderWithData(
-                Template['booModalEditEmployee'],
+                Template.booModalEditEmployee,
                 t.data,
                 $('#modals-container')[0]);
         }

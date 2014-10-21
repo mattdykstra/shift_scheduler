@@ -1,10 +1,10 @@
-Template['manageEvent'].rendered = function () {
+Template.manageEvent.rendered = function () {
     this.$modal = this.$('#manage-event');
     this.$modal.modal('show');
     this.$name = this.$('[name=name]');
 };
 
-Template['manageEvent'].helpers({
+Template.manageEvent.helpers({
     'dataHelper': function(){
             var self = this;
             return {
@@ -22,7 +22,7 @@ Template['manageEvent'].helpers({
     }
 });
 
-Template['manageEvent'].events({
+Template.manageEvent.events({
     'shown.bs.modal': function (e, t) {
         t.$('input[name=name]').focus()
     },

@@ -1,17 +1,17 @@
-Template['alert'].rendered = function () {
+Template.alert.rendered = function () {
 
 };
 
-Template['alert'].helpers({
+Template.alert.helpers({
     'class': function () {
         var ret = "alert";
         if (this.status) ret += " alert-"+this.status;
-        if (this.dismissible !== false) ret += " alert-dismissible";
+        ret += " alert-dismissible";
         return ret;
     }
 });
 
-Template['alert'].events({
+Template.alert.events({
     'click .bar': function (e, t) {
 
     }

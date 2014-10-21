@@ -13,7 +13,7 @@ Meteor.methods({
 
             key;
         if (direction == 'on' && code == 'shift') {
-            ret.serverMoment = moment();
+            ret.serverMoment = moment().toString();
             ret.serverOffset = moment().zone();
         }
         console.log(data);
@@ -26,10 +26,21 @@ Meteor.methods({
         if (direction == 'off' && code == 'split') key = 'splitClockOff';
         if (!key) {ret.status = 'false'; return ret;}
         if (shift[key]) {ret.status = 'already'; return ret;}
-        ret.m1 = cliMoment.format('h:mm a');
-        ret.m2 = stamp;
+        ret.m1 = cliMoment.format('h:mm A');
         var set = {}; set[key] = stamp;
         SH.Shifts.collection.update({_id: shiftId}, {$set: set});
         return ret;
+    },
+    'shift/clock/force': function(data){
+        var cliMoment = moment(data.moment),
+            offsetMinutes = data.offset,
+            stamp = data.time,
+            direction = data.toggle,
+            code = data.shift,
+            shiftId = data.shiftId,
+            ret = {},
+            addon = data.addon;
+        console.log(data);
+
     }
 });

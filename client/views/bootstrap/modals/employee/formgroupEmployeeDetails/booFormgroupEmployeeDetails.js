@@ -1,9 +1,9 @@
-Template['booFormgroupEmployeeDetails'].destroyed = function () {
+Template.booFormgroupEmployeeDetails.destroyed = function () {
     Session.set("hourlyIsSet", null);
     Session.set("salaryIsSet", null);
 };
 
-Template['booFormgroupEmployeeDetails'].rendered = function () {
+Template.booFormgroupEmployeeDetails.rendered = function () {
     this.$hourly = this.$("input[name=hourly_rate]");
     this.$salary = this.$("input[name=salary]");
     if (!this.data) return;
@@ -15,7 +15,7 @@ Template['booFormgroupEmployeeDetails'].rendered = function () {
     }
 };
 
-Template['booFormgroupEmployeeDetails'].helpers({
+Template.booFormgroupEmployeeDetails.helpers({
     'Coeff_mon_fri': function () {
         return this.coeff_mon_fri || '1.25'
     },
@@ -36,7 +36,7 @@ Template['booFormgroupEmployeeDetails'].helpers({
     }
 });
 
-Template['booFormgroupEmployeeDetails'].events({
+Template.booFormgroupEmployeeDetails.events({
     'change [name=hourly_rate]': function (e, t) {
         KL.Utils.Meteor._sessionSetTrueIfNonEmpty(t, '$hourly', 'hourlyIsSet')
     },

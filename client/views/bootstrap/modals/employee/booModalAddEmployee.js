@@ -1,4 +1,4 @@
-Template['booModalAddEmployee'].rendered = function () {
+Template.booModalAddEmployee.rendered = function () {
     this.$form = this.$("#add-employee-form");
     this.parsley = this.$form.parsley({trigger: "blur"});
     this.$modal = this.$('#add-employee');
@@ -6,13 +6,13 @@ Template['booModalAddEmployee'].rendered = function () {
     this.$modal.modal('show');
 };
 
-Template['booModalAddEmployee'].helpers({
+Template.booModalAddEmployee.helpers({
     'foo': function () {
 
     }
 });
 
-Template['booModalAddEmployee'].events({
+Template.booModalAddEmployee.events({
     'hidden.bs.modal': function (e, t) {
         Blaze.remove(SH.Modals.addEmployee);
         SH.Modals.addEmployee = null;

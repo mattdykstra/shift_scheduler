@@ -4,11 +4,11 @@ Meteor.startup(function(){
 });
 
 
-Template['tdShift'].rendered = function () {
+Template.tdShift.rendered = function () {
 
 };
 
-Template['tdShift'].helpers({
+Template.tdShift.helpers({
     'shift': function() {
         var selector = _.pick(this, ['dayCode', 'employeeId']);
         _.extend( selector, {
@@ -38,20 +38,20 @@ Template['tdShift'].helpers({
     }
 });
 
-Template['tdShift'].events({
+Template.tdShift.events({
     'click .add-shift-modal-popup': function(e ,t) {
         if (!SH.Modals.addShift) {
             SH.Modals.addShift = Blaze.renderWithData(
-                Template['booModalAddShift'], t.data, $("#modals-container")[0]);
+                Template.booModalAddShift, t.data, $("#modals-container")[0]);
         }
     },
     'click .edit-shift-modal-popup': function(e ,t) {
 
         if (!SH.Modals.editShift) {
-            var shift = Template['tdShift'].__helpers[' shift'].call(t.data);
+            var shift = Template.tdShift.__helpers[' shift'].call(t.data);
             if (shift) {
                 SH.Modals.editShift = Blaze.renderWithData(
-                    Template['booModalEditShift'], shift, $("#modals-container")[0]);
+                    Template.booModalEditShift, shift, $("#modals-container")[0]);
             }
         }
     }

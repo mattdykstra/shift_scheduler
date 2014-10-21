@@ -1,9 +1,9 @@
 
-Template['claim_admin'].rendered = function(){
+Template.claim_admin.rendered = function(){
     $('#claim_admin').parsley({trigger: 'change keyup'});
 };
 
-Template['claim_admin'].events({
+Template.claim_admin.events({
     'click button': function(e,t){
         e.preventDefault();
         e.stopPropagation();

@@ -6,10 +6,12 @@
 SH.Week.formats = {};
 _.extend (SH.Week.formats, {storage: 'gg W-E'});
 
+
 SH.Week.dateToString = function dateToString( momentObject ) {
     if (!momentObject) momentObject = moment();
     return momentObject.format( SH.Week.formats.storage );
 };
+
 
 SH.Week.dateFromString = function dateFromString( dateString ) {
     return moment.utc( dateString, SH.Week.formats.storage )
@@ -53,17 +55,20 @@ SH.Week.dateFromWD = function dateFromWeekStringAndDayCode (weekStartString, iso
 SH.Week.Time = {};
 
 /**
- // receives strings produced by timepicker. their format is 'h:mm a'
+ // receives strings produced by timepicker. their format is 'h:mm A'
  *
  * @param start12h - start time
  * @param end12h - end time
  * @returns {difference in minutes, negative if start later than end}
  */
 
+SH.Week.Time.formats = SH.Week.Time.formats || {};
+SH.Week.Time.formats.time12 = 'h:mm A';
+
 SH.Week.Time.spanInMinutes = function(start12h, end12h){
     if (!start12h || !end12h) return null;
     var dayFormat = 'YY M D ';
-    var fullFormat = 'YY M D h:mm a';
+    var fullFormat = 'YY M D h:mm A';
     var day_ = moment.utc().format(dayFormat);
     var start = day_+ start12h;
     var end = day_+ end12h;
@@ -87,6 +92,7 @@ SH.Week.Time.spanInMinutesNormalized = function spanInMinutesNormalized(start12h
     return ret;
 };
 
+// convert number in minutes to 'h:mm' span string
 SH.Week.Time.minutesToHmmString = function minutesToHmmString(totalMinutes){
     function pad2(number) {
         if (number < 10) return '0'+number.toString();
@@ -105,4 +111,18 @@ SH.Week.Time.minutesToHmmString = function minutesToHmmString(totalMinutes){
     var hours = Math.floor(totalMinutes / 60);
     var minutes = totalMinutes % 60;
     return hours+":"+pad2(minutes);
+};
+
+// return time part string
+SH.Week.Time.momentToHmmString = function ( momentObject ){
+    momentObject = momentObject || moment();
+    return momentObject.format(SH.Week.Time.formats.time12)
+};
+
+// take nearest 15 minutes rounded value
+SH.Week.Time.round15Minutes = function ( momentObject ) {
+    momentObject = momentObject || moment();
+    var seconds = momentObject.minutes()*60 + momentObject.seconds();
+    seconds = Math.round(seconds / 900) * 900;
+    return momentObject.minutes(seconds / 60);
 };

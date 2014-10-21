@@ -1,4 +1,4 @@
-Template['add_business'].rendered = function () {
+Template.add_business.rendered = function () {
     this.$form = this.$("#add-business-form");
     this.parsley = this.$form.parsley({trigger: "blur",
         excluded:"input[type=checkbox]"});
@@ -6,7 +6,7 @@ Template['add_business'].rendered = function () {
     this.$modal.modal('show');
 };
 
-Template['add_business'].helpers({
+Template.add_business.helpers({
     'dataHelper': function(){
         var self = this;
         return {
@@ -24,7 +24,7 @@ Template['add_business'].helpers({
     }
 });
 
-Template['add_business'].events({
+Template.add_business.events({
     'shown.bs.modal': function (e, t) {
         t.$('input[name=email]').focus()
     },

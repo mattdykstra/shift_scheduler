@@ -3,6 +3,13 @@
  */
 Meteor.methods({
     'shift/clock': function(data){
+        //TODO: add check against time cheating.
+
+        // server response :
+        // Object {serverMoment: "Wed Oct 22 2014 09:15:11 GMT+0000",
+        //      serverOffset: 0, mClient: "9:15 AM", mServer: "9:15 AM"
+        // } -- this was received at 16:15 local ( local moment().zone() gives -420.
+
         var clientMoment = moment(data.moment), //
             offsetMinutes = data.offset,// rel. to UTC, in minutes
             stamp = data.time,// when click was submit, 12h format text string

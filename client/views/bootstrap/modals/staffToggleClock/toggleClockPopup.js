@@ -158,7 +158,7 @@ function stamp(t) {
         time: moment().format('h:mm A'),
         shiftId: t.data.shift ? t.data.shift._id : '',
         employeeId: t.data.employee ? t.data.employee._id : '',
-            addon: _getAddon(t.$form)
+        addon: _getAddon(t.$form)
         }
 }
 
@@ -244,8 +244,8 @@ Template.toggleClockPopup.events({
         //check if late
 
         var shift = t.data.shift;
-        var shiftName = $link.data('shift');
-        var prop =shiftName+'Begin';
+        var shiftCode = $link.data('shift');
+        var prop =shiftCode+'Begin';
 
         // difference between scheduled start and time 'clock-on' clicked.
         // negative it clicked before schedule, positive if after
@@ -263,7 +263,7 @@ Template.toggleClockPopup.events({
 
             Meteor.call("shift/clock", _.extend(stamp(t), {
                     toggle: 'on',
-                    shift: shiftName
+                    shiftCode: shiftCode
                 }),
                 //callback is debug-only
                 function(err, ret){
@@ -278,18 +278,21 @@ Template.toggleClockPopup.events({
 
         var $link = $(e.currentTarget);
         var shift = t.data.shift;
-        var shiftName = $link.data('shift');
-        var prop =shiftName+'End';
+        var shiftCode = $link.data('shift');
+        var prop =shiftCode+'End';
 
         // difference btwn scheduled and real. positive if scheduled before real.
         // negative if scheduled after real
-        var diff = SH.Week.Time.spanInMinutes(shift[prop], SH.Week.Time.momentToHmmString());
-        console.log(diff);
+        var diff;
+        if (shift[prop]) { // if shift was inserted by staff - there s no scheduled end.
+            diff = SH.Week.Time.spanInMinutes(shift[prop], SH.Week.Time.momentToHmmString());
+            console.log(diff);
+        }
 
-        if (diff<0) { //check if early
+        if (diff && diff<0) { //check if early
             _hideMainButton();
             _showEarlyDialog();
-        } else if (diff>30) {         //check if late
+        } else if (diff && diff>30) {         //check if late
             _hideMainButton();
             _showLateDialog();
         } else { //if ok
@@ -300,7 +303,7 @@ Template.toggleClockPopup.events({
 
             Meteor.call("shift/clock", _.extend(stamp(t), {
                 toggle: 'off',
-                shift: shiftName
+                shiftCode: shiftCode
             }));
             t.$modal.modal('hide');
         }
@@ -309,7 +312,7 @@ Template.toggleClockPopup.events({
     'click .clock-on-confirm': function(e, t) { // handle click on second-step
         var $link = $(e.currentTarget);
         var shift = t.data.shift;
-        var shiftName = $link.data('shift');
+        var shiftCode = $link.data('shift');
 
         if (t.$form._parsley && !t.$form._parsley.isValid()) {
             t.$form._parsley.validate();
@@ -318,7 +321,7 @@ Template.toggleClockPopup.events({
 
         Meteor.call("shift/clock", _.extend(stamp(t), {
             toggle: 'on',
-            shift: shiftName
+            shiftCode: shiftCode
         }));
         t.$modal.modal('hide');
         console.log('confirm-on');
@@ -328,7 +331,7 @@ Template.toggleClockPopup.events({
     'click .clock-off-confirm': function(e, t) { // handle click on second-step
         var $link = $(e.currentTarget);
         var shift = t.data.shift;
-        var shiftName = $link.data('shift');
+        var shiftCode = $link.data('shift');
 
         if (t.$form._parsley && !t.$form._parsley.isValid()) {
             t.$form._parsley.validate();
@@ -336,7 +339,7 @@ Template.toggleClockPopup.events({
         }
         Meteor.call("shift/clock", _.extend(stamp(t), {
             toggle: 'off',
-            shift: shiftName
+            shiftCode: shiftCode
         }));
         t.$modal.modal('hide');
 

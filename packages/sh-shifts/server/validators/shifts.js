@@ -40,7 +40,8 @@ SH.Collections.Shifts.before.insert(
     function(userId, doc) {
         doc.businessId = KL.Validation.pass('userBusinessId', userId);
 
-        doc.staffEdited = KL.Validation.pass('isStaff') ? true : null;
+        var isStaff =  KL.Validation.pass('isStaff');
+        if (isStaff) doc.staffCreated = true;
     }
 );
 
@@ -48,8 +49,15 @@ SH.Collections.Shifts.before.update(
     function(userId, doc) {
         // all updates/inserts from staff going to be marked as staffEdited.
         // those are going to be reviewed
-        var staff = KL.Validation.pass('isStaff');
-        doc.staffEdited = staff ? true : null;
+        var isStaff =  KL.Validation.pass('isStaff');
+        if (isStaff) {
+            doc.staffEdited = true;
+        }
+        else {
+            if (doc.staffEdited) {
+                doc.staffEdited = false;
+            }
+        }
     }
 );
 

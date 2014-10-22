@@ -1,0 +1,90 @@
+<!-- originally made for shift_scheduler project-->
+<template name="booFormgroupShiftApprovalDetails">
+    <div class="form-group col-sm-6">
+		{{#if shiftRole}}
+            <label class="control-label">1st shift role: {{RoleName shiftRole}}</label>
+            <select class="form-control" name="shiftStatus">
+                <option value=""> --please set status-- </option>
+				{{#each shiftStatusesList}}
+                    <option value="{{status}}" {{selectedIfMatches ../shiftStatus status}} class="text-capitalize">
+                        {{status}}
+                    </option>
+				{{/each}}
+            </select>
+
+            <div style="visibility: {{visibleIf shiftBegin}};">
+                <label class="control-label">1st shift start time</label>
+				{{> timepicker_15 name='shiftBeginReal' id="tp1" value=_shiftBeginReal parsleyBeforethan="shiftEndReal" }}
+                {{#if shiftBegin}}
+                <span class="small pull-left">
+                    <span class="glyphicon glyphicon-list-alt"></span>{{shiftBegin}}
+                </span>
+                {{/if}}
+                {{#if shiftClockOn}}
+                <span class="small pull-right">
+                    <span class="glyphicon glyphicon-time"></span>{{shiftClockOn}}
+                </span>
+                {{/if}}
+<br/>
+                <label class="control-label">1st shift end time</label>
+				{{> timepicker_15 name='shiftEndReal' id="tp2" value=_shiftEndReal parsleyLaterthan="shiftBeginReal" }}
+                {{#if shiftEnd}}<span class="small pull-left">
+                    <span class="glyphicon glyphicon-list-alt"></span>{{shiftEnd}}
+                </span>{{/if}}
+                {{#if shiftClockOff}}<span class="small pull-right">
+                    <span class="glyphicon glyphicon-time"></span>{{shiftClockOff}}
+                </span>{{/if}}
+            </div>
+		{{/if}}
+    </div>
+
+
+    <div class="form-group col-sm-6">
+		{{#if splitRole}}
+            <label class="control-label">2nd shift role: {{RoleName shiftRole}}</label>
+            <select class="form-control" name="splitStatus">
+                <option value=""> --please set status-- </option>
+				{{#each shiftStatusesList}}
+                    <option value="{{status}}" {{selectedIfMatches ../splitStatus status}}>
+                        {{status}}
+                    </option>
+				{{/each}}
+            </select>
+
+            <div style="visibility: {{visibleIf splitBegin}};">
+                <label class="control-label">2nd shift start time</label>
+				{{> timepicker_15 name='splitBeginReal' id="tp3" value=_splitBeginReal parsleyBeforethan="splitEndReal"
+				parsleySplitafter="shiftEnd"}}
+                {{#if splitBegin}}
+                    <span class="small pull-left">
+                    <span class="glyphicon glyphicon-list-alt"></span>{{splitBegin}}
+                </span>
+                {{/if}}
+                {{#if splitClockOn}}
+                    <span class="small pull-right">
+                    <span class="glyphicon glyphicon-time"></span>{{splitClockOn}}
+                </span>
+                {{/if}}
+<br/>
+                <label class="control-label">2nd shift end time</label>
+				{{> timepicker_15 name='splitEndReal' id="tp4" value=_splitEndReal parsleyLaterthan="splitBeginReal" }}
+                {{#if splitEnd}}
+                    <span class="small pull-left">
+                    <span class="glyphicon glyphicon-list-alt"></span>{{splitEnd}}
+                </span>
+                {{/if}}
+                {{#if splitClockOff}}
+                    <span class="small pull-right">
+                    <span class="glyphicon glyphicon-time"></span>{{splitClockOff}}
+                </span>
+                {{/if}}
+            </div>
+		{{/if}}
+    </div>
+
+    <div class="row" style="height=6px;">&nbsp;</div>
+    <div class="form-group">
+        <input type="checkbox" name="dayOff" class="form-control"
+               checked="{{#if eq dayOff 'on'}}checked{{/if}}"/>
+    </div>
+</template>

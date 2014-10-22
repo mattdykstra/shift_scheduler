@@ -9,10 +9,21 @@
             <strong>{{position}}</strong>
         </td>
         {{#each isoWeekDays}}
-            {{> tdShift employeeId=../_id dayCode=dayCode}}
+            {{#if isInApprovalMode}}
+                {{> tdShiftApproval employeeId=../_id dayCode=dayCode}}
+            {{else}}
+                {{> tdShift employeeId=../_id dayCode=dayCode}}
+            {{/if}}
         {{/each}}
-        <td class="weekly-time text-right" data-value="{{weeklyTimeTotal}}">{{ weeklyTimeTotal}}</td>
-        <td class="weekly-salary text-right" data-value="{{weeklyPayment}}">
-            ${{weeklyPayment}}</td>
+
+        {{#if isInApprovalMode}}
+            <td class="weekly-time text-right" data-value="{{weeklyTimeTotal 'approved'}}">{{ weeklyTimeTotal 'approved'}}</td>
+            <td class="weekly-salary text-right" data-value="{{weeklyPayment 'approved'}}">
+                ${{weeklyPayment 'approved'}}</td>
+        {{else}}
+            <td class="weekly-time text-right" data-value="{{weeklyTimeTotal}}">{{ weeklyTimeTotal}}</td>
+            <td class="weekly-salary text-right" data-value="{{weeklyPayment}}">
+                ${{weeklyPayment}}</td>
+        {{/if}}
     </tr>
 </template>

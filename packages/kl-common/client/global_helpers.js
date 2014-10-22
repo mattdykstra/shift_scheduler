@@ -56,6 +56,9 @@ var helpers = {
     //this is for <select><option>..
     selectedIfMatches: function(value1, value2){
         return value1==value2 ? 'selected' : "";
+    },
+    visibleIf: function(condition) {
+        return condition ? 'visible' : 'hidden';
     }
 };
 

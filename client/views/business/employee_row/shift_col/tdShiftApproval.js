@@ -1,4 +1,4 @@
-Template.tdShift.helpers({
+Template.tdShiftApproval.helpers({
     'shift': function() {
         var selector = _.pick(this, ['dayCode', 'employeeId']);
         _.extend( selector, {
@@ -11,13 +11,16 @@ Template.tdShift.helpers({
     },
     'DailyTimeTotal': function(shift) {
         return SH.Week.Time.minutesToHmmString(
-            Blaze._globalHelpers['dailyTimeTotal'](shift) ); //todo: refactor into SH.Shifts....
+            Blaze._globalHelpers['dailyTimeTotalReal'](shift) ); //todo: refactor into SH.Shifts....
     },
     'shiftCellClass': function(shift) {
         if (!shift) return '';
-        if (!shift.staffEdited) return 'shift-cell-green';
-        if (shift.staffEdited) return 'shift-cell-orange';
-        return '';
+        if (shift.shiftStatus == SH.Shifts.status.LATE ||
+            shift.splitStatus == SH.Shifts.status.LATE) return 'shift-cell-red';
+        if (shift.shiftStatus == SH.Shifts.status.PENDING||
+            shift.splitStatus == SH.Shifts.status.PENDING) return 'shift-cell-orange';
+        return 'shift-cell-green';
+
     },
     'shiftClass': function(shift) {
         if (!shift) return 'tda';
@@ -25,20 +28,13 @@ Template.tdShift.helpers({
     }
 });
 
-Template.tdShift.events({
-    'click .add-shift-modal-popup': function(e ,t) {
-        if (!SH.Modals.addShift) {
-            SH.Modals.addShift = Blaze.renderWithData(
-                Template.booModalAddShift, t.data, $("#modals-container")[0]);
-        }
-    },
+Template.tdShiftApproval.events({
     'click .edit-shift-modal-popup': function(e ,t) {
-        console.log('here');
         if (!SH.Modals.editShift) {
             var shift = Template.tdShift.__helpers[' shift'].call(t.data);
             if (shift) {
                 SH.Modals.editShift = Blaze.renderWithData(
-                    Template.booModalEditShift, shift, $("#modals-container")[0]);
+                    Template.booModalApproveShift, shift, $("#modals-container")[0]);
             }
         }
     }

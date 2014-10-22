@@ -1,0 +1,11 @@
+<template name="reset_staff">
+    <form name="reset_staff" id="reset_staff" class="form-horizintal">
+        <div class="form-group">
+            <p>staff user: {{email}}</p>
+            <input id="staff_email_reset" class="form-control"
+                   type="email" placeholder="type in email to reset"
+                   data-parsley-type="email"/>
+            <button class="btn btn-danger" {{disableRemoveButton}} type="submit">reset staff user</button>
+        </div>
+    </form>
+</template>

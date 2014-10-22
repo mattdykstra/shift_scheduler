@@ -3,11 +3,11 @@
  */
 Meteor.methods({
     'shift/clock': function(data){
-        var cliMoment = moment(data.moment),
-            offsetMinutes = data.offset,
-            stamp = data.time,
-            direction = data.toggle,
-            code = data.shift,
+        var clientMoment = moment(data.moment), //
+            offsetMinutes = data.offset,// rel. to UTC, in minutes
+            stamp = data.time,// when click was submit, 12h format text string
+            toggle = data.toggle, // either 'on' or 'off'
+            code = data.shiftCode, // either 'shift' or 'split'
             shiftId = data.shiftId,
             ret = {},
             employeeId = data.employeeId,//in case there was no shift and shift is crafted by staff clicks.
@@ -32,29 +32,119 @@ Meteor.methods({
 
              // when no shift is scheduled, but clock-on is forced by staff
              addon: { 'reason-there': 'manager', manager: '<name>' },
-
          */
-            key;
-        if (direction == 'on' && code == 'shift') { // here for debug purposes
+
+            clockToggleKey, // key that stores clock button timestamp
+            realtimeKey,// key that stores 'real' times
+            shiftStatusKey = code + 'Status', // here be 'pending'/'late'/'approved'
+            shiftManagerKey = code + 'Manager',
+            scheduledTimeKey, // here be planned event time
+            reasonKey,
+            set = {}; // record modifier
+
+        var round15 = SH.Week.Time.roundTimeStringTo15Minutes;
+
+        // here for debug purposes
+        if (toggle == 'on' && code == 'shift') {
             ret.serverMoment = moment().toString();
             ret.serverOffset = moment().zone();
         }
-
         console.log(data);
 
-        if (!shiftId) {ret.status = 'false'; return ret;}
-        var shift = SH.Shifts.collection.findOne({_id: shiftId});
-        if (!shift) {ret.status = 'false'; return ret;}
-        if (direction == 'on' && code == 'shift') key = 'shiftClockOn';
-        if (direction == 'off' && code == 'shift') key = 'shiftClockOff';
-        if (direction == 'on' && code == 'split') key = 'splitClockOn';
-        if (direction == 'off' && code == 'split') key = 'splitClockOff';
-        if (!key) {ret.status = 'false'; return ret;}
+        // setting up keys.
+        if (toggle == 'on' && code == 'shift') {clockToggleKey = 'shiftClockOn'; scheduledTimeKey = 'shiftBegin';}
+        if (toggle == 'off' && code == 'shift') {clockToggleKey = 'shiftClockOff'; scheduledTimeKey = 'shiftEnd';}
+        if (toggle == 'on' && code == 'split') {clockToggleKey = 'splitClockOn'; scheduledTimeKey = 'splitBegin';}
+        if (toggle == 'off' && code == 'split') {clockToggleKey = 'splitClockOff'; scheduledTimeKey = 'splitEnd';}
 
-        if (shift[key]) {ret.status = 'already'; return ret;}
-        ret.m1 = cliMoment.format('h:mm A');
-        var set = {}; set[key] = stamp;
-        SH.Shifts.collection.update({_id: shiftId}, {$set: set});
+        // if setting up keys has failed
+        if (!clockToggleKey) {
+            ret.status = 'false'; return ret;
+        }
+        realtimeKey = scheduledTimeKey + 'Real';
+
+        reasonKey = scheduledTimeKey + 'Reason'; //pick reason
+        var reason = _.values (_.pick(addon, ['reason-there', 'reason-late', 'reason-early']));
+        if (reason.length) {
+            set[reasonKey]=reason[0];
+        }
+
+        set[clockToggleKey] = stamp; // storing
+
+        if (!shiftId) { // there was no shift. new shift should be created
+            if (addon && addon['reason-there'] == 'manager') { //only reason staff creates a record
+                set[shiftStatusKey] = SH.Shifts.status.PENDING;
+                set[shiftManagerKey] = addon['manager'];
+                set[scheduledTimeKey] = stamp; //no matter.
+
+                // this will probably be buggy at midnight.. let s wait a bit and check..
+                set[realtimeKey] = round15(stamp);
+                SH.Shifts.collection.insert(set);
+
+            } else {
+                ret.status = 'false';
+                return ret;
+            }
+
+        } else { // shift exists
+            var shift = SH.Shifts.collection.findOne({_id: shiftId});
+
+            if (!shift) { // oops
+                ret.status = 'false';
+                return ret;
+            }
+
+            if (shift[clockToggleKey]) { // allow toggling clock only once.
+                ret.status = 'already';
+                return ret;
+            }
+
+            // generic.
+            set[realtimeKey] = round15(stamp); //in general. exceptions are below.
+            if (!(shift[shiftStatusKey])) //if not set - set as approved
+                set[shiftStatusKey] = SH.Shifts.status.APPROVED;
+            var late = shift[shiftStatusKey] == SH.Shifts.status.LATE;
+            //exceptions.
+            if (addon && addon['reason-there'] == 'manager') { // staff adds 2nd shift.
+                set[shiftStatusKey] = SH.Shifts.status.PENDING;
+
+                set[shiftManagerKey] = addon['manager'];
+                set[scheduledTimeKey] = stamp; //no matter.
+
+                // this will probably be buggy at midnight.. let s wait a bit and check..
+
+            }
+
+            if (addon && addon['reason-late'] == 'timer' && addon['timepicker']) {
+                if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
+                set[realtimeKey] = round15(addon['timepicker']);
+            }
+
+            if (addon && addon['reason-late'] == 'ok') {
+                if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
+                set[realtimeKey] = shift[scheduledTimeKey]; // staff tells he is on schedule, just forgot.
+            }
+
+            if (addon && addon['reason-late'] == 'manager') { // todo: move string keys to package, same as with statuses
+                if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
+                set[shiftManagerKey] = addon['manager'];
+            }
+
+            if (addon && addon['reason-late'] == 'late') {
+                set[shiftStatusKey] = SH.Shifts.status.LATE;
+            }
+
+            if (addon && addon['reason-early'] == 'sick') {
+                if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
+            }
+
+            SH.Shifts.collection.update({_id: shiftId}, {$set: set});
+
+        }
+
+
+        ret.mClient = clientMoment.format('h:mm A'); //debug
+        ret.mServer = moment().format('h:mm A'); //debug
         return ret;
     }
 });

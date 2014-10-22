@@ -2,7 +2,7 @@
 <template name="header">
     <div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
-            <h2 class="text-center" style="padding: 0; margin: 0;">shifts scheduler
+            <h2 class="text-center" style="padding: 0; margin: 0;">shifts scheduler {{#if isInApprovalMode}}(approval mode){{/if}}
             {{# if isStaffUser }}<span class="pull-left">{{headerDate}}</span> {{/if}}
             <span class="pull-right">{{BusinessName}}</span>
             </h2>

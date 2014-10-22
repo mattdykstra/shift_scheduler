@@ -29,9 +29,6 @@ Template.booFormgroupShiftDetails.helpers({
     },
     splitRoleNotEmpty: function () {
         return !Session.get('splitRoleEmpty')
-    },
-    visibleIf: function(condition) {
-        return condition ? 'visible' : 'hidden';
     }
 });
 

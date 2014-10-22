@@ -22,7 +22,7 @@
 
     </div>
     <div class="form-group col-sm-6">
-        <label class="control-label">2st shift role</label>
+        <label class="control-label">2nd shift role</label>
         <select class="form-control" name="splitRole">
             <option value=""
             {{selectedIfMatches splitRole ""}}>select role</option>
@@ -33,11 +33,11 @@
         </select>
 
         <div style="visibility: {{visibleIf splitRoleNotEmpty}};">
-            <label class="control-label">2st shift start time</label>
+            <label class="control-label">2nd shift start time</label>
             {{> timepicker_15 name='splitBegin' id="tp3" value=splitBegin parsleyBeforethan="splitEnd"
             parsleySplitafter="shiftEnd"}}
 
-            <label class="control-label">2st shift end time</label>
+            <label class="control-label">2nd shift end time</label>
             {{> timepicker_15 name='splitEnd' id="tp4" value=splitEnd parsleyLaterthan="splitBegin" }}
         </div>
     </div>
@@ -47,6 +47,5 @@
 
         <input type="checkbox" name="dayOff" class="form-control"
                checked="{{#if eq dayOff 'on'}}checked{{/if}}"/>
-
     </div>
 </template>

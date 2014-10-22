@@ -1,0 +1,46 @@
+<!-- originally made for shift_scheduler project-->
+<template name="tdShiftApproval">
+    <td class="text-center shift-cell {{shiftCellClass shift}}" data-day-code="{{dayCode}}">
+        <span class="visible-xs-inline visible-sm-inline data">
+                <a href="#">
+	                {{ trDateFromDayCode dayCode}}{{ displayEvent_1 dayCode}}
+                </a>
+            </span>
+		{{#if shift }}
+            <a href="#" class="edit-shift-modal-popup">
+				{{#with shift}}
+					{{#if eq dayOff 'on'}}
+                        <span class="day-off">OFF</span>
+					{{else}}
+						{{#if shiftBegin}}
+							{{#if and shiftBeginReal shiftEndReal}}
+							{{niceTime shiftBeginReal}} - {{niceTime shiftEndReal}}  {{RoleCode shiftRole}}
+							{{else}}
+								<span class="italic">{{niceTime shiftBegin}} - {{niceTime shiftEnd}}  {{RoleCode shiftRole}}</span>
+							{{/if}}
+						{{/if}}
+						{{#if and shiftBegin splitBegin}}
+                            <br/>
+						{{/if}}
+						{{#if splitBegin}}
+							{{#if and splitBeginReal splitEndReal}}
+							{{niceTime splitBeginReal}} - {{niceTime splitEndReal}}   {{RoleCode splitRole}}
+							{{else}}
+                                <span class="italic">{{niceTime splitBegin}} - {{niceTime splitEnd}}  {{RoleCode splitRole}}</span>
+							{{/if}}
+						{{/if}}
+					{{/if}}
+				{{/with}}
+            </a>
+		{{else}}
+            <span class="tda">
+                NO SCHEDULE
+            </span>
+		{{/if}}
+    </td>
+    <td>
+        <div class="daily-time-total" data-time-daily="{{dailyTimeTotal shift}}" data-day-code="{{dayCode}}">
+			{{DailyTimeTotal shift}}
+        </div>
+    </td>
+</template>

@@ -39,8 +39,20 @@
             </tfoot>
         </table>
     </div>
-    {{#if staffUser}}
-    {{> reset_staff staffUser}}
-    {{/if}}
+
+    <div class="row">
+        <div class="col-md-4">
+            {{> switchApproveSchedule}}
+        </div>
+        <div class="col-md-4"> &nbsp;
+        </div>
+        <div class="col-md-4">
+            {{#if staffUser}}
+                {{> reset_staff staffUser}}
+            {{/if}}
+        </div>
+    </div>
+
+
 
 </template>

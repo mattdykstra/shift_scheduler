@@ -65,15 +65,21 @@ SH.Week.Time = {};
 SH.Week.Time.formats = SH.Week.Time.formats || {};
 SH.Week.Time.formats.time12 = 'h:mm A';
 
-SH.Week.Time.spanInMinutes = function(start12h, end12h){
-    if (!start12h || !end12h) return null;
+SH.Week.Time.todayMomentFromTimeString = function ( time12h ){
     var dayFormat = 'YY M D ';
     var fullFormat = 'YY M D h:mm A';
     var day_ = moment.utc().format(dayFormat);
-    var start = day_+ start12h;
-    var end = day_+ end12h;
+    var day_time = day_ + time12h;
+    return moment(day_time, fullFormat);
+};
 
-    return (moment(end, fullFormat). diff(moment(start, fullFormat), 'minutes') );
+SH.Week.Time.spanInMinutes = function(start12h, end12h){
+    if (!start12h || !end12h) return null;
+    var startMoment = SH.Week.Time.todayMomentFromTimeString ( start12h );
+    var endMoment = SH.Week.Time.todayMomentFromTimeString ( end12h );
+    if (startMoment.isValid() && endMoment.isValid())
+        return endMoment. diff(startMoment, 'minutes') ;
+    return null;
 };
 
 var SHIFT_BREAK_MINUTES = 30;
@@ -120,9 +126,15 @@ SH.Week.Time.momentToHmmString = function ( momentObject ){
 };
 
 // take nearest 15 minutes rounded value
-SH.Week.Time.round15Minutes = function ( momentObject ) {
+SH.Week.Time.roundMomentTo15Minutes = function ( momentObject ) {
     momentObject = momentObject || moment();
     var seconds = momentObject.minutes()*60 + momentObject.seconds();
     seconds = Math.round(seconds / 900) * 900;
     return momentObject.minutes(seconds / 60);
+};
+
+SH.Week.Time.roundTimeStringTo15Minutes = function ( timeString ) {
+    var moment = SH.Week.Time.todayMomentFromTimeString ( timeString );
+    var rounded = SH.Week.Time.roundMomentTo15Minutes ( moment );
+    return SH.Week.Time.momentToHmmString ( rounded );
 };

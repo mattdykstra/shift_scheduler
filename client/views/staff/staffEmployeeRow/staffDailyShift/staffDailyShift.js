@@ -19,15 +19,11 @@ Template.staffDailyShift.helpers({
     },
     'shiftCellClass': function(shift) {
         if (!shift) return '';
-        var mode = Session.get('businessUserSiteMode');
-        if (mode == 'scheduling') {
-            if (!shift.staffEdited) return 'shift-cell-green';
-            if (shift.staffEdited) return 'shift-cell-orange';
-        }
+        if (!shift.staffEdited) return 'shift-cell-green';
+        if (shift.staffEdited) return 'shift-cell-orange';
         return '';
     },
     'shiftClass': function(shift) {
-        console.log(shift);
         if (!shift) return 'tda';
         return '';
     },

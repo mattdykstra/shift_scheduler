@@ -14,11 +14,26 @@ var helpers = {
             if (sh != null) total += sh;
         }
         return total;
+    },
+    'dailyTimeTotalReal': function (shift) {
+        var total = 0;
+        if (shift && shift.dayOff != 'on') {
+            var sh = SH.Week.Time.spanInMinutesNormalized(shift.shiftBeginReal, shift.shiftEndReal);
+            if (sh != null) total += sh;
+            sh = SH.Week.Time.spanInMinutesNormalized(shift.splitBeginReal, shift.splitEndReal);
+            if (sh != null) total += sh;
+        }
+        return total;
+    },
+    'shiftStatusesList': function() {
+        return _.map(_.values(SH.Shifts.status), function (item) {
+            return {'status': item};
+        });
     }
 };
 
 Meteor.startup(function() {
     _.each(helpers, function (helper, key) {
-        UI.registerHelper(key, helper);
+       Blaze.registerHelper(key, helper);
     });
 });

@@ -14,21 +14,21 @@ Template.bizEmployeeRow.rendered = function () {
 };
 
 Template.bizEmployeeRow.helpers({
-    'weeklyTimeTotal': function() {
+    'weeklyTimeTotal': function(param) {
         var self = this;
         var selector = {
             weekCode: SH.Week.getWeekCode( SH.Week.getString()),
             employeeId: self._id
         };
-        return SH.Shifts.employeeWeeklyTime(selector);
+        return SH.Shifts.employeeWeeklyTime(selector, param=='approved');
     },
-    'weeklyPayment': function(){
+    'weeklyPayment': function(param){
         var self = this;
         var selector = {
             weekCode: SH.Week.getWeekCode( SH.Week.getString()),
             employeeId: self._id
         };
-        return SH.Shifts.employeeWeeklyPayment(selector);
+        return SH.Shifts.employeeWeeklyPayment(selector, param=='approved');
     }
 });
 

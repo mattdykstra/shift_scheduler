@@ -1,13 +1,26 @@
-SH.Shifts.employeeWeeklyTime= function employeeWeeklyTime(selector){
+/**
+ *
+ * @param selector
+ * @param approved = calculate based either on scheduled or approved times
+ * @returns {*|113}
+ */
+SH.Shifts.employeeWeeklyTime= function employeeWeeklyTime(selector, approved){
+    var helper = approved ? 'dailyTimeTotalReal':'dailyTimeTotal';
     //todo: check selector has employeeId && weekCode, pick only those.
     var shifts = SH.Shifts.collection.find(selector).fetch();
     return shifts ?
         SH.Week.Time.minutesToHmmString (KL.Utils.sum(shifts, function(shift) {
-            return Blaze._globalHelpers['dailyTimeTotal'](shift);
+            return Blaze._globalHelpers[helper](shift);
         })) : 0;
 };
-
-SH.Shifts.employeeWeeklyPayment= function employeeWeeklyPayment(selector){
+/**
+ *
+ * @param selector
+ * @param approved = calculate based either on scheduled or approved times
+ * @returns {number}
+ */
+SH.Shifts.employeeWeeklyPayment= function employeeWeeklyPayment(selector, approved){
+    var helper = approved ? 'dailyTimeTotalReal':'dailyTimeTotal';
     //todo: check selector has employeeId && weekCode, pick only those.
     var employee = SH.Staff.collection.findOne({_id: selector.employeeId});
     if (!employee) return 0;
@@ -17,7 +30,7 @@ SH.Shifts.employeeWeeklyPayment= function employeeWeeklyPayment(selector){
         return Math.round ( shifts ?
             ( employee.hourly_rate *
                 KL.Utils.sum(shifts, function(shift) {
-                    var time = Blaze._globalHelpers['dailyTimeTotal'](shift);
+                    var time = Blaze._globalHelpers[helper](shift);
                     if (shift.dayCode == '6') return (time / 60) * employee.coeff_sat;
                     if (shift.dayCode == '7') return (time / 60) * employee.coeff_sun;
                     return (time / 60) * employee.coeff_mon_fri;
@@ -25,8 +38,13 @@ SH.Shifts.employeeWeeklyPayment= function employeeWeeklyPayment(selector){
             : 0 );
     }
 };
-
-SH.Shifts.totalWeeklyPayment= function totalWeeklyPayment(incomingSelector)  {
+/**
+ *
+ * @param incomingSelector
+ * @param approved  - calculate based either on scheduled or approved times
+ * @returns {*|4}
+ */
+SH.Shifts.totalWeeklyPayment= function totalWeeklyPayment(incomingSelector, approved)  {
     //todo: check selector has businessId && weekCode, pick only those.
     var employees = SH.Staff.collection.find({
         businessId: incomingSelector.businessId
@@ -38,7 +56,9 @@ SH.Shifts.totalWeeklyPayment= function totalWeeklyPayment(incomingSelector)  {
                 employeeId: employee._id,
                 weekCode: incomingSelector.weekCode
             };
-            return SH.Shifts.employeeWeeklyPayment(selector);
+            return SH.Shifts.employeeWeeklyPayment(selector, approved);
         })
         : 0;
 };
+
+SH.Shifts.status = {PENDING: 'pending', APPROVED: 'approved', LATE: 'late'};

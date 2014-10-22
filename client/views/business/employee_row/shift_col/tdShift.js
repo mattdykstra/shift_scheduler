@@ -11,13 +11,16 @@ Template.tdShift.helpers({
     },
     'DailyTimeTotal': function(shift) {
         return SH.Week.Time.minutesToHmmString(
-            Blaze._globalHelpers['dailyTimeTotal'](shift) ); //todo: refactor into SH.Shifts....
+            Blaze._globalHelpers['dailyTimeTotal'](shift), true  ); //todo: refactor into SH.Shifts....
     },
     'shiftCellClass': function(shift) {
         if (!shift) return '';
-        if (!shift.staffEdited) return 'shift-cell-green';
-        if (shift.staffEdited) return 'shift-cell-orange';
-        return '';
+        if (shift.shiftStatus == SH.Shifts.status.LATE ||
+            shift.splitStatus == SH.Shifts.status.LATE) return 'shift-cell-red';
+        if (shift.shiftStatus == SH.Shifts.status.PENDING||
+            shift.splitStatus == SH.Shifts.status.PENDING) return 'shift-cell-orange';
+        return 'shift-cell-green';
+
     },
     'shiftClass': function(shift) {
         if (!shift) return 'tda';

@@ -18,9 +18,6 @@ Template.reset_staff.helpers({
 function _setSess(t) {
 
     var email = Template.reset_staff.__helpers[' email'].call(t.data);
-    console.log(email);
-    console.log(t.$email);
-    console.log(t.$email.val());
     Session.set('staffAccountRemovalAllow', email == t.$email.val());
 }
 

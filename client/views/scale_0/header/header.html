@@ -27,12 +27,13 @@
 
                 <ul class="nav navbar-nav navbar-right">
 {{# if noAdminUser}}  <li>{{> claim_admin}}</li>   {{/ if }}
-{{# if isBusinessUser}}
-    {{# if staffUser}}
-    {{else}}
-                    <li>{{> claim_staff}}</li> {{/if}}
-    {{/ if }}
                     {{> loginButtons }}
+                    {{# if isBusinessUser}}
+                        <li><a class="action-settings" href="#"><span class="glyphicon glyphicon-cog">Settings</span></a></li>
+                    {{/ if }}
+
+
+
                 </ul>
             </div>
             <!--/.nav-collapse -->

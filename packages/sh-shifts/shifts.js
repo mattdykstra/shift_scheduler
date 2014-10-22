@@ -11,7 +11,7 @@ SH.Shifts.employeeWeeklyTime= function employeeWeeklyTime(selector, approved){
     return shifts ?
         SH.Week.Time.minutesToHmmString (KL.Utils.sum(shifts, function(shift) {
             return Blaze._globalHelpers[helper](shift);
-        })) : 0;
+        }), true) : '';
 };
 /**
  *

@@ -15,7 +15,7 @@ Template.staffDailyShift.helpers({
     },
     'DailyTimeTotal': function(shift) {
         return SH.Week.Time.minutesToHmmString(
-            Blaze._globalHelpers['dailyTimeTotal'](shift) ); //todo: refactor into SH.Shifts....
+            Blaze._globalHelpers['dailyTimeTotal'](shift), true ); //todo: refactor into SH.Shifts....
     },
     'shiftCellClass': function(shift) {
         if (!shift) return '';

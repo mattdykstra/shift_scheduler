@@ -99,12 +99,13 @@ SH.Week.Time.spanInMinutesNormalized = function spanInMinutesNormalized(start12h
 };
 
 // convert number in minutes to 'h:mm' span string
-SH.Week.Time.minutesToHmmString = function minutesToHmmString(totalMinutes){
+SH.Week.Time.minutesToHmmString = function minutesToHmmString(totalMinutes, omitIfZero){
     function pad2(number) {
         if (number < 10) return '0'+number.toString();
         return number.toString();
     }
 
+    if (omitIfZero && totalMinutes == 0)  return '';
     if (_.isString(totalMinutes)) miutes = parseInt(totalMinutes);
     if (isNaN(totalMinutes)) {
         console.log ('exception: passed non-number.');

@@ -11,7 +11,7 @@ Template.tdShiftApproval.helpers({
     },
     'DailyTimeTotal': function(shift) {
         return SH.Week.Time.minutesToHmmString(
-            Blaze._globalHelpers['dailyTimeTotalReal'](shift) ); //todo: refactor into SH.Shifts....
+            Blaze._globalHelpers['dailyTimeTotalReal'](shift), true ); //todo: refactor into SH.Shifts....
     },
     'shiftCellClass': function(shift) {
         if (!shift) return '';
@@ -29,6 +29,12 @@ Template.tdShiftApproval.helpers({
 });
 
 Template.tdShiftApproval.events({
+    'click .add-shift-modal-popup': function(e ,t) {
+        if (!SH.Modals.addShift) {
+            SH.Modals.addShift = Blaze.renderWithData(
+                Template.booModalAddShift, t.data, $("#modals-container")[0]);
+        }
+    },
     'click .edit-shift-modal-popup': function(e ,t) {
         if (!SH.Modals.editShift) {
             var shift = Template.tdShift.__helpers[' shift'].call(t.data);

@@ -7,9 +7,7 @@ Template.bizEmployeeRow.rendered = function () {
           timeTotal += $item.data('timeDaily');
         });
         self.$('.weekly-time').data('weeklyTime', timeTotal);
-        self.$('.weekly-time').val(SH.Week.Time.minutesToHmmString(timeTotal));
-
-
+        self.$('.weekly-time').val(SH.Week.Time.minutesToHmmString(timeTotal), true);
     })
 };
 

@@ -31,7 +31,6 @@ Template.pasteShifts.events({
     },
     'click .submit': function (e, t) {
         var employeeId= t.$('[name=employeeId]').val();
-        console.log(employeeId);
          if (SH.isBusinessUser()) {
             Meteor.call('shifts/paste',  SH.Week.getWeekCode (Session.get("shCopyFromWeek")),  SH.Week.getWeekCode(SH.Week.getString()), employeeId);
          }

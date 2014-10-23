@@ -27,7 +27,6 @@ Template.tdShift.events({
         }
     },
     'click .edit-shift-modal-popup': function(e ,t) {
-        console.log('here');
         if (!SH.Modals.editShift) {
             var shift = Template.tdShift.__helpers[' shift'].call(t.data);
             if (shift) {

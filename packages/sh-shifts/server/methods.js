@@ -69,9 +69,6 @@ Meteor.methods({
 
         // if setting up keys has failed
         if (!clockToggleKey) {
-            console.log(toggle);
-            console.log(code);
-            console.log(clockToggleKey);
             ret.status = 'false'; return ret;
         }
         realtimeKey = scheduledTimeKey + 'Real';
@@ -173,7 +170,6 @@ Meteor.methods({
     },
     // this will copypaste
     'shifts/paste': function(weekCodeFrom, weekCodeTo, employeeId){
-        console.log(employeeId);
         var user = KL.Validation.pass('isBusiness', this.userId);
         var selector = {weekCode: weekCodeFrom, businessId: user._id};
         if (employeeId) _.extend(selector, {employeeId: employeeId});

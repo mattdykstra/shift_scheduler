@@ -172,8 +172,6 @@ Meteor.methods({
     'shifts/paste': function(weekCodeFrom, weekCodeTo){
         var user = KL.Validation.pass('isBusiness', this.userId);
         if (!user || (weekCodeFrom == weekCodeTo)) return;
-        console.log(weekCodeFrom);
-        console.log(weekCodeTo);
         var shifts = _.map (SH.Shifts.collection.find({weekCode: weekCodeFrom, businessId: user._id}).fetch(),
             function(item) {
                 var ret = _.pick(item, ['employeeId', 'shiftRole', 'splitRole',
@@ -197,12 +195,11 @@ Meteor.methods({
         })
     },
     'shifts/publish': function(weekCode) {
-        console.log(1111);
+
         var user = KL.Validation.pass('isBusiness', this.userId);
-        console.log(user);
-        console.log(weekCode);
+
         if (!user || !weekCode) return;
-        console.log('here'+weekCode);
+
         SH.Shifts.collection.update(
             {weekCode: weekCode,
                 businessId: user._id},

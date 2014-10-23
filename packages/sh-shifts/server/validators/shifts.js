@@ -48,7 +48,8 @@ SH.Collections.Shifts.before.insert(
         if (isStaff) doc.staffCreated = true;
 
         var isBusiness = KL.Validation.pass('isBusiness', user);
-        if (isBusiness) doc.unpublished = true;
+        //added shift is unpublished by default
+        if (isBusiness && doc.unpublished !== true && doc.unpublished !== false ) doc.unpublished = true;
     }
 );
 

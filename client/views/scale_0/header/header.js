@@ -35,18 +35,13 @@ Template.header.events({
         Session.set('shCopyFromWeek', SH.Week.getWeekCode( SH.Week.getString() ));
     },
     'click .action-paste': function (e, t){
-        if (SH.isBusinessUser()) {
-            console.log(SH.Week.getString());
-            console.log(    SH.Week.getWeekCode( SH.Week.getString() ));
-
-            Meteor.call('shifts/paste', Session.get('shCopyFromWeek'),
-                SH.Week.getWeekCode( SH.Week.getString() ));
+        if (!Session.get('shCopyFromWeek')) return;
+        if (!SH.Modals.pasteShifts) {
+            SH.Modals.pasteShifts = Blaze.render(Template.pasteShifts, $('#modals-container')[0]);
         }
     },
     'click .action-publish': function (e, t){
-        console.log(1);
         if (SH.isBusinessUser()) {
-            console.log(111);
             Meteor.call('shifts/publish', SH.Week.getWeekCode(SH.Week.getString()));
         }
     }

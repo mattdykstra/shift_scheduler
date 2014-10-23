@@ -60,7 +60,7 @@ Meteor.methods({
         console.log(data);
 
         var user = KL.Validation.pass('isStaff', this.userId);
-        if (!KL.Validation.pass('isStaff', this.userId))
+        if (!user) return;
         // setting up keys.
         if (toggle == 'on' && code == 'shift') {clockToggleKey = 'shiftClockOn'; scheduledTimeKey = 'shiftBegin';}
         if (toggle == 'off' && code == 'shift') {clockToggleKey = 'shiftClockOff'; scheduledTimeKey = 'shiftEnd';}
@@ -69,6 +69,9 @@ Meteor.methods({
 
         // if setting up keys has failed
         if (!clockToggleKey) {
+            console.log(toggle);
+            console.log(code);
+            console.log(clockToggleKey);
             ret.status = 'false'; return ret;
         }
         realtimeKey = scheduledTimeKey + 'Real';
@@ -95,7 +98,7 @@ Meteor.methods({
                 SH.Shifts.collection.insert(set);
 
             } else {
-                ret.status = 'false';
+                ret.status = 'no shift && no manager';
                 return ret;
             }
 
@@ -103,7 +106,7 @@ Meteor.methods({
             var shift = SH.Shifts.collection.findOne({_id: shiftId});
 
             if (!shift) { // oops
-                ret.status = 'false';
+                ret.status = 'shiftId provided but no shift';
                 return ret;
             }
 
@@ -169,22 +172,27 @@ Meteor.methods({
         return ret;
     },
     // this will copypaste
-    'shifts/paste': function(weekCodeFrom, weekCodeTo){
+    'shifts/paste': function(weekCodeFrom, weekCodeTo, employeeId){
+        console.log(employeeId);
         var user = KL.Validation.pass('isBusiness', this.userId);
+        var selector = {weekCode: weekCodeFrom, businessId: user._id};
+        if (employeeId) _.extend(selector, {employeeId: employeeId});
+
         if (!user || (weekCodeFrom == weekCodeTo)) return;
-        var shifts = _.map (SH.Shifts.collection.find({weekCode: weekCodeFrom, businessId: user._id}).fetch(),
+
+
+        var shifts = _.map (SH.Shifts.collection.find(selector).fetch(),
             function(item) {
                 var ret = _.pick(item, ['employeeId', 'shiftRole', 'splitRole',
                     'shiftBegin', 'shiftEnd', 'splitBegin', 'splitEnd', 'dayCode', 'dayOff']);
                 ret.weekCode = weekCodeTo;
-
-
                 //ret.unpublished = true;
                 return ret;
-
             });
+
         _.each(shifts, function(shift){
             if (!shift.employeeId) return; // omit events
+
             var test = SH.Shifts.collection.findOne({
                 employeeId: shift.employeeId,
                 weekCode: weekCodeTo,
@@ -192,8 +200,9 @@ Meteor.methods({
             });
             if (!test) //if there s already a record - bypass. else insert
                 SH.Shifts.collection.insert(shift);
-        })
+        });
     },
+
     'shifts/publish': function(weekCode) {
 
         var user = KL.Validation.pass('isBusiness', this.userId);

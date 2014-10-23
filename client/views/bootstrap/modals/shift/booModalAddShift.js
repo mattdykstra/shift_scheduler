@@ -45,6 +45,9 @@ Template.booModalAddShift.events({
             dayCode: t.data.dayCode.toString(),
             weekCode: SH.Week.getWeekCode( SH.Week.getString() )
         });
+        newbie.unpublished = !(newbie.publish == 'on');
+        delete (newbie.publish);
+
         SH.Shifts.collection.insert(newbie);
         t.$modal.modal('hide');
     }

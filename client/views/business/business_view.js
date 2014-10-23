@@ -3,14 +3,14 @@ Template.business_view.rendered = function () {
 };
 
 Template.business_view.helpers({
-    'grand_total': function () {
+    'grand_total': function (approved) {
         var businessId = SH.businessId();
         if (!businessId) return 0;
         var selector = {
             businessId: businessId,
             weekCode: SH.Week.getWeekCode( SH.Week.getString() )
         };
-        return SH.Shifts.totalWeeklyPayment(selector);
+        return SH.Shifts.totalWeeklyPayment(selector, approved);
     }
 });
 

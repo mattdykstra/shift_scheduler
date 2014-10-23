@@ -9,96 +9,111 @@
 
                     <div class="alerts-container"></div>
 					{{! #if employee.pin}}
-                        <!--div class="row">
+                    <!--div class="row">
                             <p>pin: {{! employee.pin}}</p>
                         </div-->
 					{{! /if}}
                 </div>
 
                 <div class="modal-body ">
+                    <form class="input-pin" style="visibility: {{visibleIf pinNotEntered}}">
+                        <div class="form-group">
+                            <input id="pnp" type="password" placeholder="Enter PIN"/>
+                        </div>
+                    </form>
+
+
                     <form class="toggle-clock-form" id="toggle-clock-form">
-						{{#if showBye}}
-                            <div class="form-group">
-                                <p>You have closed 2 shifts today. </p>
-                            </div>
-						{{/if}}
+						{{#if pinNotEntered}}
+						{{else}}
+							{{#if showBye}}
+                                <div class="form-group">
+                                    <p>You have closed 2 shifts today. </p>
+                                </div>
+							{{/if}}
 
-						{{#if showWhy2}}
-                            <div class="form-group">
-                                <p>You have closed 1 shift today. Why are you there?</p>
-                                <input type="radio" name="reason-there" value="mistake" required>Just clicked there<br>
-                                <input type="radio" name="reason-there" value="manager">Was called in by manager on 2nd
-                                shift<br>
-								{{#if manager}}
-                                    <div class="form-group row">
-                                        <div class="col-sm-6">
-                                            <input type="text" name="manager" placeholder="manager name" required>
-                                            <select class="form-control" name="role" required>
-                                                <option value="">select role</option>
-                                                {{#each occupationsList}}
-                                                    <option value="{{_id}}">{{name}} - {{code}}</option>
-                                                {{/each}}
-                                            </select>
+							{{#if showWhy2}}
+                                <div class="form-group">
+                                    <p>You have closed 1 shift today. Why are you there?</p>
+                                    <input type="radio" name="reason-there" value="mistake" required>Just clicked
+                                    there<br>
+                                    <input type="radio" name="reason-there" value="manager">Was called in by manager on
+                                    2nd
+                                    shift<br>
+									{{#if manager}}
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <input type="text" name="manager" placeholder="manager name" required>
+                                                <select class="form-control" name="role" required>
+                                                    <option value="">select role</option>
+													{{#each occupationsList}}
+                                                        <option value="{{_id}}">{{name}} - {{code}}</option>
+													{{/each}}
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-								{{/if}}
-								{{#if showConfirm}}
-
-                                    <a href="#" class="btn btn-success clock-on-confirm" data-shift="split">Clock on</a>
-								{{/if}}
-                            </div>
-						{{/if}}
-
-						{{#if showWhy1}}
-                            <div class="form-group">
-                                <p>Why are you there?</p>
-                                <input type="radio" name="reason-there" value="mistake" required>Just thought I would
-                                work today<br>
-                                <input type="radio" name="reason-there" value="manager">Was called in by manager<br>
-								{{#if manager}}
-                                    <div class="form-group row">
-                                        <div class="col-sm-6">
-                                            <input type="text" name="manager" placeholder="manager name" required>
-                                            <select class="form-control" name="role" required>
-                                                <option value="">select role</option>
-                                                {{#each occupationsList}}
-                                                    <option value="{{_id}}">{{name}} - {{code}}</option>
-                                                {{/each}}
-                                            </select>
-                                        </div>
-                                    </div>
+									{{/if}}
 									{{#if showConfirm}}
-                                        <a href="#" class="btn btn-success clock-on-confirm" data-shift="shift">Clock
+
+                                        <a href="#" class="btn btn-success clock-on-confirm" data-shift="split">Clock
                                             on</a>
 									{{/if}}
-									{{#if showButtonOn}}
-										{{> btnShiftClockOn}}
+                                </div>
+							{{/if}}
+
+							{{#if showWhy1}}
+                                <div class="form-group">
+                                    <p>Why are you there?</p>
+                                    <input type="radio" name="reason-there" value="mistake" required>Just thought I
+                                    would
+                                    work today<br>
+                                    <input type="radio" name="reason-there" value="manager">Was called in by manager<br>
+									{{#if manager}}
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <input type="text" name="manager" placeholder="manager name" required>
+                                                <select class="form-control" name="role" required>
+                                                    <option value="">select role</option>
+													{{#each occupationsList}}
+                                                        <option value="{{_id}}">{{name}} - {{code}}</option>
+													{{/each}}
+                                                </select>
+                                            </div>
+                                        </div>
+										{{#if showConfirm}}
+                                            <a href="#" class="btn btn-success clock-on-confirm" data-shift="shift">Clock
+                                                on</a>
+										{{/if}}
+										{{#if showButtonOn}}
+											{{> btnShiftClockOn}}
+										{{/if}}
 									{{/if}}
-								{{/if}}
-                            </div>
-						{{/if}}
+                                </div>
+							{{/if}}
 
 
-						{{#if hasShift}}
-                            <div class="form-group">
-								{{#if showShiftOn}}
-									{{> btnShiftClockOn split='shift'}}
-								{{else}}
-									{{#if showShiftOff}}
-										{{> btnShiftClockOff split='shift'}}
+							{{#if hasShift}}
+                                <div class="form-group">
+									{{#if showShiftOn}}
+										{{> btnShiftClockOn split='shift'}}
+									{{else}}
+										{{#if showShiftOff}}
+											{{> btnShiftClockOff split='shift'}}
+										{{/if}}
 									{{/if}}
-								{{/if}}
 
-								{{#if showSplitOn}}
-									{{> btnShiftClockOn split='split'}}
-								{{else}}
-									{{#if showSplitOff}}
-										{{> btnShiftClockOff split='split'}}
+									{{#if showSplitOn}}
+										{{> btnShiftClockOn split='split'}}
+									{{else}}
+										{{#if showSplitOff}}
+											{{> btnShiftClockOff split='split'}}
+										{{/if}}
 									{{/if}}
-								{{/if}}
-                            </div>
-						{{/if}}
+                                </div>
+							{{/if}}
+						{{/if}} {{! pinNotEntered}}
                     </form>
+
                 </div>
                 <div class="modal-footer">
                     <a href="#" data-dismiss="modal" class="btn cancel">Cancel</a>
@@ -159,25 +174,25 @@
             <input type="radio" name="reason-late" value="manager">I was asked to stay back<br>
         </div>
 
-        {{#if manager}} <!-- todo template this part-->
+		{{#if manager}} <!-- todo template this part-->
             <div class="form-group row">
                 <div class="col-sm-6">
                     <input type="text" name="manager" placeholder="manager name" required>
                     <select class="form-control" name="role" required>
                         <option value="">select role</option>
-                        {{#each occupationsList}}
+						{{#each occupationsList}}
                             <option value="{{_id}}">{{name}} - {{code}}</option>
-                        {{/each}}
+						{{/each}}
                     </select>
                 </div>
             </div>
 		{{/if}}
 	{{/if}}
 
-    {{#if showConfirm}}
+	{{#if showConfirm}}
         <div class="form-group">
             <a href="#" class="btn btn-primary clock-off-confirm" data-shift="{{split}}">Clock off</a>
         </div>
-    {{/if}}
+	{{/if}}
 </template>
 

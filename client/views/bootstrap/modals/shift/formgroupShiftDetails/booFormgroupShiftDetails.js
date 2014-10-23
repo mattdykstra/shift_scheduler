@@ -1,5 +1,6 @@
 Template.booFormgroupShiftDetails.rendered = function () {
     this.$dayOff = this.$('[name=dayOff]');
+    this.$unpublished = this.$('[name=publish]');
     this.$shiftRole = this.$('[name=shiftRole]');
     this.$splitRole = this.$('[name=splitRole]');
 
@@ -12,7 +13,19 @@ Template.booFormgroupShiftDetails.rendered = function () {
             onColor: "default"
         }
     );
+
+    this.$unpublished.bootstrapSwitch(
+        {
+            onText: "yes",
+            offText: "no",
+            labelText: "publish",
+            offColor: "primary",
+            onColor: "success"
+        }
+    );
+
     Session.set('shiftDayOff', this.$dayOff.val()=='on');
+    Session.set('unpublished', this.$unpublished.val()=='on');
     Session.set('shiftRoleEmpty', this.$shiftRole.val() == "");
     Session.set('splitRoleEmpty', this.$splitRole.val() == "");
 };

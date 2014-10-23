@@ -57,6 +57,8 @@ Template.booModalEditShift.events({
             newbie.dayOff = 'off';
         if (!(newbie.shiftBegin || newbie.shiftEnd || newbie.splitBegin || newbie.splitEnd))
             newbie.dayOff = 'on';
+        newbie.unpublished = !(newbie.publish == 'on');
+        delete (newbie.publish);
 
         SH.Shifts.collection.update({_id: t.data._id}, {$set: newbie});
         t.$modal.modal('hide');

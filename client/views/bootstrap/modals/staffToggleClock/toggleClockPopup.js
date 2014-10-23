@@ -12,7 +12,10 @@ Template.toggleClockPopup.rendered = function () {
         var p = self.$form._parsley && self.$form._parsley.isValid();
         if (p) _enableConfirmButton();
         else _disableConfirmButton();
-    })
+    });
+
+    //focus pin enter field, if any
+    if (this.employee.pin) this.$modal.focus("#pnp");
 };
 
 
@@ -63,6 +66,7 @@ function _clearVariables(){
     Session.set(__showEarlyDialog , null);
     Session.set(__showConfirmButton, null);
     Session.set(__enableConfirmButton, null);
+    Session.set('employeePin', null);
 }
 
 
@@ -107,6 +111,10 @@ Template.toggleClockPopup.helpers({
     },
     'manager': function(){ //
         return _isVisibleManagerField();
+    },
+    'pinNotEntered': function() {
+        if (!this.employee.pin) return false;
+        return this.employee.pin != Session.get("employeePin");
     }
 });
 
@@ -348,6 +356,9 @@ Template.toggleClockPopup.events({
         t.$modal.modal('hide');
 
         console.log('confirm-off');
+    },
+    'keyup #pnp, blur #pnp': function(e, t){
+        Session.set("employeePin", t.$("#pnp").val());
     }
 });
 

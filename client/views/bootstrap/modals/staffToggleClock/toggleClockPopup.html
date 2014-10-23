@@ -8,17 +8,12 @@
                     <h4 class="modal-title">{{title}}</h4>
 
                     <div class="alerts-container"></div>
-					{{! #if employee.pin}}
-                    <!--div class="row">
-                            <p>pin: {{! employee.pin}}</p>
-                        </div-->
-					{{! /if}}
                 </div>
 
                 <div class="modal-body ">
-                    <form class="input-pin" style="visibility: {{visibleIf pinNotEntered}}">
+                    <form class="input-pin {{visibleIf pinNotEntered}}">
                         <div class="form-group">
-                            <input id="pnp" type="password" placeholder="Enter PIN"/>
+                            {{> pinInputWithPinpad id='pnp'}}
                         </div>
                     </form>
 
@@ -43,11 +38,14 @@
 									{{#if manager}}
                                         <div class="form-group row">
                                             <div class="col-sm-6">
-                                                <input type="text" name="manager" placeholder="manager name" required>
+                                                <label>Manager name</label>
+                                                <input type="text" class="form-control" name="manager" required>
+                                                <label>Role</label>
                                                 <select class="form-control" name="role" required>
                                                     <option value="">select role</option>
 													{{#each occupationsList}}
-                                                        <option value="{{_id}}">{{name}} - {{code}}</option>
+                                                        <option value="{{_id}}"
+                                                            {{selectedIfMatches ../shift.splitRole _id}}>{{name}} - {{code}}</option>
 													{{/each}}
                                                 </select>
                                             </div>
@@ -71,11 +69,14 @@
 									{{#if manager}}
                                         <div class="form-group row">
                                             <div class="col-sm-6">
-                                                <input type="text" name="manager" placeholder="manager name" required>
+                                                <label>Manager name</label>
+                                                <input type="text" class="form-control" name="manager" required>
+                                                <label>Role</label>
                                                 <select class="form-control" name="role" required>
                                                     <option value="">select role</option>
 													{{#each occupationsList}}
-                                                        <option value="{{_id}}">{{name}} - {{code}}</option>
+                                                        <option value="{{_id}}"
+                                                            {{selectedIfMatches ../shift.shiftRole _id}}>{{name}} - {{code}}</option>
 													{{/each}}
                                                 </select>
                                             </div>
@@ -195,4 +196,3 @@
         </div>
 	{{/if}}
 </template>
-

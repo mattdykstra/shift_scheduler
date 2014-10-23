@@ -6,7 +6,8 @@
             <span class="pull-left  _toggle-clock" style="vertical-align: baseline;">
                 {{name}}&nbsp;<strong>{{position}}</strong>
 
-            </span>{{#if isCurrentWeek}}<span class="pull-right"><a class="btn btn-sm btn-default toggle-clock">Clock on/off</a></span>{{/if}}
+            </span>{{#if isCurrentWeek}}<span class="pull-right"><a class="btn btn-sm
+            {{clockBtnStyle}} toggle-clock">{{clockBtnName}}</a></span>{{/if}}
         </td>
         {{#each isoWeekDays}}
         {{> staffDailyShift employeeId=../_id dayCode=dayCode}}

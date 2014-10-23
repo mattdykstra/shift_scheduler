@@ -36,5 +36,5 @@ Meteor.publish('staff', function() {
         return;
     }
 
-    return SH.Collections.Staff.find(bizSel);
+    return SH.Collections.Staff.find(bizSel, {sort: {name: 1}});
 });

@@ -2,20 +2,46 @@
  * Created by angelo on 10/20/14.
  */
 Meteor.methods({
-    'shift/clock': function(data){
-        //TODO: add check against time cheating.
 
+    // somewhat heart of the app. handles clock on/clock off clicks.
+    'shift/clock': function(data){
+        //TODO: add check against time cheating?
         // server response :
         // Object {serverMoment: "Wed Oct 22 2014 09:15:11 GMT+0000",
         //      serverOffset: 0, mClient: "9:15 AM", mServer: "9:15 AM"
         // } -- this was received at 16:15 local ( local moment().zone() gives -420.
 
+        /**
+         * Updates employee record with last info
+         * - i.e. tracks last clocked shift record,
+         * useful to distinguish whether to show 'clock on' or 'clock off'
+         * useful to track down missed 'clock off'
+         * @param employeeId - employee id
+         * @param shiftId - shift record id
+         * @param code - 'shift' or 'split'
+         * @param toggle 'on' or 'off'
+         */
+        function markEmployeeState (employeeId, shiftId, code, toggle){
+            SH.Staff.collection.update({_id: employeeId}, {
+                $set: {
+                    lastActivity: {
+                        shiftId: shiftId,
+                        code: code,
+                        toggle: toggle
+                    }
+                } });
+        }
+
         var clientMoment = moment(data.moment), //
-            offsetMinutes = data.offset,// rel. to UTC, in minutes
+            offsetMinutes = data.offset,// rel. to UTC, in minutes. plan is:
+                // to use offset + stamp to prevent staff cheats.
+                // for now just pushing this thru the wires senseless
+
             stamp = data.time,// when click was submit, 12h format text string
             toggle = data.toggle, // either 'on' or 'off'
             code = data.shiftCode, // either 'shift' or 'split'
-            shiftId = data.shiftId,
+            shiftId = data.shiftId,// if there was already a split - this is its _id.
+                        // if no, method probably adds new one
             ret = {},
             employeeId = data.employeeId,//in case there was no shift and shift is crafted by staff clicks.
 
@@ -73,13 +99,14 @@ Meteor.methods({
         }
         realtimeKey = scheduledTimeKey + 'Real';
 
-        reasonKey = scheduledTimeKey + 'Reason'; //pick reason
+        //pick reason for non-ok clocks
+        reasonKey = scheduledTimeKey + 'Reason';
         var reason = _.values (_.pick(addon, ['reason-there', 'reason-late', 'reason-early']));
         if (reason.length) {
             set[reasonKey]=reason[0];
         }
 
-        set[clockToggleKey] = stamp; // storing
+        set[clockToggleKey] = stamp; // store clock time
 
         if (!shiftId) { // there was no shift. new shift should be created
             if (addon && addon['reason-there'] == 'manager') { //only reason staff creates a record
@@ -90,10 +117,12 @@ Meteor.methods({
                 set[code+'Role'] = addon['role'];
                 set.weekCode = addon.weekCode;
                 set.dayCode = addon.dayCode;
+
                 // this will probably be buggy at midnight.. let s wait a bit and check..
                 set[realtimeKey] = round15(stamp);
-                SH.Shifts.collection.insert(set);
 
+                shiftId = SH.Shifts.collection.insert(set);
+                markEmployeeState(employeeId, shiftId, code, toggle);
             } else {
                 ret.status = 'no shift && no manager';
                 return ret;
@@ -108,7 +137,7 @@ Meteor.methods({
             }
 
             if (shift[clockToggleKey]) { // allow toggling clock only once.
-                ret.status = 'already';
+                ret.status = 'already clocked this moment';
                 return ret;
             }
 
@@ -118,22 +147,21 @@ Meteor.methods({
                 set[shiftStatusKey] = SH.Shifts.status.APPROVED;
             var late = shift[shiftStatusKey] == SH.Shifts.status.LATE;
             //exceptions.
-            if (addon && addon['reason-there'] == 'manager') { // staff adds 2nd shift.
-                set[shiftStatusKey] = SH.Shifts.status.PENDING;
 
+            // staff adds 2nd shift. OR dayOff being cancelled
+            if (addon && addon['reason-there'] == 'manager') {
+                set[shiftStatusKey] = SH.Shifts.status.PENDING;
+                set.dayOff = "off";
                 set[shiftManagerKey] = addon['manager'];
                 set[code+'Role'] = addon['role'];
                 set[scheduledTimeKey] = round15(stamp); //no matter.
-
-                // this will probably be buggy at midnight.. let s wait a bit and check..
-
+                // round15 probably is buggy at midnight.. let s wait a bit and check..
             }
 
-
-            if (toggle == 'off' && (shift[code + 'BeginReason'] == reasons.there.MANAGER)) { // non scheduled shift - lets set 'scheduled' time
+            // non scheduled shift - lets set 'scheduled' time same as clock time
+            if (toggle == 'off' && (shift[code + 'BeginReason'] == reasons.there.MANAGER)) {
                 set[scheduledTimeKey] = round15(stamp);
             }
-
 
 
             if (addon && addon['reason-late'] == reasons.late.TIMER && addon['timepicker']) {
@@ -160,12 +188,11 @@ Meteor.methods({
             }
 
             SH.Shifts.collection.update({_id: shiftId}, {$set: set});
-
+            markEmployeeState(employeeId, shiftId, code, toggle);
         }
 
-
-        ret.mClient = clientMoment.format('h:mm A'); //debug
-        ret.mServer = moment().format('h:mm A'); //debug
+        //ret.mClient = clientMoment.format('h:mm A'); //debug
+        //ret.mServer = moment().format('h:mm A'); //debug
         return ret;
     },
     // this will copypaste

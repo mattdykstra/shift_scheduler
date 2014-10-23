@@ -15,7 +15,7 @@ Template.toggleClockPopup.rendered = function () {
     });
 
     //focus pin enter field, if any
-    if (this.employee.pin) this.$modal.focus("#pnp");
+
 };
 
 
@@ -182,6 +182,9 @@ Template.toggleClockPopup.events({
         SH.Modals.toggleClock = null;
 
     },
+    'shown.bs.modal': function(e, t) {
+        t.$("#pnp").focus();
+    },
 
     'change [name=\"reason-there\"]': function (e, t) { // this handles answer on 'why are you there?'
         t.$alerts_container.empty();
@@ -212,7 +215,7 @@ Template.toggleClockPopup.events({
 
         var val = $checked.val();
         _showConfirmButton();
-        console.log(val);
+        //console.log(val);
         switch(val) {
             case 'manager':
                 // show manager.
@@ -245,7 +248,7 @@ Template.toggleClockPopup.events({
         _showConfirmButton();
     },
     'click .day-off': function (e, t) {
-        console.log('day-off clicked');
+        //console.log('day-off clicked');
     },
     // this handles click on .clock-off
     'click .clock-on': function (e, t) {
@@ -262,7 +265,7 @@ Template.toggleClockPopup.events({
         // difference between scheduled start and time 'clock-on' clicked.
         // negative it clicked before schedule, positive if after
         var diff = SH.Week.Time.spanInMinutes(shift[prop], SH.Week.Time.momentToHmmString());
-        console.log(diff);
+        //console.log(diff);
 
         if (diff>0) { //if late
             _hideMainButton();
@@ -276,11 +279,11 @@ Template.toggleClockPopup.events({
             Meteor.call("shift/clock", _.extend(stamp(t), {
                     toggle: 'on',
                     shiftCode: shiftCode
-                }),
+                })
                 //callback is debug-only
-                function(err, ret){
-             console.log(ret);
-             });
+               // ,function(err, ret){
+             //console.log(ret);}
+             );
             t.$modal.modal('hide');
         }
     },
@@ -298,7 +301,7 @@ Template.toggleClockPopup.events({
         var diff;
         if (shift[prop]) { // if shift was inserted by staff - there s no scheduled end.
             diff = SH.Week.Time.spanInMinutes(shift[prop], SH.Week.Time.momentToHmmString());
-            console.log(diff);
+            //console.log(diff);
         }
 
         if (diff && diff<0) { //check if early
@@ -336,7 +339,7 @@ Template.toggleClockPopup.events({
             shiftCode: shiftCode
         }));
         t.$modal.modal('hide');
-        console.log('confirm-on');
+        //console.log('confirm-on');
 
     },
 
@@ -355,7 +358,7 @@ Template.toggleClockPopup.events({
         }));
         t.$modal.modal('hide');
 
-        console.log('confirm-off');
+        //console.log('confirm-off');
     },
     'keyup #pnp, blur #pnp': function(e, t){
         Session.set("employeePin", t.$("#pnp").val());

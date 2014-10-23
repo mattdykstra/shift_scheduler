@@ -60,7 +60,7 @@ function getFilesFromFolder(packageName,folder){
 }
 
 Package.on_use(function (api) {
-    api.use(['ui', 'templating', 'less'], c);
+    api.use(['ui', 'templating', 'less', 'mizzao:bootstrap-3'], c);
     api.use(['kl-common'], c);
     api.imply('sh-common');
     /* Use or imply other packages.
@@ -74,7 +74,7 @@ Package.on_use(function (api) {
      * Add files that should be used with this
      * package.
      */
-    api.add_files(getFilesFromFolder("sh-templates","client"), 'client');
+    api.add_files(getFilesFromFolder("sh-templates","client"), c);
     //api.add_files(['timepicker.html', 'timepicker.js'], c);
     //api.add_files(['templates.html', 'templates.js', 'templates.less',
     //'countrySelector.html', 'countrySelector.js'], c);

@@ -26,7 +26,11 @@ var helpers = {
             .format(SH.Week.formats.trDate);
     },
     'niceTime': function(time12h) {
+        if (!time12h) time12h = '';
         return time12h.toLowerCase().replace(' ','');
+    },
+    'isCurrentWeek': function(){
+        return SH.Week.getString() == SH.Week.weekStartDateString();
     }
 };
 

@@ -42,6 +42,7 @@ SH.Collections.Shifts.before.insert(
 
         var isStaff =  KL.Validation.pass('isStaff');
         if (isStaff) doc.staffCreated = true;
+        if (!doc.dayOff) doc.dayOff = 'off';
     }
 );
 

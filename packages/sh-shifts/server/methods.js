@@ -47,10 +47,11 @@ Meteor.methods({
             shiftManagerKey = code + 'Manager',
             scheduledTimeKey, // here be planned event time
             reasonKey,
+
             set = {}; // record modifier
 
         var round15 = SH.Week.Time.roundTimeStringTo15Minutes;
-
+        var reasons = SH.Shifts.reason;
         // here for debug purposes
         if (toggle == 'on' && code == 'shift') {
             ret.serverMoment = moment().toString();
@@ -82,8 +83,11 @@ Meteor.methods({
             if (addon && addon['reason-there'] == 'manager') { //only reason staff creates a record
                 set[shiftStatusKey] = SH.Shifts.status.PENDING;
                 set[shiftManagerKey] = addon['manager'];
-                set[scheduledTimeKey] = stamp; //no matter.
-
+                set[scheduledTimeKey] = round15(stamp);
+                set['employeeId'] = employeeId;
+                set[code+'Role'] = addon['role'];
+                set.weekCode = addon.weekCode;
+                set.dayCode = addon.dayCode;
                 // this will probably be buggy at midnight.. let s wait a bit and check..
                 set[realtimeKey] = round15(stamp);
                 SH.Shifts.collection.insert(set);
@@ -116,32 +120,40 @@ Meteor.methods({
                 set[shiftStatusKey] = SH.Shifts.status.PENDING;
 
                 set[shiftManagerKey] = addon['manager'];
-                set[scheduledTimeKey] = stamp; //no matter.
+                set[code+'Role'] = addon['role'];
+                set[scheduledTimeKey] = round15(stamp); //no matter.
 
                 // this will probably be buggy at midnight.. let s wait a bit and check..
 
             }
 
-            if (addon && addon['reason-late'] == 'timer' && addon['timepicker']) {
+
+            if (toggle == 'off' && (shift[code + 'BeginReason'] == reasons.there.MANAGER)) { // non scheduled shift - lets set 'scheduled' time
+                set[scheduledTimeKey] = round15(stamp);
+            }
+
+
+
+            if (addon && addon['reason-late'] == reasons.late.TIMER && addon['timepicker']) {
                 if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
                 set[realtimeKey] = round15(addon['timepicker']);
             }
 
-            if (addon && addon['reason-late'] == 'ok') {
+            if (addon && addon['reason-late'] == reasons.late.OK) {
                 if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
                 set[realtimeKey] = shift[scheduledTimeKey]; // staff tells he is on schedule, just forgot.
             }
 
-            if (addon && addon['reason-late'] == 'manager') { // todo: move string keys to package, same as with statuses
+            if (addon && addon['reason-late'] == reasons.late.MANAGER ) { // todo: move string keys to package, same as with statuses
                 if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
                 set[shiftManagerKey] = addon['manager'];
             }
 
-            if (addon && addon['reason-late'] == 'late') {
+            if (addon && addon['reason-late'] == reasons.late.LATE) {
                 set[shiftStatusKey] = SH.Shifts.status.LATE;
             }
 
-            if (addon && addon['reason-early'] == 'sick') {
+            if (addon && addon['reason-early'] == reasons.early.SICK) {
                 if (!late) set[shiftStatusKey] = SH.Shifts.status.PENDING;
             }
 

@@ -153,13 +153,17 @@ function _getAddon(form){
 }
 
 function stamp(t) {
-    return {
+    var ret = {
         offset: moment().zone(),
         time: moment().format('h:mm A'),
         shiftId: t.data.shift ? t.data.shift._id : '',
         employeeId: t.data.employee ? t.data.employee._id : '',
         addon: _getAddon(t.$form)
-        }
+    };
+    if (ret.addon['reason-there'] == SH.Shifts.reason.there.MANAGER) {
+        _.extend (ret.addon, {dayCode: SH.Week.getDayCode(), weekCode: SH.Week.getWeekCode()});
+    }
+    return ret;
 }
 
 Template.toggleClockPopup.events({

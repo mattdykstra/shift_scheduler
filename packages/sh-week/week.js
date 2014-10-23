@@ -33,9 +33,8 @@ SH.Week.getDayCode  = function getDayCode ( dateString ) {
 
 // return 'gg W-E' for monday. current monday or monday of week that momentObject belongs to
 SH.Week.weekStartDateString = function weekStartDateString ( momentObject ) {
-    return SH.Week.dateToString( momentObject ?
-            momentObject.isoWeekday(1) : moment().isoWeekday(1)
-    );
+    if (!momentObject) momentObject = moment();
+    return SH.Week.dateToString( momentObject.isoWeekday(1) );
 };
 
 /**

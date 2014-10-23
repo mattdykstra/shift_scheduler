@@ -33,6 +33,12 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <input type="text" name="manager" placeholder="manager name" required>
+                                            <select class="form-control" name="role" required>
+                                                <option value="">select role</option>
+                                                {{#each occupationsList}}
+                                                    <option value="{{_id}}">{{name}} - {{code}}</option>
+                                                {{/each}}
+                                            </select>
                                         </div>
                                     </div>
 								{{/if}}
@@ -53,6 +59,12 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <input type="text" name="manager" placeholder="manager name" required>
+                                            <select class="form-control" name="role" required>
+                                                <option value="">select role</option>
+                                                {{#each occupationsList}}
+                                                    <option value="{{_id}}">{{name}} - {{code}}</option>
+                                                {{/each}}
+                                            </select>
                                         </div>
                                     </div>
 									{{#if showConfirm}}
@@ -147,10 +159,16 @@
             <input type="radio" name="reason-late" value="manager">I was asked to stay back<br>
         </div>
 
-        {{#if manager}}
+        {{#if manager}} <!-- todo template this part-->
             <div class="form-group row">
                 <div class="col-sm-6">
                     <input type="text" name="manager" placeholder="manager name" required>
+                    <select class="form-control" name="role" required>
+                        <option value="">select role</option>
+                        {{#each occupationsList}}
+                            <option value="{{_id}}">{{name}} - {{code}}</option>
+                        {{/each}}
+                    </select>
                 </div>
             </div>
 		{{/if}}

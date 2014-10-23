@@ -62,3 +62,8 @@ SH.Shifts.totalWeeklyPayment= function totalWeeklyPayment(incomingSelector, appr
 };
 
 SH.Shifts.status = {PENDING: 'pending', APPROVED: 'approved', LATE: 'late'};
+SH.Shifts.reason = {
+    there: {MANAGER: 'manager', MISTAKE: 'mistake'},
+    late: {LATE: 'late', OK: 'ok', TIMER: 'timer', MANAGER: 'manager'},
+    early: {OK: 'ok', SICK: 'sick'}
+}

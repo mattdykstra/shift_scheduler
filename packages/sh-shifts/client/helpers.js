@@ -29,6 +29,15 @@ var helpers = {
         return _.map(_.values(SH.Shifts.status), function (item) {
             return {'status': item};
         });
+    },
+    shiftCellClass: function getCellClass(shift) {
+        if (!shift) return '';
+        if (shift.unpublished) return 'shift-cell-blue';
+        if (shift.shiftStatus == SH.Shifts.status.LATE ||
+            shift.splitStatus == SH.Shifts.status.LATE) return 'shift-cell-red';
+        if (shift.shiftStatus == SH.Shifts.status.PENDING ||
+            shift.splitStatus == SH.Shifts.status.PENDING) return 'shift-cell-orange';
+        return 'shift-cell-green';
     }
 };
 

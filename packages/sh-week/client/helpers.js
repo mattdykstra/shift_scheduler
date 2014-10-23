@@ -31,6 +31,12 @@ var helpers = {
     },
     'isCurrentWeek': function(){
         return SH.Week.getString() == SH.Week.weekStartDateString();
+    },
+    weekNumber: function(weekCode){
+        return weekCode.split(" ")[1];
+    },
+    weekCode: function(){
+        return SH.Week.getWeekCode( SH.Week.getString() );
     }
 };
 

@@ -23,13 +23,14 @@ SH.staffId = function() {
     return null;
 };
 
+SH.isBusinessUser = function () {
+    var user = Meteor.user();
+    return user ? user.role == 'business' : false;
+};
 
 var helpers = {
     // who is looged in ?
-    isBusinessUser: function () {
-        var user = Meteor.user();
-        return user ? user.role == 'business' : false;
-    },
+    isBusinessUser: SH.isBusinessUser,
     isStaffUser: function () {
         var user = Meteor.user();
         return user ? user.role == 'staff' : false;

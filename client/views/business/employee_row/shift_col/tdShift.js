@@ -13,15 +13,6 @@ Template.tdShift.helpers({
         return SH.Week.Time.minutesToHmmString(
             Blaze._globalHelpers['dailyTimeTotal'](shift), true  ); //todo: refactor into SH.Shifts....
     },
-    'shiftCellClass': function(shift) {
-        if (!shift) return '';
-        if (shift.shiftStatus == SH.Shifts.status.LATE ||
-            shift.splitStatus == SH.Shifts.status.LATE) return 'shift-cell-red';
-        if (shift.shiftStatus == SH.Shifts.status.PENDING||
-            shift.splitStatus == SH.Shifts.status.PENDING) return 'shift-cell-orange';
-        return 'shift-cell-green';
-
-    },
     'shiftClass': function(shift) {
         if (!shift) return 'tda';
         return '';

@@ -5,18 +5,21 @@ Template.header.rendered = function () {
 Template.header.helpers({
     'headerDate': function(){
         return moment().format('ddd DD MMM');
+    },
+    'copyFromWeek': function(){
+        return Session.get('shCopyFromWeek');
     }
 
 });
 
 Template.header.events({
-    'click [name=pweek]': function(e, t) {
+    'click .action-pweek': function(e, t) {
         SH.Week.setPrevious();
     },
-    'click [name=cweek]': function(e, t) {
+    'click .action-cweek': function(e, t) {
         SH.Week.setCurrent();
     },
-    'click [name=nweek]': function(e, t) {
+    'click .action-nweek': function(e, t) {
         SH.Week.setNext();
     },
     'click .action-settings': function(e, t) {
@@ -27,7 +30,25 @@ Template.header.events({
                 Template['bizSettings'],
                 $('#modals-container')[0])
         }
+    },
+    'click .action-copy': function(e, t){
+        Session.set('shCopyFromWeek', SH.Week.getWeekCode( SH.Week.getString() ));
+    },
+    'click .action-paste': function (e, t){
+        if (SH.isBusinessUser()) {
+            console.log(SH.Week.getString());
+            console.log(    SH.Week.getWeekCode( SH.Week.getString() ));
 
+            Meteor.call('shifts/paste', Session.get('shCopyFromWeek'),
+                SH.Week.getWeekCode( SH.Week.getString() ));
+        }
+    },
+    'click .action-publish': function (e, t){
+        console.log(1);
+        if (SH.isBusinessUser()) {
+            console.log(111);
+            Meteor.call('shifts/publish', SH.Week.getWeekCode(SH.Week.getString()));
+        }
     }
 
 });

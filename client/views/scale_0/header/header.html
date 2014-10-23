@@ -2,10 +2,12 @@
 <template name="header">
     <div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
-            <h2 class="text-center" style="padding: 0; margin: 0;">shifts scheduler {{#if isInApprovalMode}}(approval mode){{/if}}
-            {{# if isStaffUser }}<span class="pull-left">{{headerDate}}</span> {{/if}}
-            <span class="pull-right">{{BusinessName}}</span>
+            <h2 class="text-center" style="padding: 0; margin: 0;">shifts scheduler {{#if isInApprovalMode}}(approval
+                mode){{/if}}
+				{{# if isStaffUser }}<span class="pull-left">{{headerDate}}</span> {{/if}}
+                <span class="pull-right">{{BusinessName}}</span>
             </h2>
+
             <div class="navbar-header">
 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -17,21 +19,41 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    {{# if or isBusinessUser isStaffUser}}
-                        <li><a href="#"><input class="bid" name="pweek" value="Previous Week" type="submit"></a></li>
-                        <li><a href="#"><input class="bid" name="nweek" value="Next Week" type="submit"></a></li>
-                        <li><a href="#"><input class="bid" name="cweek" value="Current Week" type="submit"></a></li>
-                    {{/if }}
-                </ul>
+				{{# if or isBusinessUser isStaffUser}}
+                    <div class="btn-group navbar-nav nav">
+                        <a href="#" class="btn navbar-btn btn-default btn-sm action-pweek">&lt; Previous week</a>
+                        <a href="#" class="btn navbar-btn btn-default btn-sm action-cweek">Current week</a>
+                        <a href="#" class="btn navbar-btn btn-default btn-sm action-nweek">Next week &gt;</a>
+                    </div>
+                    <div class="nav-divider"></div>
+				{{/if }}
+
+                {{#if isBusinessUser}}
+
+                    <div class="btn-group navbar-nav nav">
+                        <a href="#" class="btn navbar-btn btn-default btn-sm action-copy">Copy shifts</a>
+
+                        <a href="#" class="btn navbar-btn btn-default btn-sm action-paste"
+                           title="{{#if copyFromWeek}} from week {{weekNumber copyFromWeek}}{{/if}}">
+                            Paste shifts{{#if copyFromWeek}}<span class="small sup">
+                                (from week {{weekNumber copyFromWeek}} to week {{weekNumber weekCode}})</span>{{/if}}
+                            </a>
+                    </div>
+
+                    <div class="nav-divider"></div>
+                    <div class="btn-group navbar-nav nav">
+                        <a href="#" class="btn navbar-btn btn-default btn-sm action-publish">Publish shifts</a>
+                    </div>
+				{{/if}}
 
                 <ul class="nav navbar-nav navbar-right">
-{{# if noAdminUser}}  <li>{{> claim_admin}}</li>   {{/ if }}
-                    {{> loginButtons }}
-                    {{# if isBusinessUser}}
-                        <li><a class="action-settings" href="#"><span class="glyphicon glyphicon-cog">Settings</span></a></li>
-                    {{/ if }}
-
+					{{# if noAdminUser}}
+                        <li>{{> claim_admin}}</li>   {{/ if }}
+					{{> loginButtons }}
+					{{# if isBusinessUser}}
+                        <li><a class="action-settings" href="#"><span
+                                class="glyphicon glyphicon-cog">Settings</span></a></li>
+					{{/ if }}
 
 
                 </ul>

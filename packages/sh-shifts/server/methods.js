@@ -59,6 +59,8 @@ Meteor.methods({
         }
         console.log(data);
 
+        var user = KL.Validation.pass('isStaff', this.userId);
+        if (!KL.Validation.pass('isStaff', this.userId))
         // setting up keys.
         if (toggle == 'on' && code == 'shift') {clockToggleKey = 'shiftClockOn'; scheduledTimeKey = 'shiftBegin';}
         if (toggle == 'off' && code == 'shift') {clockToggleKey = 'shiftClockOff'; scheduledTimeKey = 'shiftEnd';}
@@ -165,6 +167,47 @@ Meteor.methods({
         ret.mClient = clientMoment.format('h:mm A'); //debug
         ret.mServer = moment().format('h:mm A'); //debug
         return ret;
+    },
+    // this will copypaste
+    'shifts/paste': function(weekCodeFrom, weekCodeTo){
+        var user = KL.Validation.pass('isBusiness', this.userId);
+        if (!user || (weekCodeFrom == weekCodeTo)) return;
+        console.log(weekCodeFrom);
+        console.log(weekCodeTo);
+        var shifts = _.map (SH.Shifts.collection.find({weekCode: weekCodeFrom, businessId: user._id}).fetch(),
+            function(item) {
+                var ret = _.pick(item, ['employeeId', 'shiftRole', 'splitRole',
+                    'shiftBegin', 'shiftEnd', 'splitBegin', 'splitEnd', 'dayCode', 'dayOff']);
+                ret.weekCode = weekCodeTo;
+
+
+                //ret.unpublished = true;
+                return ret;
+
+            });
+        _.each(shifts, function(shift){
+            if (!shift.employeeId) return; // omit events
+            var test = SH.Shifts.collection.findOne({
+                employeeId: shift.employeeId,
+                weekCode: weekCodeTo,
+                dayCode: shift.dayCode
+            });
+            if (!test) //if there s already a record - bypass. else insert
+                SH.Shifts.collection.insert(shift);
+        })
+    },
+    'shifts/publish': function(weekCode) {
+        console.log(1111);
+        var user = KL.Validation.pass('isBusiness', this.userId);
+        console.log(user);
+        console.log(weekCode);
+        if (!user || !weekCode) return;
+        console.log('here'+weekCode);
+        SH.Shifts.collection.update(
+            {weekCode: weekCode,
+                businessId: user._id},
+            {$unset: {unpublished: true}},
+            {multi:true})
     }
 });
 

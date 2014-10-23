@@ -38,11 +38,17 @@ SH.Collections.Shifts.allow({
 
 SH.Collections.Shifts.before.insert(
     function(userId, doc) {
-        doc.businessId = KL.Validation.pass('userBusinessId', userId);
 
-        var isStaff =  KL.Validation.pass('isStaff');
-        if (isStaff) doc.staffCreated = true;
+        doc.businessId = KL.Validation.pass('userBusinessId', userId);
         if (!doc.dayOff) doc.dayOff = 'off';
+
+        var user = KL.Validation.pass('isUser', userId);
+
+        var isStaff =  KL.Validation.pass('isStaff', user);
+        if (isStaff) doc.staffCreated = true;
+
+        var isBusiness = KL.Validation.pass('isBusiness', user);
+        if (isBusiness) doc.unpublished = true;
     }
 );
 

@@ -266,19 +266,48 @@ Meteor.methods({
         return {result: 'ok'};
     },
     "shifts/request/dayoff": function(employeeId, begin, end){
-        console.log(employeeId, begin, end);
+        var user = KL.Validation.pass("isStaff", this.userId);
+        var employee= SH.Staff.collection.findOne({_id: employeeId});
+        var businessId = KL.Validation.pass('userBusinessId', user);
         //1. check employeeId matches logged user
         //1.1. check exists
+        if (!employee || employee.businessId != businessId ) {
+            return ({result: false});
+        }
+
+        var bizUser = Meteor.users.findOne({_id: businessId});
+        if (!bizUser) return ({result: false});
+        var sendTo = bizUser.emails[0].address;
+
+
         //2. check 'begin' is a parseable date
-        //3. if !end end = begin
-        //4. check end is a parseable date.
-        //5. from begin to end: if employee' shift for that day exists:
+        var from = moment(begin, "DD MMM YYYY");
+        if (!from.isValid()) {return {result: false};}
+
+        //3. check end is a parseable date.
+        if (!end) end = begin;
+        var to = moment(end, "DD MMM YYYY");
+        if (!to.isValid()) {return {result: false};}
+
+        console.log(from);
+        console.log(to);
+
+        //4. from begin to end: if employee' shift for that day exists:
         //5.1. mark as dayOff. mark as pending ('shiftBeginReason' = "claimed dayoff",
         //                  'shiftStatus: pending'(so it will be marked orange color)
         //else
         //5.2. make new shift (unpublished, pending?) for that day/employee, marked dayOff='on'
         //5.2.
-        //6. send email to manager with empl. name, vacation start/end dates.
+
+        //_.each (days of range [begin, end]: get shift of that day/ that employee
+        //  if shift exists: set dayOff: 'on', shiftStatus: 'pending', shiftBeginReason: 'claimed dayoff'
+        //  if (! ) - create one.
+        //  (thus we later need shifts to store dates. so can search bit faster, not taking 1 record at a time);
+        //
+
+        //6. send email to manager with empl. name, vacation start/end dates. uncomment below.
+        Meteor.call("sendEmail", sendTo, SH.Email.from, "vacation request",
+          bizUser.businessName +": employee "+employee.name+" requests vacation from "+ begin+" to "+end);
 
     }
 });

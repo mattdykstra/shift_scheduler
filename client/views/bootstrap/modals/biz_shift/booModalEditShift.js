@@ -62,5 +62,9 @@ Template.booModalEditShift.events({
 
         SH.Shifts.collection.update({_id: t.data._id}, {$set: newbie});
         t.$modal.modal('hide');
+    },
+    'click .action-delete': function(e, t) {
+        SH.Shifts.collection.remove({_id: t.data._id});
+        t.$modal.modal('hide');
     }
 });

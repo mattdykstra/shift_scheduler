@@ -18,10 +18,12 @@ Template.staffDailyShift.helpers({
             Blaze._globalHelpers['dailyTimeTotal'](shift), true ); //todo: refactor into SH.Shifts....
     },
     'shiftCellClass': function(shift) {
+        var oranges = [SH.Shifts.status.LATE,  SH.Shifts.status.PENDING];
         if (!shift) return '';
-        if (!shift.staffEdited) return 'shift-cell-green';
-        if (shift.staffEdited) return 'shift-cell-orange';
-        return '';
+
+        if ((shift.shiftStatus && oranges.indexOf(shift.shiftStatus) >-1)
+           ||(shift.splitStatus && oranges.indexOf(shift.splitStatus ) >-1 ))return 'shift-cell-orange';
+        return 'shift-cell-green';
     },
     'shiftClass': function(shift) {
         if (!shift) return 'tda';

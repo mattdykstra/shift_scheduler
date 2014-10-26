@@ -4,10 +4,10 @@
 		{{#if shiftRole}}
             <label class="control-label">1st shift role: {{RoleName shiftRole}}</label>
             <select class="form-control" name="shiftStatus">
-                <option value=""> --please set status-- </option>
+                <option value=""> --please set status--</option>
 				{{#each shiftStatusesList}}
                     <option value="{{status}}" {{selectedIfMatches ../shiftStatus status}} class="text-capitalize">
-                        {{status}}
+						{{status}}
                     </option>
 				{{/each}}
             </select>
@@ -15,25 +15,35 @@
             <div style="visibility: {{visibleIf shiftBegin}};">
                 <label class="control-label">1st shift start time</label>
 				{{> timepicker_15 name='shiftBeginReal' id="tp1" value=_shiftBeginReal parsleyBeforethan="shiftEndReal" }}
-                {{#if shiftBegin}}
-                <span class="small pull-left">
-                    <span class="glyphicon glyphicon-list-alt"></span>{{shiftBegin}}
-                </span>
-                {{/if}}
-                {{#if shiftClockOn}}
-                <span class="small pull-right">
-                    <span class="glyphicon glyphicon-time"></span>{{shiftClockOn}}
-                </span>
-                {{/if}}
-<br/>
+                <div class="text-center small">
+					{{#if shiftBegin}}
+                        <span class="pull-left">
+                        <span class="glyphicon glyphicon-list-alt"></span>{{shiftBegin}}
+                    </span>
+					{{/if}}
+					{{#if shiftBeginReason}}
+                        <span class="glyphicon glyphicon-asterisk">{{shiftBeginReason}}</span>{{/if}}
+					{{#if shiftClockOn}}
+                        <span class="pull-right">
+                        <span class="glyphicon glyphicon-time"></span>{{shiftClockOn}}
+                    </span>
+					{{/if}}
+                </div>
+
+                <br/>
                 <label class="control-label">1st shift end time</label>
 				{{> timepicker_15 name='shiftEndReal' id="tp2" value=_shiftEndReal parsleyLaterthan="shiftBeginReal" }}
-                {{#if shiftEnd}}<span class="small pull-left">
+                <div class="text-center small">
+					{{#if shiftEnd}}<span class="pull-left">
                     <span class="glyphicon glyphicon-list-alt"></span>{{shiftEnd}}
                 </span>{{/if}}
-                {{#if shiftClockOff}}<span class="small pull-right">
+
+					{{#if shiftEndReason}}<span class="glyphicon glyphicon-asterisk">{{shiftEndReason}}</span>{{/if}}
+
+					{{#if shiftClockOff}}<span class="pull-right">
                     <span class="glyphicon glyphicon-time"></span>{{shiftClockOff}}
                 </span>{{/if}}
+                </div>
             </div>
 		{{/if}}
     </div>
@@ -43,10 +53,10 @@
 		{{#if splitRole}}
             <label class="control-label">2nd shift role: {{RoleName shiftRole}}</label>
             <select class="form-control" name="splitStatus">
-                <option value=""> --please set status-- </option>
+                <option value=""> --please set status--</option>
 				{{#each shiftStatusesList}}
                     <option value="{{status}}" {{selectedIfMatches ../splitStatus status}}>
-                        {{status}}
+						{{status}}
                     </option>
 				{{/each}}
             </select>
@@ -55,29 +65,35 @@
                 <label class="control-label">2nd shift start time</label>
 				{{> timepicker_15 name='splitBeginReal' id="tp3" value=_splitBeginReal parsleyBeforethan="splitEndReal"
 				parsleySplitafter="shiftEnd"}}
-                {{#if splitBegin}}
-                    <span class="small pull-left" data-toggle="tooltip" title="scheduled start of 2nd shift">
+                <div class="text-center small">
+					{{#if splitBegin}}
+                        <span class="pull-left" data-toggle="tooltip" title="scheduled start of 2nd shift">
                     <span class="glyphicon glyphicon-list-alt"></span>{{splitBegin}}
-                </span>
-                {{/if}}
-                {{#if splitClockOn}}
-                    <span class="small pull-right">
+                    </span>
+					{{/if}}
+					{{#if shiftEndReason}}<span class="glyphicon glyphicon-asterisk">{{shiftEndReason}}</span>{{/if}}
+					{{#if splitClockOn}}
+                        <span class="pull-right">
                     <span class="glyphicon glyphicon-time"></span>{{splitClockOn}}
-                </span>
-                {{/if}}
-<br/>
+                     </span>
+					{{/if}}
+                </div>
+                <br/>
                 <label class="control-label">2nd shift end time</label>
 				{{> timepicker_15 name='splitEndReal' id="tp4" value=_splitEndReal parsleyLaterthan="splitBeginReal" }}
-                {{#if splitEnd}}
-                    <span class="small pull-left">
+                <div class="text-center small">
+					{{#if splitEnd}}
+                        <span class="pull-left">
                     <span class="glyphicon glyphicon-list-alt"></span>{{splitEnd}}
                 </span>
-                {{/if}}
-                {{#if splitClockOff}}
-                    <span class="small pull-right">
+					{{/if}}
+					{{#if splitEndReason}}<span class="glyphicon glyphicon-asterisk">{{splitEndReason}}</span>{{/if}}
+					{{#if splitClockOff}}
+                        <span class="pull-right">
                     <span class="glyphicon glyphicon-time"></span>{{splitClockOff}}
                 </span>
-                {{/if}}
+					{{/if}}
+                </div>
             </div>
 		{{/if}}
     </div>

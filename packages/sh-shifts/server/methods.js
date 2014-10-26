@@ -264,7 +264,7 @@ Meteor.methods({
         set[context.code+'ClockOff'] = value;
         set[context.code+'Status'] = SH.Shifts.status.PENDING;
         set[context.code+'EndReason'] = 'forgot to clock off';
-        
+
         SH.Shifts.collection.update({_id: shiftId}, {$set: set});
         return {result: 'ok'};
     }

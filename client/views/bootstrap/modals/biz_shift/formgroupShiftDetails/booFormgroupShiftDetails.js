@@ -42,6 +42,10 @@ Template.booFormgroupShiftDetails.helpers({
     },
     splitRoleNotEmpty: function () {
         return !Session.get('splitRoleEmpty')
+    },
+    'canDeleteShift': function() {
+        console.log(this);
+        return (!(this.shiftClockOn || this.shiftClockOff || this.splitClockOn  || this.splitClockOff )) && this._id;
     }
 });
 

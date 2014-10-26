@@ -14,8 +14,11 @@ Template.pinInputWithPinpad.events({
         var buttonValue = $button.data('value') || $button.html();
         if (buttonValue) {
             if (buttonValue == 'backspace') {
-                t.$pin.val(val.slice(0, -1));
-                return t.$pin.toggle('keyup');
+                if (val.length>0) {
+                    t.$pin.val(val.slice(0, -1));
+                    return t.$pin.toggle('keyup');
+                }
+                return;
             }
             t.$pin.val(val + buttonValue);
             t.$pin.trigger('keyup');

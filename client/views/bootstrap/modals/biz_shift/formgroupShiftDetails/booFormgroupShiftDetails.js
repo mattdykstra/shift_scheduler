@@ -44,13 +44,13 @@ Template.booFormgroupShiftDetails.helpers({
         return !Session.get('splitRoleEmpty')
     },
     'canDeleteShift': function() {
-        console.log(this);
         return (!(this.shiftClockOn || this.shiftClockOff || this.splitClockOn  || this.splitClockOff )) && this._id;
     }
 });
 
 Template.booFormgroupShiftDetails.destroyed = function(){
     Session.set('shiftDayOff',null);
+    Session.set('unpublished', null);
     Session.set('shiftRoleEmpty', null);
     Session.set('splitRoleEmpty', null);
 };

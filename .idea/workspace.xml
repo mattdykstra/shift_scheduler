@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feaf01bf-5fd4-4456-8993-18457d5b0a13" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalAddShift.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalAddShift.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalAddShift.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalApproveShift.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalApproveShift.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalApproveShift.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalApproveShift.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalEditShift.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/booModalEditShift.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalEditShift.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/shift/formgroupShiftDetails/booFormgroupShiftDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-shifts/server/methods.js" afterPath="$PROJECT_DIR$/packages/sh-shifts/server/methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staffEmployeeRow/staffDailyShift/staffDailyShift.js" afterPath="$PROJECT_DIR$/client/views/staff/staffEmployeeRow/staffDailyShift/staffDailyShift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js" afterPath="$PROJECT_DIR$/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shift_scheduler.iws" />
@@ -46,8 +37,8 @@
       <file leaf-file-name="booFormgroupShiftApprovalDetails.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="1665">
-              <caret line="25" column="38" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="38" />
+            <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1665">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
@@ -59,7 +50,7 @@
       <file leaf-file-name="booFormgroupShiftDetails.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.625" vertical-offset="402" max-vertical-offset="960">
+            <state vertical-scroll-proportion="-34.375" vertical-offset="0" max-vertical-offset="960">
               <caret line="55" column="41" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -69,21 +60,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booModalEditShift.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="booFormgroupShiftDetails.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1095">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="booModalEditShift.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalEditShift.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8969072" vertical-offset="483" max-vertical-offset="1125">
+            <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="1125">
               <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booFormgroupShiftDetails.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js">
+      <file leaf-file-name="methods.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
-              <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2656" max-vertical-offset="4125">
+              <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pinInputWithPinpad.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5154639" vertical-offset="0" max-vertical-offset="582">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -578,7 +589,7 @@
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="methods&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;no-&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/no-gutter.less&#10;meth&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;past&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header.j&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;pastes&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;reset_&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/reset_staff/reset_staff.js&#10;tim&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/form-elements/timepicker/timepicker.html&#10;rese&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/reset_staff/reset_staff.js&#10;togg&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html&#10;sh.week&#9;null&#9;null&#10;events&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/events.js&#10;.less&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/employee_row/shift_col/shift-cell.less&#10;alert&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/__bootstrap/alert.html&#10;validat&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-common/server/validation.js" />
+    <property name="SearchEverywhereHistoryKey" value="pin&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js&#10;meth&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;methods&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;no-&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/no-gutter.less&#10;past&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header.j&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;pastes&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;reset_&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/reset_staff/reset_staff.js&#10;tim&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/form-elements/timepicker/timepicker.html&#10;rese&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/reset_staff/reset_staff.js&#10;togg&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html&#10;sh.week&#9;null&#9;null&#10;events&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/events.js&#10;.less&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/employee_row/shift_col/shift-cell.less&#10;alert&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/__bootstrap/alert.html&#10;validat&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-common/server/validation.js" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="73" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="83" />
@@ -927,7 +938,13 @@
       <option name="project" value="LOCAL" />
       <updated>1414328291419</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added 'delete' button for manager/schedulling mode.&#10;&#10;only appears when no clock been toggled that day.">
+      <created>1414330959531</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1414330959531</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -993,7 +1010,6 @@
     </option>
     <option name="FORCE_NON_EMPTY_COMMENT" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="calculating totals" />
     <MESSAGE value="grand total added" />
     <MESSAGE value="added more support for dayOff: &#10;auto-set dayOff once no shifts timing is present.&#10;do not count time if dayOff is set" />
     <MESSAGE value="removed console output" />
@@ -1018,7 +1034,8 @@
     <MESSAGE value="removed console outputs" />
     <MESSAGE value="almost done with 'remind to fill clock off'" />
     <MESSAGE value="added 'you forgot to clock off last day, please enter clockoff time now'&#10;&#10;probably, in approval mode should display more information" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 'you forgot to clock off last day, please enter clockoff time now'&#10;&#10;probably, in approval mode should display more information" />
+    <MESSAGE value="added 'delete' button for manager/schedulling mode.&#10;&#10;only appears when no clock been toggled that day." />
+    <option name="LAST_COMMIT_MESSAGE" value="added 'delete' button for manager/schedulling mode.&#10;&#10;only appears when no clock been toggled that day." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1160,13 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17605634" vertical-offset="0" max-vertical-offset="852">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/staff/staff_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="675">
@@ -1284,14 +1294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3569" max-vertical-offset="4170">
-          <caret line="265" column="8" selection-start-line="265" selection-start-column="8" selection-end-line="265" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="6090">
@@ -1348,17 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="1665">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/booModalForm2Buttons.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48387095" vertical-offset="0" max-vertical-offset="570">
@@ -1399,17 +1390,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalEditShift.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="1125">
+          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1095">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.625" vertical-offset="402" max-vertical-offset="960">
+        <state vertical-scroll-proportion="-34.375" vertical-offset="0" max-vertical-offset="960">
           <caret line="55" column="41" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -1418,10 +1417,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/booModalEditShift.js">
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8969072" vertical-offset="483" max-vertical-offset="1125">
-          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1665">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2656" max-vertical-offset="4125">
+          <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5154639" vertical-offset="0" max-vertical-offset="582">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding />
         </state>
       </provider>

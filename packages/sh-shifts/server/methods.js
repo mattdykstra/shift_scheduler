@@ -256,9 +256,6 @@ Meteor.methods({
         // last activity - closed same shift..
         var set = {};
         context.toggle = 'off';
-        console.log(context);
-        console.log(shift);
-        console.log(set);
         SH.Staff.collection.update({_id: shift.employeeId}, {$set: {lastActivity: context}});
         set[context.code+'EndReal'] = value;
         set[context.code+'ClockOff'] = value;

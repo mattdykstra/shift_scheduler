@@ -28,14 +28,6 @@ Template.staffDailyShift.helpers({
     'shiftClass': function(shift) {
         if (!shift) return 'tda';
         return '';
-    },
-    'shiftTimeStatus': function(shift) {
-        return shift.shiftClockOn ?
-             (shift.shiftClockOff ? "glyphicon-check" : "glyphicon-time"): "";
-    },
-    'splitTimeStatus': function(shift) {
-        return shift.splitClockOn ?
-             (shift.splitClockOff ? "glyphicon-check" : "glyphicon-time"): "";
     }
 });
 

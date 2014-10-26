@@ -17,7 +17,9 @@
                     {{niceTime shiftBegin}} - {{niceTime shiftEnd}} {{RoleCode shiftRole}}
                     <span class="glyphicon {{shiftTimeStatus this}}"></span>
                     {{/if}}
+
                     {{#if and shiftBegin splitBegin}}<br/>{{/if}}
+
                     {{#if splitBegin}}
                     {{niceTime splitBegin}} - {{niceTime splitEnd}} {{RoleCode splitRole}}
                     <span class="glyphicon {{splitTimeStatus this}}"></span>

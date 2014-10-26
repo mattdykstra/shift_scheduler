@@ -13,21 +13,15 @@
                         <span class="day-off">OFF</span>
 					{{else}}
 						{{#if shiftBegin}}
-							{{#if and shiftBeginReal shiftEndReal}}
-							{{niceTime shiftBeginReal}} - {{niceTime shiftEndReal}}  {{RoleCode shiftRole}}
-							{{else}}
-								<span class="italic">{{niceTime shiftBegin}} - {{niceTime shiftEnd}}  {{RoleCode shiftRole}}</span>
-							{{/if}}
+							<span class="{{#if and shiftBeginReal shiftEndReal}}{{else}}italic{{/if}}">
+								{{niceTime shiftBegin}} - {{niceTime shiftEnd}}  {{RoleCode shiftRole}}</span>
+                            <span class="glyphicon {{shiftTimeStatus this}}"></span>
 						{{/if}}
-						{{#if and shiftBegin splitBegin}}
-                            <br/>
-						{{/if}}
+						{{#if and shiftBegin splitBegin}}<br/>{{/if}}
 						{{#if splitBegin}}
-							{{#if and splitBeginReal splitEndReal}}
-							{{niceTime splitBeginReal}} - {{niceTime splitEndReal}}   {{RoleCode splitRole}}
-							{{else}}
-                                <span class="italic">{{niceTime splitBegin}} - {{niceTime splitEnd}}  {{RoleCode splitRole}}</span>
-							{{/if}}
+                            <span class="{{#if and splitBeginReal splitEndReal}}{{else}}italic{{/if}}">
+                                {{niceTime splitBegin}} - {{niceTime splitEnd}}  {{RoleCode splitRole}}</span>
+                            <span class="glyphicon {{splitTimeStatus this}}"></span>
 						{{/if}}
 					{{/if}}
 				{{/with}}

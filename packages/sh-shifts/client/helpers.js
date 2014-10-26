@@ -38,6 +38,16 @@ var helpers = {
         if (shift.shiftStatus == SH.Shifts.status.PENDING ||
             shift.splitStatus == SH.Shifts.status.PENDING) return 'shift-cell-orange';
         return 'shift-cell-green';
+    },
+    //depends on bootstrap3
+    shiftTimeStatus: function(shift) {
+        return shift.shiftClockOn ?
+            (shift.shiftClockOff ? "glyphicon-check" : "glyphicon-time"): "";
+    },
+    //depends on bootstrap3
+    splitTimeStatus: function(shift) {
+        return shift.splitClockOn ?
+            (shift.splitClockOff ? "glyphicon-check" : "glyphicon-time"): "";
     }
 };
 

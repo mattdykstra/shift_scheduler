@@ -1,0 +1,35 @@
+<!-- originally made for shift_scheduler project-->
+
+<!-- renders data: employee record-->
+<template name="requestDayoff">
+    <div class="text-left">
+        <button type="button" class="btn btn-sm btn-default" data-toggle="collapse" data-target="#vacation">
+            ask day(s) off
+        </button>
+    </div>
+    <div id="vacation" class="collapse">
+        <div class="row">
+            <div class="col-sm-6">
+                <label class="small">pick dayoff/1st day</label>
+                <div class='input-group date datepicker' id="dp1">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    <input type='text' data-date-pickdate="true" data-date-picktime="false"/>
+                </div>
+            </div>
+
+            <div class="col-sm-6 disabled">
+                <label class="small">pick last day (if needed)</label>
+                <div class='input-group date datepicker' id="dp2">
+
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+
+                    <input type='text' data-date-pickdate="true" data-date-picktime="false"/>
+                </div>
+            </div>
+        </div>
+        <div class="text-left" style="padding-top: 12px;">
+            <a href="#" class="btn btn-primary action-request">submit</a>
+        </div>
+    </div>
+
+</template>

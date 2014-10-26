@@ -264,6 +264,22 @@ Meteor.methods({
 
         SH.Shifts.collection.update({_id: shiftId}, {$set: set});
         return {result: 'ok'};
+    },
+    "shifts/request/dayoff": function(employeeId, begin, end){
+        console.log(employeeId, begin, end);
+        //1. check employeeId matches logged user
+        //1.1. check exists
+        //2. check 'begin' is a parseable date
+        //3. if !end end = begin
+        //4. check end is a parseable date.
+        //5. from begin to end: if employee' shift for that day exists:
+        //5.1. mark as dayOff. mark as pending ('shiftBeginReason' = "claimed dayoff",
+        //                  'shiftStatus: pending'(so it will be marked orange color)
+        //else
+        //5.2. make new shift (unpublished, pending?) for that day/employee, marked dayOff='on'
+        //5.2.
+        //6. send email to manager with empl. name, vacation start/end dates.
+
     }
 });
 

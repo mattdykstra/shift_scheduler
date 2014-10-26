@@ -1,4 +1,6 @@
 <!-- originally made for shift_scheduler project-->
+
+<!-- render data object: {shift: {}, employee: {}} -->
 <template name="toggleClockPopup">
     <div class="modal" id="toggle-clock">
         <div class="modal-dialog">
@@ -126,15 +128,7 @@
                     {{#if pinNotEntered}}
                     {{else}}
                         <div class="pull-left">
-                            <div>
-                                <button type="button" class="btn " data-toggle="collapse" data-target="#vacation">
-                                        ask day(s) off
-                                </button>
-                            </div>
-                            <div id="vacation" class="pull-left collapse">
-                                <p>hello datepickers</p>
-                                <a href="#" class="btn btn-primary">go go go </a>
-                            </div>
+                            {{> requestDayoff employee}}
                         </div>
                     {{/if}}
                     <a href="#" data-dismiss="modal" class="btn cancel">Cancel</a>

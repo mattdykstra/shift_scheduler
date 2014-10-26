@@ -15,7 +15,22 @@ Template.toggleClockPopup.rendered = function () {
     });
 
     //focus pin enter field, if any
+    this.autorun(function(){
+        var ret = false;
+        if (self.data && self.data.employee) {
+            // 1. employee has lastActivity.toggle=='on'
+            // 2. lastActivity.shiftId does not match current / today' s shift
+            var state = self.data.employee.lastActivity;
+            if (!state) {ret = false; }// complete newbie, did not ever clocked a shift.
+            else {
 
+                ret = (state.toggle == 'on' // last click action was 'clock on'
+                    && (!self.data.shift || (self.data.shift._id != state.shiftId)) // last click action target was not current (today's) shift
+                );
+            }
+        }
+        Session.set('shouldClosePreviousDay', ret);
+    })
 };
 
 
@@ -67,6 +82,7 @@ function _clearVariables(){
     Session.set(__showConfirmButton, null);
     Session.set(__enableConfirmButton, null);
     Session.set('employeePin', null);
+    Session.set('shouldClosePreviousDay', null);
 }
 
 
@@ -118,14 +134,7 @@ Template.toggleClockPopup.helpers({
         return this.employee.pin != Session.get("employeePin");
     },
     'shouldClosePreviousDay': function() {
-        // 1. employee has lastActivity.toggle=='on'
-        // 2. lastActivity.shiftId does not match current / today' s shift
-        var state = this.employee.lastActivity;
-        if (!state) return false; // complete newbie, did not ever clocked a shift.
-        if (state.toggle == 'on' // last click action was 'clock on'
-            && (!this.shift || (this.shift._id !=state.shiftId)) // last click action target was not current (today's) shift
-        ) {return true;}
-        return false;
+        return Session.get('shouldClosePreviousDay');
     },
     'firstDayAtWork': function(){ //not used.
     // could be moved to upper level templates to show some intro

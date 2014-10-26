@@ -237,6 +237,36 @@ Meteor.methods({
                 businessId: user._id},
             {$unset: {unpublished: true}},
             {multi:true})
+    },
+    'shift/fix/clockoff': function(value, context) {
+        // todo: remove verbose errors?
+        if (!context) throw new Meteor.Error('400', 'could not resolve schedule entry', 'could not resolve schedule entry');
+        if (context.toggle != 'on') throw new Meteor.Error('400', 'expected last employee action being a clockon', 'expected last employee action being a clockon');
+
+        var shiftId = context.shiftId;
+        if (!shiftId) throw new Meteor.Error('400', 'could not resolve schedule entry', 'could not resolve schedule entry');
+
+        var shift = SH.Shifts.collection.findOne({_id: shiftId});
+        if (!shift) throw new Meteor.Error('400', 'could not resolve schedule entry', 'could not resolve schedule entry');
+
+        //todo: check if value is above than shiftEnd
+        var diff = SH.Week.Time.spanInMinutes(shift[context.code+'BeginReal'], value);
+        if (diff<=0) throw new Meteor.Error('400', 'could not close shift - end before start', 'could not close shift - end before start');
+
+        // last activity - closed same shift..
+        var set = {};
+        context.toggle = 'off';
+        console.log(context);
+        console.log(shift);
+        console.log(set);
+        SH.Staff.collection.update({_id: shift.employeeId}, {$set: {lastActivity: context}});
+        set[context.code+'EndReal'] = value;
+        set[context.code+'ClockOff'] = value;
+        set[context.code+'Status'] = SH.Shifts.status.PENDING;
+        set[context.code+'EndReason'] = 'forgot to clock off';
+        
+        SH.Shifts.collection.update({_id: shiftId}, {$set: set});
+        return {result: 'ok'};
     }
 });
 

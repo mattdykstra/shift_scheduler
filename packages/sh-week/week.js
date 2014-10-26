@@ -73,6 +73,7 @@ SH.Week.Time.todayMomentFromTimeString = function ( time12h ){
     return moment(day_time, fullFormat);
 };
 
+// return dt in minutes. positive if end after start. only works within a single day.
 SH.Week.Time.spanInMinutes = function(start12h, end12h){
     if (!start12h || !end12h) return null;
     var startMoment = SH.Week.Time.todayMomentFromTimeString ( start12h );

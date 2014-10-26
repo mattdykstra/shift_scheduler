@@ -1,5 +1,5 @@
 Template.pinInputWithPinpad.rendered = function () {
-    this.$pin = this.$(".pin-input input");
+    this.$pin = this.$(".pin-input > input");
 };
 
 Template.pinInputWithPinpad.helpers({
@@ -16,7 +16,7 @@ Template.pinInputWithPinpad.events({
             if (buttonValue == 'backspace') {
                 if (val.length>0) {
                     t.$pin.val(val.slice(0, -1));
-                    return t.$pin.toggle('keyup');
+                    return t.$pin.trigger('keyup');
                 }
                 return;
             }

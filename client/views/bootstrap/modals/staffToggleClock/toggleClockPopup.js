@@ -393,7 +393,7 @@ Template.toggleClockPopup.events({
 
         //console.log('confirm-off');
     },
-    'keyup #pnp, blur #pnp': function(e, t){
+    'keyup #pnp, blur #pnp, ololo': function(e, t){
         Session.set("employeePin", t.$("#pnp").val());
     }
 });

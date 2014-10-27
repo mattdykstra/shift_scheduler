@@ -1,6 +1,7 @@
 Template.requestDayoff.rendered = function () {
     this.dp1 = this.$('#dp1').datetimepicker();
     this.dp2 = this.$('#dp2').datetimepicker();
+    this.dp1.data("DateTimePicker").setMinDate(moment().add(1, 'days'));
     this.$dayfirst = this.$('#dp1 input');
     this.$daylast = this.$('#dp2 input');
 };
@@ -31,5 +32,6 @@ Template.requestDayoff.events({
         var nd2 = t.$daylast.val();
         Meteor.call("shifts/request/dayoff", t.data._id,//employeeId
         st1, nd2);// first day, last day if any
+
     }
 });

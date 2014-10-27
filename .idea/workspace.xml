@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feaf01bf-5fd4-4456-8993-18457d5b0a13" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftApprovalDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.html" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/biz_shift/formgroupShiftDetails/booFormgroupShiftDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-shifts/client/helpers.js" afterPath="$PROJECT_DIR$/packages/sh-shifts/client/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/manageEvent/manageEvent.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/manageEvent/manageEvent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-shifts/server/methods.js" afterPath="$PROJECT_DIR$/packages/sh-shifts/server/methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/kl-common/namespace.js" afterPath="$PROJECT_DIR$/packages/kl-common/namespace.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/requestDayoff.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/requestDayoff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/sh-shifts/shifts.js" afterPath="$PROJECT_DIR$/packages/sh-shifts/shifts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShift.html" afterPath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShift.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShiftApproval.html" afterPath="$PROJECT_DIR$/client/views/business/employee_row/shift_col/tdShiftApproval.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/form-elements/timepicker/timepicker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js" afterPath="$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,7 +33,48 @@
     <favorites_list name="shift_scheduler" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="methods.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4559" max-vertical-offset="5130">
+              <caret line="331" column="10" selection-start-line="331" selection-start-column="10" selection-end-line="331" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requestDayoff.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/requestDayoff.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.078809105" vertical-offset="0" max-vertical-offset="630">
+              <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toggleClockPopup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.416667" vertical-offset="1604" max-vertical-offset="2175">
+              <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toggleClockPopup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5534" max-vertical-offset="6105">
+              <caret line="398" column="5" selection-start-line="398" selection-start-column="5" selection-end-line="398" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -288,7 +319,7 @@
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="tdshiftap&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/employee_row/shift_col/tdShiftApproval.html&#10;meth&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;time&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/form-elements/timepicker/timepicker.js&#10;pin&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js&#10;methods&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;no-&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/no-gutter.less&#10;past&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header.j&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;pastes&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;reset_&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/reset_staff/reset_staff.js&#10;tim&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/form-elements/timepicker/timepicker.html&#10;rese&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/reset_staff/reset_staff.js&#10;togg&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html&#10;sh.week&#9;null&#9;null&#10;events&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/events.js&#10;.less&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/employee_row/shift_col/shift-cell.less&#10;alert&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/__bootstrap/alert.html&#10;validat&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-common/server/validation.js" />
+    <property name="SearchEverywhereHistoryKey" value="req&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/staffToggleClock/requestDayoff.js&#10;meth&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;tdshiftap&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/employee_row/shift_col/tdShiftApproval.html&#10;time&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/form-elements/timepicker/timepicker.js&#10;pin&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/pinInputWithPinpad/pinInputWithPinpad.js&#10;methods&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/server/methods.js&#10;no-&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/no-gutter.less&#10;past&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header.j&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;pastes&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/pasteShifts/pasteShifts.html&#10;header&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/header.js&#10;reset_&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/reset_staff/reset_staff.js&#10;tim&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/form-elements/timepicker/timepicker.html&#10;rese&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/scale_0/header/reset_staff/reset_staff.js&#10;togg&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html&#10;sh.week&#9;null&#9;null&#10;events&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-shifts/events.js&#10;.less&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/client/views/business/employee_row/shift_col/shift-cell.less&#10;alert&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-templates/client/__bootstrap/alert.html&#10;validat&#9;FILE&#9;file:///home/angelo/projects/shift_scheduler/packages/sh-common/server/validation.js" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="73" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="83" />
@@ -673,29 +704,35 @@
       <option name="project" value="LOCAL" />
       <updated>1414351748304</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="added 'claim dayoff' functionality&#10;&#10;">
+      <created>1414378155529</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1414378155529</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1286" height="1001" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3130129" sideWeight="0.5949166" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31257343" sideWeight="0.5949166" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3352872" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33607522" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28196982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976552" sideWeight="0.49960285" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28238133" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3352872" sideWeight="0.50039715" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28196982" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31257343" sideWeight="0.4050834" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -739,7 +776,6 @@
     </option>
     <option name="FORCE_NON_EMPTY_COMMENT" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="started with staff view. &#10;" />
     <MESSAGE value="now 2nd shift should start not before 1st shift ends" />
     <MESSAGE value="added daily events &#10;&#10;displayed as ' (&lt;event name&gt;)' near dates" />
     <MESSAGE value="added clock on/ clock off buttons + logic to show one of them.&#10;&#10;no logic is present to control late/on time/ etc. no dialogs, too." />
@@ -764,7 +800,8 @@
     <MESSAGE value="added markers to manager view (clock/check against shifts for  in process/complete ones)" />
     <MESSAGE value="planned code for dayoff claim method. polished template for dayoff claim" />
     <MESSAGE value="unwrapping 'claim vacation' method. it already sends emails." />
-    <option name="LAST_COMMIT_MESSAGE" value="unwrapping 'claim vacation' method. it already sends emails." />
+    <MESSAGE value="added 'claim dayoff' functionality&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 'claim dayoff' functionality&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -956,14 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.982143" vertical-offset="1648" max-vertical-offset="2175">
-          <caret line="121" column="49" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2029" max-vertical-offset="2580">
@@ -1111,26 +1140,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/requestDayoff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.747191" vertical-offset="66" max-vertical-offset="600">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/sh-shifts/client/helpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5759717" vertical-offset="454" max-vertical-offset="1020">
           <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46835443" vertical-offset="1991" max-vertical-offset="6060">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1161,8 +1174,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/sh-shifts/server/methods.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33273056" vertical-offset="4436" max-vertical-offset="5115">
-          <caret line="308" column="12" selection-start-line="308" selection-start-column="12" selection-end-line="308" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4559" max-vertical-offset="5130">
+          <caret line="331" column="10" selection-start-line="331" selection-start-column="10" selection-end-line="331" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.416667" vertical-offset="1604" max-vertical-offset="2175">
+          <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/toggleClockPopup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5534" max-vertical-offset="6105">
+          <caret line="398" column="5" selection-start-line="398" selection-start-column="5" selection-end-line="398" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/bootstrap/modals/staffToggleClock/requestDayoff.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.078809105" vertical-offset="0" max-vertical-offset="630">
+          <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
           <folding />
         </state>
       </provider>

@@ -326,9 +326,10 @@ Meteor.methods({
             iter.add(1, 'days');
         }
 
-        //6. send email to manager with empl. name, vacation start/end dates. uncomment below.
+        //6. send email to manager with empl. name, vacation start/end dates.
         Meteor.call("sendEmail", sendTo, SH.Email.from, "vacation request",
-          bizUser.businessName +": employee "+employee.name+" requests vacation from "+ begin+" to "+end);
+          bizUser.businessName +": employee "+employee.name+" requests vacation from "
+          + begin+" to "+end);
 
     }
 });

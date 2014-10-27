@@ -393,6 +393,9 @@ Template.toggleClockPopup.events({
     },
     'keyup #pnp, blur #pnp, ololo': function(e, t){
         Session.set("employeePin", t.$("#pnp").val());
+    },
+    'click .action-request': function(e, t) { // handle click on second-step
+        t.$modal.modal('hide');
     }
 });
 

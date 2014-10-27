@@ -83,7 +83,7 @@ Meteor.methods({
             ret.serverMoment = moment().toString();
             ret.serverOffset = moment().zone();
         }
-        console.log(data);
+        //console.log(data);
 
         var user = KL.Validation.pass('isStaff', this.userId);
         if (!user) return;
@@ -289,21 +289,42 @@ Meteor.methods({
         var to = moment(end, "DD MMM YYYY");
         if (!to.isValid()) {return {result: false};}
 
-        console.log(from);
-        console.log(to);
+        //check whether vaction is requested in future
+        if (from.valueOf() < moment().valueOf())  {return {result: false};}
 
-        //4. from begin to end: if employee' shift for that day exists:
-        //5.1. mark as dayOff. mark as pending ('shiftBeginReason' = "claimed dayoff",
-        //                  'shiftStatus: pending'(so it will be marked orange color)
-        //else
-        //5.2. make new shift (unpublished, pending?) for that day/employee, marked dayOff='on'
-        //5.2.
+       // console.log(from);
+       // console.log(to);
+        var iter = from;
 
-        //_.each (days of range [begin, end]: get shift of that day/ that employee
-        //  if shift exists: set dayOff: 'on', shiftStatus: 'pending', shiftBeginReason: 'claimed dayoff'
-        //  if (! ) - create one.
-        //  (thus we later need shifts to store dates. so can search bit faster, not taking 1 record at a time);
-        //
+        //4. from begin to end:         //_.each (days of range [begin, end]: get shift of that day/ that employee
+
+        while (iter.valueOf() <= to.valueOf()) {
+
+            //// if employee' shift for that day exists:
+            //a. build shift selector.
+            var dateString = SH.Week.dateToString(iter);
+            var selector = {employeeId: employeeId,
+                weekCode: SH.Week.getWeekCode(dateString),
+                dayCode: SH.Week.getDayCode(dateString)};
+
+            //b. search shift
+            var shift = SH.Shifts.collection.findOne(selector);
+            //c. if exists: modify.
+            //  if shift exists: set dayOff: 'on', shiftStatus: 'pending', shiftBeginReason: 'claimed dayoff'
+            var set = {shiftStatus: SH.Shifts.status.PENDING,
+                shiftBeginReason: SH.Shifts.reason.other.VACATION, dayOff: 'on'};
+
+            if (shift) {
+                SH.Shifts.collection.update({_id: shift._id}, {$set: set});
+            }
+            //d. if none - add
+            //5.2. make new shift (unpublished, pending?) for that day/employee, marked dayOff='on'
+            else {
+                SH.Shifts.collection.insert(_.extend(selector, set));
+            }
+
+            iter.add(1, 'days');
+        }
 
         //6. send email to manager with empl. name, vacation start/end dates. uncomment below.
         Meteor.call("sendEmail", sendTo, SH.Email.from, "vacation request",

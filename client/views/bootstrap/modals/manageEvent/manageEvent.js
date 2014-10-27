@@ -27,7 +27,6 @@ Template.manageEvent.events({
         t.$('input[name=name]').focus()
     },
     'hidden.bs.modal': function (e, t) {
-        console.log("--");
         Blaze.remove(SH.Modals.manageEvent);
         SH.Modals.manageEvent = null;
     },

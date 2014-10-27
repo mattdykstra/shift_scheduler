@@ -11,6 +11,9 @@
 				{{#with shift}}
 					{{#if eq dayOff 'on'}}
                         <span class="day-off">OFF</span>
+                        {{#if vacationPending this}}
+                            <span class="glyphicon glyphicon-asterisk" title="pending dayoff/vacation"></span>
+                        {{/if}}
 					{{else}}
 						{{#if shiftBegin}}
 							<span class="{{#if and shiftBeginReal shiftEndReal}}{{else}}italic{{/if}}">

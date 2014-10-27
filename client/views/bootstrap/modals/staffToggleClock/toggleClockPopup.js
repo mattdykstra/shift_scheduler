@@ -143,8 +143,6 @@ Template.toggleClockPopup.helpers({
     },
     'getPreviousShiftData': function(){
         if (!this.employee.lastActivity) return null;
-        console.log(this.employee.lastActivity.shiftId);
-
         return {shift: SH.Shifts.collection.findOne({_id: this.employee.lastActivity.shiftId}),
             lastActivity: this.employee.lastActivity
         }

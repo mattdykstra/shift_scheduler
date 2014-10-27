@@ -65,5 +65,6 @@ SH.Shifts.status = {PENDING: 'pending', APPROVED: 'approved', LATE: 'late'};
 SH.Shifts.reason = {
     there: {MANAGER: 'manager', MISTAKE: 'mistake'},
     late: {LATE: 'late', OK: 'ok', TIMER: 'timer', MANAGER: 'manager'},
-    early: {OK: 'ok', SICK: 'sick'}
-}
+    early: {OK: 'ok', SICK: 'sick'},
+    other: {VACATION: 'claimed dayoff'}
+};

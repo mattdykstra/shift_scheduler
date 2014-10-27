@@ -48,6 +48,11 @@ var helpers = {
     splitTimeStatus: function(shift) {
         return shift.splitClockOn ?
             (shift.splitClockOff ? "glyphicon-check" : "glyphicon-time"): "";
+    },
+    vacationPending: function(shift){
+        return shift.shiftStatus == SH.Shifts.status.PENDING &&
+            shift.shiftBeginReason == SH.Shifts.reason.other.VACATION &&
+            shift.dayOff == 'on'
     }
 };
 

@@ -11,7 +11,6 @@ Template.requestDayoff.destroyed = function () {
 
 Template.requestDayoff.helpers({
     'secondPickerDisabled': function () {
-        console.log(Session.get('shVacationPickerActivated'));
         return !Session.get('shVacationPickerActivated');
     }
 });
@@ -30,8 +29,6 @@ Template.requestDayoff.events({
     'click .action-request': function (e, t){
         var st1 = t.$dayfirst.val();
         var nd2 = t.$daylast.val();
-        console.log(st1 );
-        console.log(nd2 );//
         Meteor.call("shifts/request/dayoff", t.data._id,//employeeId
         st1, nd2);// first day, last day if any
     }

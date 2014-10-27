@@ -1,59 +1,74 @@
 <!-- originally made for shift_scheduler project-->
 <template name="booFormgroupShiftDetails">
-    <div class="form-group col-sm-6">
-
-        <label class="control-label">1st shift role</label>
-        <select class="form-control" name="shiftRole">
-            <option value=""
-            {{selectedIfMatches shiftRole ""}}>select role</option>
-            {{#each occupationsList}}
-            <option value="{{_id}}"
-            {{selectedIfMatches ../shiftRole _id}}>{{name}} - {{code}}</option>
-            {{/each}}
-        </select>
-
-        <div style="visibility: {{visibleIf shiftRoleNotEmpty}};">
-            <label class="control-label">1st shift start time</label>
-            {{> timepicker_15 name='shiftBegin' id="tp1" value=shiftBegin parsleyBeforethan="shiftEnd" }}
-
-            <label class="control-label">1st shift end time</label>
-            {{> timepicker_15 name='shiftEnd' id="tp2" value=shiftEnd parsleyLaterthan="shiftBegin" }}
+	{{#if vacationPending this}}
+        <div class="text-center">
+            <span class="glyphicon glyphicon-asterisk">{{shiftBeginReason}}</span>
         </div>
-
-    </div>
-    <div class="form-group col-sm-6">
-        <label class="control-label">2nd shift role</label>
-        <select class="form-control" name="splitRole">
-            <option value=""
-            {{selectedIfMatches splitRole ""}}>select role</option>
-            {{#each occupationsList}}
-            <option value="{{_id}}"
-            {{selectedIfMatches ../splitRole _id}}>{{name}} - {{code}}</option>
-            {{/each}}
+        <select class="form-control" name="shiftStatus">
+            <option value=""> --please set status--</option>
+			{{#each shiftStatusesList}}
+                <option value="{{status}}" {{selectedIfMatches ../shiftStatus status}} class="text-capitalize">
+					{{status}}
+                </option>
+			{{/each}}
         </select>
+	{{else}}
+        <div class="form-group col-sm-6">
 
-        <div style="visibility: {{visibleIf splitRoleNotEmpty}};">
-            <label class="control-label">2nd shift start time</label>
-            {{> timepicker_15 name='splitBegin' id="tp3" value=splitBegin parsleyBeforethan="splitEnd"
-            parsleySplitafter="shiftEnd"}}
+            <label class="control-label">1st shift role</label>
+            <select class="form-control" name="shiftRole">
+                <option value=""
+					{{selectedIfMatches shiftRole ""}}>select role
+                </option>
+				{{#each occupationsList}}
+                    <option value="{{_id}}"
+						{{selectedIfMatches ../shiftRole _id}}>{{name}} - {{code}}</option>
+				{{/each}}
+            </select>
 
-            <label class="control-label">2nd shift end time</label>
-            {{> timepicker_15 name='splitEnd' id="tp4" value=splitEnd parsleyLaterthan="splitBegin" }}
+            <div style="visibility: {{visibleIf shiftRoleNotEmpty}};">
+                <label class="control-label">1st shift start time</label>
+				{{> timepicker_15 name='shiftBegin' id="tp1" value=shiftBegin parsleyBeforethan="shiftEnd" }}
+
+                <label class="control-label">1st shift end time</label>
+				{{> timepicker_15 name='shiftEnd' id="tp2" value=shiftEnd parsleyLaterthan="shiftBegin" }}
+            </div>
+
         </div>
-    </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">2nd shift role</label>
+            <select class="form-control" name="splitRole">
+                <option value=""
+					{{selectedIfMatches splitRole ""}}>select role
+                </option>
+				{{#each occupationsList}}
+                    <option value="{{_id}}"
+						{{selectedIfMatches ../splitRole _id}}>{{name}} - {{code}}</option>
+				{{/each}}
+            </select>
 
-    <div class="row" style="height=6px;">&nbsp;</div>
-    <div class="form-group">
-        <input type="checkbox" name="dayOff" class="form-control"
-               checked="{{#if eq dayOff 'on'}}checked{{/if}}"/>
-    </div>
-    <div class="form-group">
-        <input type="checkbox" name="publish" class="form-control"
-               checked="{{#if neq unpublished true}}checked{{/if}}"/>
-    </div>
-    {{#if canDeleteShift}}
-    <div class="form-group pull-right">
-        <a href="#" class="action-delete btn btn-sm btn-danger">Delete</a>
-    </div>
+            <div style="visibility: {{visibleIf splitRoleNotEmpty}};">
+                <label class="control-label">2nd shift start time</label>
+				{{> timepicker_15 name='splitBegin' id="tp3" value=splitBegin parsleyBeforethan="splitEnd"
+				parsleySplitafter="shiftEnd"}}
+
+                <label class="control-label">2nd shift end time</label>
+				{{> timepicker_15 name='splitEnd' id="tp4" value=splitEnd parsleyLaterthan="splitBegin" }}
+            </div>
+        </div>
     {{/if}}
+        <div class="row" style="height=6px;">&nbsp;</div>
+        <div class="form-group">
+            <input type="checkbox" name="dayOff" class="form-control"
+                   checked="{{#if eq dayOff 'on'}}checked{{/if}}"/>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="publish" class="form-control"
+                   checked="{{#if neq unpublished true}}checked{{/if}}"/>
+        </div>
+	{{#if canDeleteShift}}
+        <div class="form-group pull-right">
+            <a href="#" class="action-delete btn btn-sm btn-danger">Delete</a>
+        </div>
+	{{/if}}
 </template>

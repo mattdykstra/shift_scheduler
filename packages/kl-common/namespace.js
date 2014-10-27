@@ -2,7 +2,6 @@ KL = {};
 KL.Utils = {};
 
 function functionName(fun) {
-    console.log(fun);
     return (fun.nsPrefix ? fun.nsPrefix + "." : "") + fun.toString().split(' ')[1].split('(')[0];
 } //not so useful..
 

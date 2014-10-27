@@ -86,6 +86,4 @@ if (window.ParsleyValidator) window.ParsleyValidator.
         var ret = SH.Week.Time.spanInMinutes(valEnd, value);
         return (ret >= 0 );
     }).
-    addMessage("en", "splitaftershift", 'Second shift should not start before first shift ends'); else {
-    console.logWarning("is there parsley in this app? i'm nervous..")
-}
+    addMessage("en", "splitaftershift", 'Second shift should not start before first shift ends');

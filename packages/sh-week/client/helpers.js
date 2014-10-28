@@ -20,6 +20,11 @@ var helpers = {
             .dateFromWD(SH.Week.getString(), isoDay)
             .format(SH.Week.formats.thDate);
     },
+   'dateFromWD': function(weekCode, dayCode) {
+        return SH.Week
+           .dateFromWD(weekCode, dayCode)
+           .format(SH.Week.formats.thDate);
+   },
    'trDateFromDayCode': function (isoDay) {
         return SH.Week
             .dateFromWD(SH.Week.get(), isoDay)

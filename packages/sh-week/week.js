@@ -45,6 +45,7 @@ SH.Week.weekStartDateString = function weekStartDateString ( momentObject ) {
  * @returns {momentjs object}
  */
 SH.Week.dateFromWD = function dateFromWeekStringAndDayCode (weekStartString, isoDay) {
+
     return this.dateFromString( weekStartString ) .day(isoDay);
 };
 

@@ -48,6 +48,10 @@ var helpers = {
     concat: function(value1, value2) {
         return value1.toString() + value2.toString();
     },
+    log: function(param) {
+        console.log(param);
+        return '';
+    },
     'indexedArray': function(context, options) {
         if (context) {
             return context.map(function(item, index) {

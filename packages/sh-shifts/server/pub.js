@@ -13,7 +13,9 @@ Meteor.publish('weeklyShifts', function (week) {
     }
 
     var weekCode = SH.Week.getWeekCode (week);
+    var staff = SH.Staff
     var selector = _.extend(biz, {weekCode: weekCode});
+
     if (user.role == 'staff') _.extend(selector, {unpublished : {$ne: true}});
     return SH.Collections.Shifts.find(selector);
 });

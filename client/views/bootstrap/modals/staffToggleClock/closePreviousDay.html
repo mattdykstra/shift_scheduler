@@ -1,0 +1,22 @@
+<!-- originally made for shift_scheduler project-->
+<template name="closePreviousDay">
+	<div class="form-group">
+		<p> You did not close previous shift </p>
+		<p> Shift details: {{shift._id}} {{log this}}</p>
+
+		<p> Date: {{ dateFromWD shift.weekCode shift.dayCode}}</p>
+		<p>{{_shiftName}}<br/>
+			scheduled time: {{_shiftBegin}} <br/>
+			recorded start time: {{>timepicker_15 name='shiftBegin' value=_shiftBeginReal id='tp553' disabled=true}}
+		</p>
+		<p> Please fill shift end time.</p>
+		<div class="row">
+	        <div class="col-sm-6">
+				{{>timepicker_15 name='splitEndReal' id='tp557'}}
+	        </div>
+        </div>
+	</div>
+    <div class="form-group">
+	    <a class="btn btn-primary submit" href="#">Submit</a>
+    </div>
+</template>

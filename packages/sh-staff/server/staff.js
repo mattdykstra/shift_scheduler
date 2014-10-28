@@ -35,6 +35,12 @@ Meteor.publish('staff', function() {
         this.ready();
         return;
     }
-
-    return SH.Collections.Staff.find(bizSel, {sort: {name: 1}});
+    var cursor = SH.Collections.Staff.find(bizSel, {sort: {name: 1}});
+    var forgotShifts = _.map(cursor.fetch(), function(staff){
+       if (staff && staff.lastActivity && staff.lastActivity.shiftId) {
+           return staff.lastActivity.shiftId;
+       }
+    });
+    var shiftsCursor = SH.Collections.Shifts.find({_id: {$in: forgotShifts}});
+    return [cursor, shiftsCursor ];
 });

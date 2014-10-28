@@ -109,12 +109,36 @@ Template.toggleClockPopup.helpers({
     'showConfirm': function(){ // should we chow clock button (when in complex cases)
         return _isVisibleConfirmButton();
     },
-    'manager': function(){ //
+    'manager': function(){ // has chosen manager's will as a reason for some decision
+        // should provide manager name
         return _isVisibleManagerField();
     },
     'pinNotEntered': function() {
         if (!this.employee.pin) return false;
         return this.employee.pin != Session.get("employeePin");
+    },
+    'shouldClosePreviousDay': function() {
+        // 1. employee has lastActivity.toggle=='on'
+        // 2. lastActivity.shiftId does not match current / today' s shift
+        var state = this.employee.lastActivity;
+        if (!state) return false; // complete newbie, did not ever clocked a shift.
+        if (state.toggle == 'on' // last click action was 'clock on'
+            && (!this.shift || (this.shift._id !=state.shiftId)) // last click action target was not current (today's) shift
+        ) {return true;}
+        return false;
+    },
+    'firstDayAtWork': function(){ //not used.
+    // could be moved to upper level templates to show some intro
+        var state = this.employee.lastActivity;
+        if (!state) return true;
+    },
+    'getPreviousShiftData': function(){
+        if (!this.employee.lastActivity) return null;
+        console.log(this.employee.lastActivity.shiftId);
+
+        return {shift: SH.Shifts.collection.findOne({_id: this.employee.lastActivity.shiftId}),
+            lastActivity: this.employee.lastActivity
+        }
     }
 });
 

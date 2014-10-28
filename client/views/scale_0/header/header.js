@@ -2,9 +2,18 @@ Template.header.rendered = function () {
 
 };
 
+Meteor.setInterval(function setCurrentTime(){
+    Session.set("currentTime", moment().format('h:mm A') );
+    Session.set("currentDate", moment().format('ddd DD MMM'));
+}, 1000);
+
+
 Template.header.helpers({
-    'headerDate': function(){
-        return moment().format('ddd DD MMM');
+    headerDate: function(){
+        return Session.get("currentDate");
+    },
+    'headerTime': function(){
+        return Session.get("currentTime");
     },
     'copyFromWeek': function(){
         return Session.get('shCopyFromWeek');

@@ -4,8 +4,8 @@
         <div class="container">
             <h2 class="text-center" style="padding: 0; margin: 0;">shifts scheduler {{#if isInApprovalMode}}(approval
                 mode){{/if}}
-				{{# if isStaffUser }}<span class="pull-left">{{headerDate}}</span> {{/if}}
-                <span class="pull-right">{{BusinessName}}</span>
+				<span class="pull-left">{{headerDate}}{{# if isStaffUser }} {{headerTime}}{{/if}}</span>
+				<span class="pull-right">{{BusinessName}}</span>
             </h2>
 
             <div class="navbar-header">

@@ -72,5 +72,15 @@
             <label class="control-label">PIN</label>
             <input type="text" name="pin" class="form-control" value="{{pin}}"/>
         </div>
+
     </div>
+
+        {{#if _id}}
+            <div class="form-group pull-right">
+                <div class="col-sm-4 ">
+                    <a href="#" class="action-delete btn btn-sm btn-danger">Delete</a>
+                </div>
+            </div>
+        {{/if}}
+
 </template>

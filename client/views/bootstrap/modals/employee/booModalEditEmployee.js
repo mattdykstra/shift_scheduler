@@ -47,5 +47,9 @@ Template.booModalEditEmployee.events({
 
         SH.Collections.Staff.update({_id: t.data._id}, {$set: newbie} );
         t.$modal.modal('hide');
+    },
+    'click .action-delete': function(e, t) {
+        SH.Staff.collection.remove({_id: t.data._id});
+        t.$modal.modal('hide');
     }
 });

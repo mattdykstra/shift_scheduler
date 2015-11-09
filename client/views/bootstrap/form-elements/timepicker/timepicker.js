@@ -1,6 +1,7 @@
 Template.timepicker_15.rendered = function () {
     this.$timepicker = this.$('.timepicker');
     this.$timepicker.datetimepicker({
+        format: 'LT'
         //pickDate: false,
         //pickTime: true,
     //    minuteStepping: 15

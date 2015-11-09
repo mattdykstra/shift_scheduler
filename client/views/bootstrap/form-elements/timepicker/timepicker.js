@@ -1,9 +1,10 @@
 Template.timepicker_15.rendered = function () {
     this.$timepicker = this.$('.timepicker');
     this.$timepicker.datetimepicker({
-        pickDate: false,
-        pickTime: true,
-        minuteStepping: 15});
+        //pickDate: false,
+        //pickTime: true,
+    //    minuteStepping: 15
+    });
 
     this.$input = this.$('input');
     this.$revertButton = this.$('.action-revert');

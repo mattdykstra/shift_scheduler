@@ -3,22 +3,33 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 insecure
 accounts-password
 less
+email
 mizzao:bootboxjs
 tsega:bootstrap3-datetimepicker
+
+mizzao:bootstrap-3
+ian:accounts-ui-bootstrap-3
+
 amr:parsley.js
 mrt:moment
-gfk:mailgun-api
-email
+
 sh-common
 iron:router
 kl-common
-mizzao:bootstrap-3
-yasinuslu:accounts-ui-bootstrap-3
 matb33:collection-hooks
 sh-app
 sh-templates
 
+meteor-base             # Packages every Meteor app needs to have
+mobile-experience       # Packages for a great mobile UX
+mongo                   # The database Meteor supports right now
+session                 # Client-side reactive dictionary for your app
+jquery                  # Helpful client-side library
+tracker                 # Meteor's client-side reactive programming library
+
+es5-shim                # ECMAScript 5 compatibility for older browsers.
+templating
+check

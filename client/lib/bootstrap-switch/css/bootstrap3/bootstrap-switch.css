@@ -37,6 +37,7 @@
   min-width: 100px;
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
 }
 .bootstrap-switch.bootstrap-switch-mini {
   min-width: 71px;
